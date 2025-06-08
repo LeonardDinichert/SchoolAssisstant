@@ -126,7 +126,7 @@ struct UserInfosCreation: View {
                 }
                 .padding()
             }
-            .background(Color(UIColor.systemGroupedBackground))
+            .background(AppTheme.background)
             .padding(.top)
             .onTapGesture {
                 focusedField = nil

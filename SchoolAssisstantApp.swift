@@ -15,6 +15,7 @@ struct SchoolAssisstantApp: App {
         WindowGroup {
             HasSeenWelcomingMessage()
                 .tint(AppTheme.primaryColor)
+                .background(AppTheme.background)
         }
     }
 }
@@ -77,6 +78,7 @@ struct MainInterfaceView: View {
                     .tabItem { Label("Account", systemImage: "person.fill") }
                     .tag(Tab.account)
             }
+            .background(AppTheme.background)
             .preferredColorScheme(useDarkMode ? .dark : .light)
             .onChange(of: selectedTab) {
                 haptic.impactOccurred()

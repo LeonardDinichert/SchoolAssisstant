@@ -53,7 +53,7 @@ struct modifyBiographyView: View {
                    .padding(.horizontal)
                    .padding(.bottom, 20)
                }
-               .background(Color(UIColor.systemGroupedBackground).ignoresSafeArea())
+               .background(AppTheme.background.ignoresSafeArea())
                .navigationTitle("Edit Biography")
                .navigationBarTitleDisplayMode(.inline)
            }

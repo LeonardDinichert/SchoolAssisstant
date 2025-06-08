@@ -35,7 +35,7 @@ struct MeditationPreWorkView: View {
         ZStack {
             // MARK: — Animated Gradient Background
             LinearGradient(
-                gradient: Gradient(colors: [Color.blue.opacity(0.6), Color.purple.opacity(0.6)]),
+                gradient: Gradient(colors: [AppTheme.primaryTint.opacity(0.6), AppTheme.primaryShade.opacity(0.6)]),
                 startPoint: animateGradient ? .topLeading : .bottomTrailing,
                 endPoint: animateGradient ? .bottomTrailing : .topLeading
             )
