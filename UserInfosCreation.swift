@@ -49,45 +49,25 @@ struct UserInfosCreation: View {
                     // First Name
                     CustomTextField(text: $firstName, placeholder: "Surname")
                         .focused($focusedField, equals: .firstName)
-                        .padding()
-                        .background(
-                            RoundedRectangle(cornerRadius: 10)
-                                .fill(Color.white)
-                                .shadow(radius: 5)
-                        )
+                        .cardStyle()
                         .padding(.horizontal)
                     
                     // Last Name
                     CustomTextField(text: $lastName, placeholder: "Name")
                         .focused($focusedField, equals: .lastName)
-                        .padding()
-                        .background(
-                            RoundedRectangle(cornerRadius: 10)
-                                .fill(Color.white)
-                                .shadow(radius: 5)
-                        )
+                        .cardStyle()
                         .padding(.horizontal)
                     
                     // Username
                     CustomTextField(text: $username, placeholder: "Username")
                         .focused($focusedField, equals: .username)
-                        .padding()
-                        .background(
-                            RoundedRectangle(cornerRadius: 10)
-                                .fill(Color.white)
-                                .shadow(radius: 5)
-                        )
+                        .cardStyle()
                         .padding(.horizontal)
                     
                     // Birth Date
                     DatePicker("Birthdate", selection: $birthDate, displayedComponents: .date)
                         .datePickerStyle(CompactDatePickerStyle())
-                        .padding()
-                        .background(
-                            RoundedRectangle(cornerRadius: 10)
-                                .fill(Color.white)
-                                .shadow(radius: 5)
-                        )
+                        .cardStyle()
                         .padding(.horizontal)
                     
                     
@@ -104,13 +84,8 @@ struct UserInfosCreation: View {
                                 .fontWeight(.semibold)
                                 .foregroundColor(.black)
                         }
-                        .padding()
+                        .cardStyle()
                         .frame(maxWidth: .infinity)
-                        .background(
-                            RoundedRectangle(cornerRadius: 10)
-                                .fill(Color.white)
-                                .shadow(radius: 5)
-                        )
                         .padding(.horizontal)
                     }
                     .onChange(of: selectedItem) { oldItem, newItem in
@@ -141,17 +116,9 @@ struct UserInfosCreation: View {
                         }
                     }) {
                         Text("Finish Registration")
-                            .font(.headline)
-                            .fontWeight(.semibold)
-                            .foregroundColor(.white)
-                            .frame(maxWidth: .infinity)
-                            .padding()
-                            .background(
-                                RoundedRectangle(cornerRadius: 10)
-                                    .fill(Color.accentColor)
-                            )
-                            .padding(.horizontal)
                     }
+                    .primaryButtonStyle(disabled: firstName.isEmpty || lastName.isEmpty || username.isEmpty || profileImageData == nil)
+                    .padding(.horizontal)
                     .disabled(firstName.isEmpty || lastName.isEmpty || username.isEmpty || profileImageData == nil)
                     
                     // Spacer

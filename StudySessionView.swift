@@ -26,17 +26,11 @@ struct StudySessionView: View {
                             .font(.title)
                             .fontWeight(.semibold)
                         
-                        ZStack {
-                            TextField("Eg. Math", text: $userWillStudy)
-                                .padding(.leading, 30)
-                            RoundedRectangle(cornerSize: CGSize(width: 10, height: 10))
-                                .foregroundStyle(.white)
-                                .frame(height: 40)
-                                .padding()
-                                .shadow(color: .black, radius: 5).opacity(0.5)
-                            
-                        }
-                        .padding()
+                        TextField("Eg. Math", text: $userWillStudy)
+                            .padding(.leading, 30)
+                            .frame(height: 40)
+                            .cardStyle()
+                            .padding()
                         
                         
                         Button {
@@ -68,24 +62,15 @@ struct StudySessionView: View {
                         Spacer()
                         
                         Button {
-                            
+
                             startSession = true
                             userId = user.userId
-                            
+
                         } label: {
-                            ZStack {
-                                RoundedRectangle(cornerSize: CGSize(width: 15, height: 15))
-                                    .frame(minHeight: 50)
-                                    .padding(.horizontal)
-                                    .foregroundStyle(.orange).opacity(0.2)
-                                
-                                Text("Begin the pomodoro timer")
-                                    .foregroundStyle(.black)
-                                    .font(.subheadline)
-                                    .fontWeight(.semibold)
-                                
-                            }
+                            Text("Begin the pomodoro timer")
                         }
+                        .primaryButtonStyle()
+                        .padding(.horizontal)
                     }
                     
                 } else {

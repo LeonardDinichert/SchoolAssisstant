@@ -41,22 +41,12 @@ struct SignUpView: View {
                     
                     // Email Input Card
                     CustomTextField(text: $viewModel.email, placeholder: "Email", isSecure: false, keyboardType: .emailAddress, returnKeyType: .next)
-                        .padding()
-                        .background(
-                            RoundedRectangle(cornerRadius: 12)
-                                .fill(Color.white)
-                                .shadow(color: Color.black.opacity(0.1), radius: 5, x: 0, y: 2)
-                        )
+                        .cardStyle()
                         .padding(.horizontal)
                     
                     // Password Input Card
                     CustomTextField(text: $viewModel.password, placeholder: "Password", isSecure: true, keyboardType: .default, returnKeyType: .done)
-                        .padding()
-                        .background(
-                            RoundedRectangle(cornerRadius: 12)
-                                .fill(Color.white)
-                                .shadow(color: Color.black.opacity(0.1), radius: 5, x: 0, y: 2)
-                        )
+                        .cardStyle()
                         .padding(.horizontal)
                     
                     // Error Message
@@ -78,15 +68,8 @@ struct SignUpView: View {
                         }
                     } label: {
                         Text("Sign up")
-                            .font(.system(size: 18, weight: .semibold))
-                            .foregroundColor(.white)
-                            .frame(maxWidth: .infinity)
-                            .padding()
-                            .background(
-                                RoundedRectangle(cornerRadius: 12)
-                                    .fill(viewModel.email.isEmpty || viewModel.password.isEmpty ? Color.gray : Color.blue)
-                            )
                     }
+                    .primaryButtonStyle(disabled: viewModel.email.isEmpty || viewModel.password.isEmpty)
                     .padding(.horizontal)
                     .disabled(viewModel.email.isEmpty || viewModel.password.isEmpty)
                     
@@ -119,15 +102,10 @@ struct SignUpView: View {
                                 .font(.system(size: 18, weight: .semibold))
                                 .foregroundColor(.black)
                         }
-                        .padding()
+                        .cardStyle()
                         .frame(maxWidth: .infinity)
-                        .background(
-                            RoundedRectangle(cornerRadius: 12)
-                                .fill(Color.white)
-                                .shadow(color: Color.black.opacity(0.1), radius: 5, x: 0, y: 2)
-                        )
-                    .padding(.horizontal)
                     }
+                    .padding(.horizontal)
                     
                     // Sign Up with Apple
                     Button {
