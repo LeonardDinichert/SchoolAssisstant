@@ -14,13 +14,13 @@ final class NotesManager {
     }
 
     func addNote(_ note: LearningNote, userId: String) async throws {
-        try notesCollection(userId: userId).addDocument(from: note)
+        try await notesCollection(userId: userId).addDocument(data: note.dictionary)
     }
 
     func fetchNotes(userId: String) async throws -> [LearningNote] {
         let snapshot = try await notesCollection(userId: userId).getDocuments()
-        return try snapshot.documents.compactMap { document in
-            try document.data(as: LearningNote.self)
+        return snapshot.documents.compactMap { document in
+            LearningNote(document: document)
         }
     }
 

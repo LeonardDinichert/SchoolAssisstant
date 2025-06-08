@@ -1,9 +1,9 @@
 import Foundation
 
-import FirebaseFirestoreSwift
+import FirebaseFirestore
 
 struct LearningNote: Codable, Identifiable {
-    @DocumentID var id: String?
+    var id: String?
 
   let category: String
     let text: String
@@ -11,8 +11,6 @@ struct LearningNote: Codable, Identifiable {
     var reviewCount: Int
     var nextReview: Date
     let createdAt: Date
-/*
-
     init(id: String? = nil, category: String, text: String, importance: String, reviewCount: Int, nextReview: Date, createdAt: Date) {
         self.id = id
         self.category = category
@@ -51,5 +49,4 @@ struct LearningNote: Codable, Identifiable {
             "createdAt": Timestamp(date: createdAt)
         ]
     }
-*/
 }
