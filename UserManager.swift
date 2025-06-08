@@ -7,6 +7,7 @@
 
 import Foundation
 import FirebaseFirestore
+import FirebaseFirestoreSwift
 import PhotosUI
 import SwiftUI
 import Combine
@@ -220,7 +221,10 @@ final class UserManager: ObservableObject {
 
     func fetchStudySessions(userId: String) async throws -> [StudySession] {
         let snapshot = try await userDocument(userId: userId).collection("work_sessions").getDocuments()
-        return snapshot.documents.compactMap { StudySession(document: $0) }
+
+        return try snapshot.documents.compactMap { document in
+            try document.data(as: StudySession.self)
+        }
     }
     
     func addBiographyAndTownToUser(userId: String, biography: String, town : String) async throws {

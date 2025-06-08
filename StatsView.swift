@@ -3,8 +3,8 @@ import Charts
 import FirebaseAuth
 import FirebaseFirestore
 
-struct StudySession: Identifiable {
-    var id: String?
+struct StudySession: Identifiable, Codable {
+    @DocumentID var id: String?
     let session_start: Date
     let session_end: Date
     let studied_subject: String
@@ -31,6 +31,7 @@ struct StudySession: Identifiable {
         self.session_end = endTS.dateValue()
         self.studied_subject = subject
     }
+
 }
 
 @MainActor

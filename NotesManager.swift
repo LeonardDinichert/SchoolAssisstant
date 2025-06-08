@@ -14,12 +14,14 @@ final class NotesManager {
     }
 
     func addNote(_ note: LearningNote, userId: String) async throws {
-        try await notesCollection(userId: userId).addDocument(data: note.dictionary)
+        try notesCollection(userId: userId).addDocument(from: note)
     }
 
     func fetchNotes(userId: String) async throws -> [LearningNote] {
         let snapshot = try await notesCollection(userId: userId).getDocuments()
-        return snapshot.documents.compactMap { LearningNote(document: $0) }
+        return try snapshot.documents.compactMap { document in
+            try document.data(as: LearningNote.self)
+        }
     }
 
     func deleteNote(_ noteId: String, userId: String) async throws {
@@ -29,7 +31,7 @@ final class NotesManager {
     func updateReview(noteId: String, userId: String, reviewCount: Int, nextReview: Date) async throws {
         try await notesCollection(userId: userId).document(noteId).updateData([
             "reviewCount": reviewCount,
-            "nextReview": Timestamp(date: nextReview)
+            "nextReview": nextReview
         ])
     }
 }

@@ -1,8 +1,9 @@
 import Foundation
 import FirebaseFirestore
 
-struct TaskItem: Identifiable {
-    var id: String?
+struct TaskItem: Codable, Identifiable {
+    @DocumentID var id: String?
+  
     var title: String
     var dueDate: Date
     var completed: Bool
