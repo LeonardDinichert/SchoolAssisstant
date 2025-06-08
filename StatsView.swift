@@ -4,7 +4,7 @@ import FirebaseAuth
 import FirebaseFirestore
 
 struct StudySession: Identifiable, Codable {
-    @DocumentID var id: String?
+    var id: String?
     let session_start: Date
     let session_end: Date
     let studied_subject: String
