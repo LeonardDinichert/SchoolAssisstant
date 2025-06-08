@@ -40,22 +40,12 @@ struct LogInView: View {
                     
                     // Email Field Card
                     CustomTextField(text: $viewModel.email, placeholder: "Email", keyboardType: .emailAddress, returnKeyType: .next)
-                        .padding()
-                        .background(
-                            RoundedRectangle(cornerRadius: 12)
-                                .fill(Color.white)
-                                .shadow(color: Color.black.opacity(0.1), radius: 5, x: 0, y: 2)
-                        )
+                        .cardStyle()
                         .padding(.horizontal)
                     
                     // Password Field Card
                     CustomTextField(text: $viewModel.password, placeholder: "Password", isSecure: true, returnKeyType: .done)
-                        .padding()
-                        .background(
-                            RoundedRectangle(cornerRadius: 12)
-                                .fill(Color.white)
-                                .shadow(color: Color.black.opacity(0.1), radius: 5, x: 0, y: 2)
-                        )
+                        .cardStyle()
                         .padding(.horizontal)
                     
                     if !viewModel.errorMessage.isEmpty {
@@ -76,17 +66,9 @@ struct LogInView: View {
                         }
                     }) {
                         Text("Log in")
-                            .font(.headline)
-                            .fontWeight(.semibold)
-                            .foregroundColor(.white)
-                            .frame(maxWidth: .infinity)
-                            .padding()
-                            .background(
-                                RoundedRectangle(cornerRadius: 12)
-                                    .fill((viewModel.email.isEmpty || viewModel.password.isEmpty) ? Color.gray : Color.blue)
-                            )
-                            .padding(.horizontal)
                     }
+                    .primaryButtonStyle(disabled: viewModel.email.isEmpty || viewModel.password.isEmpty)
+                    .padding(.horizontal)
                     .disabled(viewModel.email.isEmpty || viewModel.password.isEmpty)
                     
                     // Social Sign-In Buttons
@@ -102,15 +84,10 @@ struct LogInView: View {
                                 .fontWeight(.semibold)
                                 .foregroundColor(.black)
                         }
-                        .padding()
+                        .cardStyle()
                         .frame(maxWidth: .infinity)
-                        .background(
-                            RoundedRectangle(cornerRadius: 12)
-                                .fill(Color.white)
-                                .shadow(color: Color.black.opacity(0.1), radius: 5, x: 0, y: 2)
-                        )
-                        .padding(.horizontal)
                     }
+                    .padding(.horizontal)
                     
                     Button {
                         Task { await signUpWithApple() }
@@ -129,7 +106,7 @@ struct LogInView: View {
                             Text("Don't have an account yet?")
                             Text("Sign up")
                                 .bold()
-                                .foregroundColor(Color.blue)
+                                .foregroundColor(AppTheme.primaryColor)
                         }
                         .font(.subheadline)
                         .padding()
@@ -148,7 +125,7 @@ struct LogInView: View {
                 }
                 .padding()
             }
-            .background(Color(UIColor.systemGroupedBackground))
+            .background(AppTheme.background)
             .ignoresSafeArea(.keyboard, edges: .bottom)
         }
     }

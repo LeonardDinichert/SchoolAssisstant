@@ -57,8 +57,8 @@ struct ResetPasswordView: View {
                             .frame(maxWidth: .infinity)
                             .padding()
                             .background(
-                                RoundedRectangle(cornerRadius: 10)
-                                    .fill(Color("Green"))
+                                RoundedRectangle(cornerRadius: AppTheme.cornerRadius)
+                                    .fill(AppTheme.primaryColor)
                             )
                             .padding(.horizontal)
                     }
@@ -70,14 +70,14 @@ struct ResetPasswordView: View {
                 } label: {
                     Text("Cancel")
                         .font(.system(size: 18, weight: .bold))
-                        .foregroundColor(Color("Green"))
+                        .foregroundColor(AppTheme.primaryColor)
                         .padding()
                 }
                 
                 Spacer()
             }
             .padding()
-            .background(Color(uiColor: .systemGroupedBackground).ignoresSafeArea())
+            .background(AppTheme.background.ignoresSafeArea())
             .navigationTitle("Reset Password")
             .navigationBarTitleDisplayMode(.inline)
             .alert(isPresented: $alertIsShown) {

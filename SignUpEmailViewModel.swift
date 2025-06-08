@@ -39,7 +39,7 @@ final class SignUpEmailViewModel: NSObject, ObservableObject, ASAuthorizationCon
             do {
                 let authDataResult = try await AuthService.shared.createUser(email: email, password: password)
                 let user = DBUser(auth: authDataResult)
-                try UserManager.shared.createNewUser(user: user)
+                try await UserManager.shared.createNewUser(user: user)
                 
                 print("Success")
                 print(errorMessage)

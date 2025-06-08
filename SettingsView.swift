@@ -39,6 +39,12 @@ struct SettingsView: View {
                             settingsRow(title: "Biography")
                         }
 
+                        NavigationLink {
+                            EditProfileView(user: user)
+                        } label: {
+                            settingsRow(title: "Edit Profile")
+                        }
+
                     }
                     .padding(.horizontal)
                     
@@ -49,7 +55,7 @@ struct SettingsView: View {
                 }
                 .padding(.vertical)
             }
-            .background(Color(uiColor: .systemGroupedBackground).ignoresSafeArea())
+            .background(AppTheme.background.ignoresSafeArea())
             .navigationTitle("My account")
             .navigationBarTitleDisplayMode(.large)
         }
@@ -69,7 +75,7 @@ struct SettingsView: View {
             Image(systemName: "chevron.right")
                 .foregroundColor(.gray)
         }
-        .padding(.horizontal)
+        .cardStyle()
     }
 }
 
