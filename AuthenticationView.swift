@@ -53,16 +53,9 @@ struct AuthenticationView: View {
                                 .navigationBarBackButtonHidden()
                         } label: {
                             Text("Create an Account")
-                                .font(.system(size: 18, weight: .semibold))
-                                .foregroundColor(.primary)
                                 .frame(maxWidth: .infinity)
-                                .padding()
-                                .background(
-                                    RoundedRectangle(cornerRadius: 12)
-                                        .fill(Color.white)
-                                        .shadow(color: Color.black.opacity(0.1), radius: 5, x: 0, y: 2)
-                                )
                         }
+                        .primaryButtonStyle()
                         .padding(.horizontal)
                         
                         NavigationLink {
@@ -70,15 +63,9 @@ struct AuthenticationView: View {
                                 .navigationBarBackButtonHidden()
                         } label: {
                             Text("Log In")
-                                .font(.system(size: 18, weight: .semibold))
-                                .foregroundColor(.white)
                                 .frame(maxWidth: .infinity)
-                                .padding()
-                                .background(
-                                    RoundedRectangle(cornerRadius: 12)
-                                        .shadow(color: Color.black.opacity(0.1), radius: 5, x: 0, y: 2)
-                                )
                         }
+                        .primaryButtonStyle()
                         .padding(.horizontal)
                     }
                     

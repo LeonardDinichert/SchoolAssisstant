@@ -6,6 +6,7 @@
 //
 
 import SwiftUI
+import FirebaseAuth
 
 struct UserWantsToAddInfoView: View {
     
@@ -52,12 +53,12 @@ struct UserWantsToAddInfoView: View {
                 }
             }
             .padding()
-            .background(Color(.secondarySystemBackground))
-            .cornerRadius(12)
+            .background(AppTheme.cardBackground)
+            .cornerRadius(AppTheme.cornerRadius)
             .shadow(color: .black.opacity(0.05), radius: 4, x: 0, y: 2)
 
             Button(action: {
-                // TODO: handle save action
+                Task { await save() }
             }) {
                 Text("Save")
                     .frame(maxWidth: .infinity)
@@ -78,12 +79,26 @@ struct UserWantsToAddInfoView: View {
         .padding()
     }
     
-    func save() {
-        
-        
-        
-        userWantsAddInfo = false
+    func save() async {
+        guard let userId = Auth.auth().currentUser?.uid else {
+            userWantsAddInfo = false
+            return
+        }
 
+        let firstReview = Calendar.current.date(byAdding: .day, value: 1, to: Date()) ?? Date()
+        let note = LearningNote(category: category,
+                                text: learned,
+                                importance: importance.rawValue,
+                                reviewCount: 0,
+                                nextReview: firstReview,
+                                createdAt: Date())
+
+        do {
+            try await NotesManager.shared.addNote(note, userId: userId)
+            userWantsAddInfo = false
+        } catch {
+            print("Failed to save note: \(error)")
+        }
     }
 }
 

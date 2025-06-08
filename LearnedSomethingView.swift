@@ -18,18 +18,20 @@ struct LearnedSomethingView: View {
         NavigationStack {
             
             Text("Did you learn something new ?")
-            
+
             Button {
                 userWantsAddInfo = true
             } label: {
                 Text("I learned something new i want to remember")
             }
-            
+            .primaryButtonStyle()
+
             Button {
                 userWantsToRevise = true
             } label: {
                 Text("I want to revise")
             }
+            .primaryButtonStyle()
 
         }
         .fullScreenCover(isPresented: $userWantsToRevise) {

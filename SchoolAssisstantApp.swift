@@ -14,6 +14,8 @@ struct SchoolAssisstantApp: App {
     var body: some Scene {
         WindowGroup {
             HasSeenWelcomingMessage()
+                .tint(AppTheme.primaryColor)
+                .background(AppTheme.background)
         }
     }
 }
@@ -41,8 +43,9 @@ class AppDelegate: NSObject, UIApplicationDelegate {
 }
 
 struct MainInterfaceView: View {
-    
+
     @AppStorage("showSignInView") private var showSignInView = true
+    @AppStorage("useDarkMode") private var useDarkMode = false
     @State private var selectedTab: Tab = .home
     @State private var haptic = UIImpactFeedbackGenerator(style: .medium)
 
@@ -59,6 +62,14 @@ struct MainInterfaceView: View {
                     .tabItem { Label("Study", systemImage: "pencil.and.outline") }
                     .tag(Tab.studySession)
 
+                StatsView()
+                    .tabItem { Label("Stats", systemImage: "chart.bar") }
+                    .tag(Tab.stats)
+
+                TasksTab()
+                    .tabItem { Label("Tasks", systemImage: "list.bullet") }
+                    .tag(Tab.tasks)
+
                 LearnedSomethingView()
                     .tabItem { Label("Learn", systemImage: "graduationcap.fill") }
                     .tag(Tab.learnedSomething)
@@ -67,7 +78,8 @@ struct MainInterfaceView: View {
                     .tabItem { Label("Account", systemImage: "person.fill") }
                     .tag(Tab.account)
             }
-            
+            .background(AppTheme.background)
+            .preferredColorScheme(useDarkMode ? .dark : .light)
             .onChange(of: selectedTab) {
                 haptic.impactOccurred()
             }
@@ -79,5 +91,7 @@ enum Tab {
     case home
     case account
     case studySession
+    case stats
     case learnedSomething
+    case tasks
 }
