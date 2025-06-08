@@ -32,7 +32,18 @@ struct LearnedSomethingView: View {
                 Text("I want to revise")
             }
             .primaryButtonStyle()
+          
+                Button {
+                    userWantsToRevise = true
+                } label: {
+                    Text("I want to revise")
+                }
+                .primaryButtonStyle()
 
+                Spacer()
+            }
+            .padding()
+            .background(AppTheme.background)
         }
         .fullScreenCover(isPresented: $userWantsToRevise) {
             UserWantsToReviseView()
