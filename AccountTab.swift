@@ -129,7 +129,7 @@ struct AccountTab: View {
                     .padding()
                     
                 } // end ScrollView
-                .background(Color(uiColor: .systemGroupedBackground))
+                .background(AppTheme.background)
                 
             } else {
                 // MARK: - Loading / Not Logged In

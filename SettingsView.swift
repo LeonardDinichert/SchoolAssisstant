@@ -55,7 +55,7 @@ struct SettingsView: View {
                 }
                 .padding(.vertical)
             }
-            .background(Color(uiColor: .systemGroupedBackground).ignoresSafeArea())
+            .background(AppTheme.background.ignoresSafeArea())
             .navigationTitle("My account")
             .navigationBarTitleDisplayMode(.large)
         }

@@ -19,3 +19,11 @@ SchoolAssisstant is a study companion app built with SwiftUI. It helps students 
 
 Firebase integration requires setting up Firestore collections referenced in the code. See `UserManager` and `NotesManager` for document structures.
 
+## Design System
+The UI follows Apple's Human Interface Guidelines with a soft orange accent.
+
+- **Primary Color:** `#FFB660` with 10% tint and shade for states.
+- **Neutrals:** `#F8F8F8` and `#EAEAEB` for cards and separators.
+- **Components:** `cardStyle` and `primaryButtonStyle` keep rounded corners and gentle shadows consistent.
+- **Accessibility:** Dynamic Type and 44pt touch targets are respected.
+

@@ -122,7 +122,7 @@ struct SignUpView: View {
                             Text("Already have an account?")
                             Text("Log in")
                                 .bold()
-                                .foregroundColor(Color.blue)
+                                .foregroundColor(AppTheme.primaryColor)
                         }
                         .font(.system(size: 16))
                         .padding()
@@ -132,7 +132,7 @@ struct SignUpView: View {
                 }
                 .padding()
             }
-            .background(Color(UIColor.systemGroupedBackground))
+            .background(AppTheme.background)
             .ignoresSafeArea(.keyboard, edges: .bottom)
         }
         .navigationDestination(isPresented: $signUpSuccessful) {

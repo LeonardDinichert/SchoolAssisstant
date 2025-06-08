@@ -106,7 +106,7 @@ struct LogInView: View {
                             Text("Don't have an account yet?")
                             Text("Sign up")
                                 .bold()
-                                .foregroundColor(Color.blue)
+                                .foregroundColor(AppTheme.primaryColor)
                         }
                         .font(.subheadline)
                         .padding()
@@ -125,7 +125,7 @@ struct LogInView: View {
                 }
                 .padding()
             }
-            .background(Color(UIColor.systemGroupedBackground))
+            .background(AppTheme.background)
             .ignoresSafeArea(.keyboard, edges: .bottom)
         }
     }

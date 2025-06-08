@@ -44,8 +44,8 @@ struct HomeTab: View {
                                         Text(note.text)
                                             .frame(maxWidth: .infinity, alignment: .leading)
                                             .padding(8)
-                                            .background(Color(.secondarySystemBackground))
-                                            .cornerRadius(8)
+                                            .background(AppTheme.cardBackground)
+                                            .cornerRadius(AppTheme.cornerRadius)
                                     }
                                 }
                                 .padding(.horizontal)
