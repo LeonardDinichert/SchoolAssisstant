@@ -1,0 +1,400 @@
+{
+  "sourceLanguage" : "en",
+  "strings" : {
+    "" : {
+
+    },
+    "%lld min" : {
+      "localizations" : {
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%lld min"
+          }
+        }
+      }
+    },
+    "🎉 Great job! 🎉" : {
+
+    },
+    "Account" : {
+      "localizations" : {
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Profil"
+          }
+        }
+      }
+    },
+    "Add a profile picture" : {
+      "localizations" : {
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Ajouter une photo de profil"
+          }
+        }
+      }
+    },
+    "Add New Info" : {
+
+    },
+    "Already have an account?" : {
+      "localizations" : {
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Vous possédez déjà un compte ?"
+          }
+        }
+      }
+    },
+    "Are you sure you want to delete your account? You cannot undo it" : {
+      "localizations" : {
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Êtes-vous sûrs de vouloir supprimer votre compte ? Cette action est définitive"
+          }
+        }
+      }
+    },
+    "Back" : {
+
+    },
+    "Begin the pomodoro timer" : {
+      "localizations" : {
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Commencer le timer Pomodoro"
+          }
+        }
+      }
+    },
+    "Birthdate" : {
+      "localizations" : {
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Date d’anniversaire"
+          }
+        }
+      }
+    },
+    "Break" : {
+
+    },
+    "By resting a few minutes before working, you will be able to concentrate better" : {
+      "localizations" : {
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "En reposant vos esprits quelques minutes avant de travailler, vous serez capable de mieux travailler"
+          }
+        }
+      }
+    },
+    "Cancel" : {
+      "localizations" : {
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Annuler"
+          }
+        }
+      }
+    },
+    "Category" : {
+      "localizations" : {
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Categorie"
+          }
+        }
+      }
+    },
+    "Change my email adress" : {
+
+    },
+    "Create an Account" : {
+
+    },
+    "Create an account or log in to start exploring amazing opportunities." : {
+
+    },
+    "Delete my account" : {
+
+    },
+    "Describe what you learned" : {
+
+    },
+    "Did you learn something new ?" : {
+
+    },
+    "Don't have an account yet?" : {
+
+    },
+    "Edit Biography" : {
+
+    },
+    "Edit Your Biography" : {
+
+    },
+    "Eg. Math" : {
+
+    },
+    "Email adress :" : {
+
+    },
+    "Enter your email" : {
+
+    },
+    "Etes-vous sur de vouloir vous déconnecter?" : {
+
+    },
+    "Finish" : {
+
+    },
+    "Finish Registration" : {
+
+    },
+    "Forgot your Password?" : {
+
+    },
+    "Hello %@, let's work !" : {
+
+    },
+    "Hello, World!" : {
+
+    },
+    "History" : {
+
+    },
+    "Home" : {
+
+    },
+    "How important is it?" : {
+
+    },
+    "I learned something new i want to remember" : {
+
+    },
+    "I want to revise" : {
+
+    },
+    "If you are not logged in, you can log in below:" : {
+
+    },
+    "Importance" : {
+
+    },
+    "Informations manquantes" : {
+
+    },
+    "Key" : {
+      "extractionState" : "manual"
+    },
+    "Learn" : {
+
+    },
+    "Loading..." : {
+
+    },
+    "Log in" : {
+
+    },
+    "Log In" : {
+
+    },
+    "Log in to access your account." : {
+
+    },
+    "Log in with Google" : {
+
+    },
+    "Me déconnecter" : {
+
+    },
+    "Modify my password" : {
+
+    },
+    "More about my profile" : {
+
+    },
+    "My account" : {
+
+    },
+    "Next" : {
+      "localizations" : {
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Suivant"
+          }
+        }
+      }
+    },
+    "No" : {
+      "localizations" : {
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Non"
+          }
+        }
+      }
+    },
+    "No sessions yet." : {
+
+    },
+    "Non" : {
+
+    },
+    "OK" : {
+
+    },
+    "OR" : {
+
+    },
+    "Oui" : {
+
+    },
+    "Password reset" : {
+
+    },
+    "Please complete the information below to finish your registration" : {
+
+    },
+    "Prepare yourself better for working ?" : {
+
+    },
+    "Profile" : {
+
+    },
+    "Quit" : {
+
+    },
+    "Quit session" : {
+
+    },
+    "Quit session?" : {
+
+    },
+    "Registration" : {
+
+    },
+    "Reset" : {
+
+    },
+    "Reset my password" : {
+
+    },
+    "Reset Password" : {
+
+    },
+    "Reset Timer?" : {
+
+    },
+    "Save" : {
+
+    },
+    "Save Biography" : {
+
+    },
+    "Security and privacy" : {
+
+    },
+    "Session %lld of %lld" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "Session %1$lld of %2$lld"
+          }
+        }
+      }
+    },
+    "Settings" : {
+
+    },
+    "Share your story, skills, and experiences so others can get to know you better." : {
+
+    },
+    "Sign in / Create an account" : {
+
+    },
+    "Sign up" : {
+
+    },
+    "Sign up using your email to get started" : {
+
+    },
+    "Sign up with Google" : {
+
+    },
+    "Start a study session" : {
+
+    },
+    "Streak and social things view" : {
+
+    },
+    "Study" : {
+
+    },
+    "Study Session" : {
+
+    },
+    "Study Timer" : {
+
+    },
+    "Take 20 min break" : {
+
+    },
+    "This is a description" : {
+
+    },
+    "Title Example" : {
+
+    },
+    "Veuillez remplir toutes les informations demandées." : {
+
+    },
+    "We'll send you an email with instructions on how to reset it." : {
+
+    },
+    "Welcome" : {
+
+    },
+    "Welcome Back to Jobb" : {
+
+    },
+    "Welcome to Jobb" : {
+
+    },
+    "Welcome to SchoolAssisstant!" : {
+
+    },
+    "What category does it fit in?" : {
+
+    },
+    "What did you learn specifically?" : {
+
+    },
+    "What will you study %@" : {
+
+    },
+    "Work" : {
+
+    },
+    "Yes" : {
+
+    },
+    "You’ve completed four sessions." : {
+
+    }
+  },
+  "version" : "1.0"
+}

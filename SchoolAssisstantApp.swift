@@ -1,0 +1,83 @@
+//
+//  SchoolAssisstantApp.swift
+//  SchoolAssisstant
+//
+//  Created by Léonard Dinichert on 07.04.2025.
+//
+
+import SwiftUI
+import FirebaseCore
+
+@main
+struct SchoolAssisstantApp: App {
+    @UIApplicationDelegateAdaptor(AppDelegate.self) var delegate
+    var body: some Scene {
+        WindowGroup {
+            HasSeenWelcomingMessage()
+        }
+    }
+}
+
+struct HasSeenWelcomingMessage: View {
+    
+    @AppStorage("hasShownWelcome") private var hasShownWelcome: Bool = false
+    
+    var body: some View {
+        
+        if !hasShownWelcome {
+            JobbIntroView()
+        } else {
+            MainInterfaceView()
+        }
+    }
+}
+
+class AppDelegate: NSObject, UIApplicationDelegate {
+    func application(_ application: UIApplication,
+                     didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey : Any]? = nil) -> Bool {
+        FirebaseApp.configure()
+        return true
+    }
+}
+
+struct MainInterfaceView: View {
+    
+    @AppStorage("showSignInView") private var showSignInView = true
+    @State private var selectedTab: Tab = .home
+    @State private var haptic = UIImpactFeedbackGenerator(style: .medium)
+
+    var body: some View {
+        if showSignInView {
+            AuthenticationView()
+        } else {
+            TabView(selection: $selectedTab) {
+                HomeTab(selectedTab: $selectedTab)
+                    .tabItem { Label("Home", systemImage: "house.fill") }
+                    .tag(Tab.home)
+
+                StudySessionView()
+                    .tabItem { Label("Study", systemImage: "pencil.and.outline") }
+                    .tag(Tab.studySession)
+
+                LearnedSomethingView()
+                    .tabItem { Label("Learn", systemImage: "graduationcap.fill") }
+                    .tag(Tab.learnedSomething)
+
+                AccountTab()
+                    .tabItem { Label("Account", systemImage: "person.fill") }
+                    .tag(Tab.account)
+            }
+            
+            .onChange(of: selectedTab) {
+                haptic.impactOccurred()
+            }
+        }
+    }
+}
+
+enum Tab {
+    case home
+    case account
+    case studySession
+    case learnedSomething
+}

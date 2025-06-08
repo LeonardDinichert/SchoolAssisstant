@@ -1,0 +1,111 @@
+//
+//  UserAccountDetail.swift
+//
+//
+//  Created by Léonard Dinichert on 10.04.25.
+//
+
+import SwiftUI
+
+struct SettingsView: View {
+    
+    let userId: String
+    let user: DBUser
+    
+    @StateObject private var viewModel = userManagerViewModel()
+    
+    var body: some View {
+        NavigationStack {
+            ScrollView {
+                VStack(spacing: 32) {
+                    
+                    // MARK: - Personal Info Cards
+                    VStack(spacing: 16) {
+                        NavigationLink {
+                            ShowEmailAdressView()
+                        } label: {
+                            settingsRow(title: "Email")
+                        }
+                        
+                        NavigationLink {
+                            ShowPasswordView()
+                        } label: {
+                            settingsRow(title: "Password")
+                        }
+                        
+                        NavigationLink {
+                            modifyBiographyView(userId: userId)
+                        } label: {
+                            settingsRow(title: "Biography")
+                        }
+
+                    }
+                    .padding(.horizontal)
+                    
+                    Divider()
+                        .padding()
+                    
+                    Spacer()
+                }
+                .padding(.vertical)
+            }
+            .background(Color(uiColor: .systemGroupedBackground).ignoresSafeArea())
+            .navigationTitle("My account")
+            .navigationBarTitleDisplayMode(.large)
+        }
+        .task {
+            try? await viewModel.loadCurrentUser()
+        }
+    }
+    
+    // MARK: - Helper for Settings Row
+    @ViewBuilder
+    private func settingsRow(title: String) -> some View {
+        HStack {
+            Text(title)
+                .font(.system(size: 18, weight: .semibold))
+                .foregroundColor(.primary)
+            Spacer()
+            Image(systemName: "chevron.right")
+                .foregroundColor(.gray)
+        }
+        .padding(.horizontal)
+    }
+}
+
+@MainActor
+final class SettingViewModel: ObservableObject {
+    
+    @Published var authProviders: [authProviderOption] = []
+    @AppStorage("showSignInView") private var showSignInView: Bool = true
+    
+    
+    func loadAuthProviders() {
+        if let providers = try? AuthService.shared.getProviders() {
+            authProviders = providers
+        }
+    }
+    
+    func logOut() throws {
+        try AuthService.shared.signOut()
+    }
+    
+    func resetPassword() async throws {
+        let authUser = try AuthService.shared.getAuthenticatedUser()
+        
+        guard let email = authUser.email else {
+            throw URLError(.fileDoesNotExist)
+        }
+        
+        try await AuthService.shared.resetPassword(email: email)
+    }
+    
+    func updateEmail(email: String) async throws {
+        try await AuthService.shared.updateEmail(email: email)
+    }
+    
+    func updatePassword(password: String) async throws {
+        try await AuthService.shared.updatePassword(password: password)
+    }
+    
+}
