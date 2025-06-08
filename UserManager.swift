@@ -106,6 +106,33 @@ struct DBUser: Codable {
         try container.encodeIfPresent(self.biography, forKey: .biography)
         try container.encodeIfPresent(self.fcmToken, forKey: .fcmToken) // Encode FCM Token
     }
+
+    init?(id: String, data: [String: Any]) {
+        self.userId = id
+        self.email = data[CodingKeys.email.rawValue] as? String
+        self.age = data[CodingKeys.age.rawValue] as? Int
+        self.username = data[CodingKeys.username.rawValue] as? String
+        self.firstName = data[CodingKeys.firstName.rawValue] as? String
+        self.lastName = data[CodingKeys.lastName.rawValue] as? String
+        self.profileImagePathUrl = data[CodingKeys.profileImagePathUrl.rawValue] as? String
+        self.biography = data[CodingKeys.biography.rawValue] as? String
+        self.fcmToken = data[CodingKeys.fcmToken.rawValue] as? String
+    }
+
+    var dictionary: [String: Any] {
+        var dict: [String: Any] = [
+            CodingKeys.userId.rawValue: userId
+        ]
+        if let email = email { dict[CodingKeys.email.rawValue] = email }
+        if let age = age { dict[CodingKeys.age.rawValue] = age }
+        if let username = username { dict[CodingKeys.username.rawValue] = username }
+        if let firstName = firstName { dict[CodingKeys.firstName.rawValue] = firstName }
+        if let lastName = lastName { dict[CodingKeys.lastName.rawValue] = lastName }
+        if let profileImagePathUrl = profileImagePathUrl { dict[CodingKeys.profileImagePathUrl.rawValue] = profileImagePathUrl }
+        if let biography = biography { dict[CodingKeys.biography.rawValue] = biography }
+        if let fcmToken = fcmToken { dict[CodingKeys.fcmToken.rawValue] = fcmToken }
+        return dict
+    }
 }
 
 final class UserManager: ObservableObject {
@@ -123,20 +150,6 @@ final class UserManager: ObservableObject {
         userCollection.document(userId)
     }
     
-    // MARK: - Firestore Encoder/Decoder
-    
-    private let decoder: Firestore.Decoder = {
-        let decoder = Firestore.Decoder()
-        // decoder.keyDecodingStrategy = .convertFromSnakeCase
-        return decoder
-    }()
-    
-    private let encoder: Firestore.Encoder = {
-        let encoder = Firestore.Encoder()
-        // encoder.keyEncodingStrategy = .convertToSnakeCase
-        return encoder
-    }()
-    
     // MARK: - Authentication Properties
     
     @Published var currentUser: DBUser? = nil
@@ -145,8 +158,8 @@ final class UserManager: ObservableObject {
     
     // MARK: - Firestore User Data Management
     
-    func createNewUser(user: DBUser) throws {
-        try userDocument(userId: user.userId).setData(from: user, merge: false)
+    func createNewUser(user: DBUser) async throws {
+        try await userDocument(userId: user.userId).setData(user.dictionary, merge: false)
     }
     
     func deleteUsersData(userId: String) async throws {
@@ -154,13 +167,20 @@ final class UserManager: ObservableObject {
     }
     
     func getUser(userId: String) async throws -> DBUser {
-        try await userDocument(userId: userId).getDocument(as: DBUser.self)
+        let snapshot = try await userDocument(userId: userId).getDocument()
+        guard let data = snapshot.data() else {
+            throw NSError(domain: "UserManager", code: -1, userInfo: [NSLocalizedDescriptionKey: "User not found"])
+        }
+        guard let user = DBUser(id: snapshot.documentID, data: data) else {
+            throw NSError(domain: "UserManager", code: -1, userInfo: [NSLocalizedDescriptionKey: "Invalid user data"])
+        }
+        return user
     }
     
     func getAllUsers() async throws -> [DBUser] {
         let querySnapshot = try await userCollection.getDocuments()
-        return try querySnapshot.documents.compactMap { document in
-            try document.data(as: DBUser.self)
+        return querySnapshot.documents.compactMap { doc in
+            DBUser(id: doc.documentID, data: doc.data())
         }
     }
     
@@ -179,8 +199,12 @@ final class UserManager: ObservableObject {
         let data: [String: Any] = [
             "adress": adress
         ]
-        
+
         try await userDocument(userId: userId).setData(data, merge: true)
+    }
+
+    func updateUsername(userId: String, username: String) async throws {
+        try await userDocument(userId: userId).setData(["username": username], merge: true)
     }
     
     func addStudySessionRegisteredToUser(userId: String, studiedSubject: String, start: Date, end: Date) async throws {
@@ -190,8 +214,13 @@ final class UserManager: ObservableObject {
             "session_end": end,
             "studied_subject": studiedSubject
         ]
-        
+
         try await userDocument(userId: userId).collection("work_sessions").addDocument(data: data)
+    }
+
+    func fetchStudySessions(userId: String) async throws -> [StudySession] {
+        let snapshot = try await userDocument(userId: userId).collection("work_sessions").getDocuments()
+        return snapshot.documents.compactMap { StudySession(document: $0) }
     }
     
     func addBiographyAndTownToUser(userId: String, biography: String, town : String) async throws {
@@ -244,8 +273,10 @@ final class UserManager: ObservableObject {
 
 @MainActor
 final class userManagerViewModel: ObservableObject {
-    
+
     @Published private(set) var user: DBUser? = nil
+    @Published var leaderboard: [DBUser] = []
+    @AppStorage("useDarkMode") var useDarkMode: Bool = false
     
     let userCollection = Firestore.firestore().collection("users")
     
@@ -264,13 +295,14 @@ final class userManagerViewModel: ObservableObject {
         self.user = try await UserManager.shared.getUser(userId: userId)
     }
     
-    func sendNotificationRequest(title: String, body: String) {
+    func sendNotificationRequest(title: String, body: String, token: String? = nil) {
         guard let url = URL(string: "https://us-central1-jobb-8f5e7.cloudfunctions.net/sendPushNotification") else { return }
         var request = URLRequest(url: url)
         request.httpMethod = "POST"
 
         // Retrieve the FCM token from UserManager
-        guard let fcmToken = user?.fcmToken else {
+        let targetToken = token ?? user?.fcmToken
+        guard let fcmToken = targetToken else {
             print("FCM token not found (userManagerViewModel sendNotificationRequest)")
             return
         }
@@ -301,6 +333,14 @@ final class userManagerViewModel: ObservableObject {
             }
         }
         task.resume()
+    }
+
+    func loadLeaderboard() async {
+        do {
+            leaderboard = try await UserManager.shared.getAllUsers()
+        } catch {
+            print("Failed to load leaderboard: \(error)")
+        }
     }
     
     func saveProfileImage(data: Data, userId: String) async throws {

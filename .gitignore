@@ -1,0 +1,16 @@
+# Xcode user data and temporary files
+*.xcuserdatad
+*.xcuserstate
+
+# Build artifacts
+DerivedData/
+.build/
+
+# Xcode project archives
+*.xcodeproj.zip
+
+# Swift Package Manager resolved files
+Package.resolved
+
+# Other
+.DS_Store

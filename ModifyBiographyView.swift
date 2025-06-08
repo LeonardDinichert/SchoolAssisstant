@@ -34,13 +34,8 @@ struct modifyBiographyView: View {
                    // Biography Editor
                    TextEditor(text: $biography)
                        .font(.body)
-                       .padding(12)
                        .frame(minHeight: 150, maxHeight: 300)
-                       .background(
-                           RoundedRectangle(cornerRadius: 12)
-                               .fill(Color.white)
-                               .shadow(color: Color.black.opacity(0.05), radius: 4, x: 0, y: 2)
-                       )
+                       .cardStyle()
                        .padding(.horizontal)
                        .padding(.top, 20)
                    
@@ -53,20 +48,12 @@ struct modifyBiographyView: View {
                        }
                    }) {
                        Text("Save Biography")
-                           .font(.headline)
-                           .fontWeight(.semibold)
-                           .foregroundColor(.white)
-                           .frame(maxWidth: .infinity)
-                           .padding()
-                           .background(
-                               RoundedRectangle(cornerRadius: 12)
-                                   .fill(Color("JobbGreen"))
-                           )
                    }
+                   .primaryButtonStyle()
                    .padding(.horizontal)
                    .padding(.bottom, 20)
                }
-               .background(Color(UIColor.systemGroupedBackground).ignoresSafeArea())
+               .background(AppTheme.background.ignoresSafeArea())
                .navigationTitle("Edit Biography")
                .navigationBarTitleDisplayMode(.inline)
            }
