@@ -73,11 +73,7 @@ struct AccountTab: View {
                             }
                             .padding()
                         }
-                        .background(
-                            RoundedRectangle(cornerRadius: 12)
-                                .fill(Color(uiColor: .secondarySystemBackground))
-                                .shadow(color: Color.black.opacity(0.05), radius: 4, x: 0, y: 2)
-                        )
+                        .cardStyle()
                         .padding(.horizontal)
                         .padding(.top, 10)
                     }

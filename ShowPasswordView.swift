@@ -23,20 +23,10 @@ struct ShowPasswordView: View {
             NavigationLink {
                 ResetPasswordView()
             } label: {
-                ZStack {
-                    
-                    Rectangle()
-                        .frame(width: 160, height: 40)
-                        .cornerRadius(10)
-                        .shadow(radius: 4)
-                        .foregroundColor(.white)
-                    Text("Reset my password")
-                        .font(.title3)
-                        .foregroundColor(.primary)
-                        .fontWeight(.medium)
-                }
+                Text("Reset my password")
             }
-           .padding(.leading)
+            .primaryButtonStyle()
+            .padding(.leading)
             Spacer()
         }
     }

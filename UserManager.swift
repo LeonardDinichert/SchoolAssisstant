@@ -7,6 +7,7 @@
 
 import Foundation
 import FirebaseFirestore
+import FirebaseFirestoreSwift
 import PhotosUI
 import SwiftUI
 import Combine
@@ -179,8 +180,12 @@ final class UserManager: ObservableObject {
         let data: [String: Any] = [
             "adress": adress
         ]
-        
+
         try await userDocument(userId: userId).setData(data, merge: true)
+    }
+
+    func updateUsername(userId: String, username: String) async throws {
+        try await userDocument(userId: userId).setData(["username": username], merge: true)
     }
     
     func addStudySessionRegisteredToUser(userId: String, studiedSubject: String, start: Date, end: Date) async throws {
@@ -190,8 +195,15 @@ final class UserManager: ObservableObject {
             "session_end": end,
             "studied_subject": studiedSubject
         ]
-        
+
         try await userDocument(userId: userId).collection("work_sessions").addDocument(data: data)
+    }
+
+    func fetchStudySessions(userId: String) async throws -> [StudySession] {
+        let snapshot = try await userDocument(userId: userId).collection("work_sessions").getDocuments()
+        return try snapshot.documents.compactMap { document in
+            try document.data(as: StudySession.self)
+        }
     }
     
     func addBiographyAndTownToUser(userId: String, biography: String, town : String) async throws {
@@ -244,8 +256,10 @@ final class UserManager: ObservableObject {
 
 @MainActor
 final class userManagerViewModel: ObservableObject {
-    
+
     @Published private(set) var user: DBUser? = nil
+    @Published var leaderboard: [DBUser] = []
+    @AppStorage("useDarkMode") var useDarkMode: Bool = false
     
     let userCollection = Firestore.firestore().collection("users")
     
@@ -264,13 +278,14 @@ final class userManagerViewModel: ObservableObject {
         self.user = try await UserManager.shared.getUser(userId: userId)
     }
     
-    func sendNotificationRequest(title: String, body: String) {
+    func sendNotificationRequest(title: String, body: String, token: String? = nil) {
         guard let url = URL(string: "https://us-central1-jobb-8f5e7.cloudfunctions.net/sendPushNotification") else { return }
         var request = URLRequest(url: url)
         request.httpMethod = "POST"
 
         // Retrieve the FCM token from UserManager
-        guard let fcmToken = user?.fcmToken else {
+        let targetToken = token ?? user?.fcmToken
+        guard let fcmToken = targetToken else {
             print("FCM token not found (userManagerViewModel sendNotificationRequest)")
             return
         }
@@ -301,6 +316,14 @@ final class userManagerViewModel: ObservableObject {
             }
         }
         task.resume()
+    }
+
+    func loadLeaderboard() async {
+        do {
+            leaderboard = try await UserManager.shared.getAllUsers()
+        } catch {
+            print("Failed to load leaderboard: \(error)")
+        }
     }
     
     func saveProfileImage(data: Data, userId: String) async throws {

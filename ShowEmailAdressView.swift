@@ -33,9 +33,10 @@ struct ShowEmailAdressView: View {
                     Task {
                         try await settingsVm.updateEmail(email: user.email ?? "")
                     }
-                }, label: {
+                }) {
                     Text("Change my email adress")
-                })
+                }
+                .primaryButtonStyle()
             }
         }
         .task {
