@@ -21,7 +21,7 @@ class SignInWithGoogleModel: ObservableObject {
         let tokens = try await helper.signIn()
         let authDataResult = try await AuthService.shared.signInWithGoogle(tokens: tokens)
         let user = DBUser(auth: authDataResult)
-        try await UserManager.shared.createNewUser(user: user)
+        try UserManager.shared.createNewUser(user: user)
     }
     
     func signInGoogle() async throws {
