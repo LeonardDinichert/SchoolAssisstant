@@ -7,6 +7,7 @@ let package = Package(
         .library(name: "SchoolAssisstantPackage", targets: ["SchoolAssisstantPackage"])
     ],
     targets: [
-        .target(name: "SchoolAssisstantPackage", path: "swiftpackage")
+        .target(name: "SchoolAssisstantPackage", path: "swiftpackage"),
+        .testTarget(name: "SchoolAssisstantPackageTests", dependencies: ["SchoolAssisstantPackage"], path: "Tests/SchoolAssisstantPackageTests")
     ]
 )

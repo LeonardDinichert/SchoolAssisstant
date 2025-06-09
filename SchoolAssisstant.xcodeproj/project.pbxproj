@@ -111,36 +111,25 @@ F6D1F8F062B2601EA237E322 /* TasksTab.swift */ = {isa = PBXFileReference; lastKno
 A1D21D8E6E2B21FD0FA449BC /* UserWantsToReviseView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Views/UserWantsToReviseView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
-/* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
-		E3405F412DA816F600216E57 /* Exceptions for "SchoolAssisstant" folder in "SchoolAssisstant" target */ = {
-			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
-			membershipExceptions = (
-				Info.plist,
-			);
-			target = E3405EF02DA80F2100216E57 /* SchoolAssisstant */;
-		};
-/* End PBXFileSystemSynchronizedBuildFileExceptionSet section */
+/* Removed PBXFileSystemSynchronizedBuildFileExceptionSet section for older Xcode compatibility */
 
-/* Begin PBXFileSystemSynchronizedRootGroup section */
-		E3405EF32DA80F2100216E57 /* SchoolAssisstant */ = {
-			isa = PBXFileSystemSynchronizedRootGroup;
-			exceptions = (
-				E3405F412DA816F600216E57 /* Exceptions for "SchoolAssisstant" folder in "SchoolAssisstant" target */,
-			);
-			path = SchoolAssisstant;
-			sourceTree = "<group>";
-		};
-		E3B140062DBE2C9C00DE31AD /* StudysessionScreen */ = {
-			isa = PBXFileSystemSynchronizedRootGroup;
-			path = StudysessionScreen;
-			sourceTree = "<group>";
-		};
-		E3B140092DBE2CA000DE31AD /* LearnedSomeThingScreen */ = {
-			isa = PBXFileSystemSynchronizedRootGroup;
-			path = LearnedSomeThingScreen;
-			sourceTree = "<group>";
-		};
-/* End PBXFileSystemSynchronizedRootGroup section */
+/* Begin PBXGroup section (converted from PBXFileSystemSynchronizedRootGroup) */
+               E3405EF32DA80F2100216E57 /* SchoolAssisstant */ = {
+                       isa = PBXGroup;
+                       path = SchoolAssisstant;
+                       sourceTree = "<group>";
+               };
+               E3B140062DBE2C9C00DE31AD /* StudysessionScreen */ = {
+                       isa = PBXGroup;
+                       path = StudysessionScreen;
+                       sourceTree = "<group>";
+               };
+               E3B140092DBE2CA000DE31AD /* LearnedSomeThingScreen */ = {
+                       isa = PBXGroup;
+                       path = LearnedSomeThingScreen;
+                       sourceTree = "<group>";
+               };
+/* End PBXGroup section */
 
 /* Begin PBXFrameworksBuildPhase section */
 		E3405EEE2DA80F2100216E57 /* Frameworks */ = {
@@ -302,12 +291,7 @@ A1D21D8E6E2B21FD0FA449BC /* UserWantsToReviseView.swift */ = {isa = PBXFileRefer
 			);
 			dependencies = (
 			);
-			fileSystemSynchronizedGroups = (
-				E3405EF32DA80F2100216E57 /* SchoolAssisstant */,
-				E3B140062DBE2C9C00DE31AD /* StudysessionScreen */,
-				E3B140092DBE2CA000DE31AD /* LearnedSomeThingScreen */,
-			);
-			name = SchoolAssisstant;
+                       name = SchoolAssisstant;
 			packageProductDependencies = (
 				E3405F272DA80F7900216E57 /* FirebaseAppDistribution-Beta */,
 				E3405F292DA80F7900216E57 /* FirebaseAuth */,
