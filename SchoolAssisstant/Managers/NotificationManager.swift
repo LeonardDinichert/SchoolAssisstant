@@ -16,4 +16,9 @@ enum NotificationManager {
                                             trigger: trigger)
         center.add(request)
     }
+
+    static func cancelAll() {
+        let center = UNUserNotificationCenter.current()
+        center.removeAllPendingNotificationRequests()
+    }
 }

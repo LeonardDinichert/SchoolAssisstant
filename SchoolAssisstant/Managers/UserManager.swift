@@ -24,6 +24,7 @@ struct DBUser: Codable {
     let lastName: String?
     let profileImagePathUrl: String?
     let biography: String?
+    let lastConnection: Date?
     var fcmToken: String?
     
     // MARK: - Initializers
@@ -37,6 +38,7 @@ struct DBUser: Codable {
         self.username = nil
         self.profileImagePathUrl = nil
         self.biography = nil
+        self.lastConnection = nil
         self.fcmToken = nil
     }
     
@@ -50,7 +52,8 @@ struct DBUser: Codable {
         lastName: String? = nil,
         profileImagePathUrl: String? = nil,
         biography: String? = nil,
-        fcmToken: String? = nil
+        fcmToken: String? = nil,
+        lastConnection: Date? = nil
     ) {
         self.userId = userId
         self.email = email
@@ -60,6 +63,7 @@ struct DBUser: Codable {
         self.username = username
         self.profileImagePathUrl = profileImagePathUrl
         self.biography = biography
+        self.lastConnection = lastConnection
         self.fcmToken = fcmToken
     }
     
@@ -75,6 +79,7 @@ struct DBUser: Codable {
         case profileImagePathUrl = "profile_image_path_url"
         case biography = "biography"
         case fcmToken = "fcmToken" // Coding Key for FCM Token
+        case lastConnection = "last_connection"
     }
     
     // MARK: - Decoder Initializer
@@ -89,7 +94,8 @@ struct DBUser: Codable {
         self.username = try container.decodeIfPresent(String.self, forKey: .username)
         self.profileImagePathUrl = try container.decodeIfPresent(String.self, forKey: .profileImagePathUrl)
         self.biography = try container.decodeIfPresent(String.self, forKey: .biography)
-        self.fcmToken = try container.decodeIfPresent(String.self, forKey: .fcmToken) // Decode FCM Token
+        self.fcmToken = try container.decodeIfPresent(String.self, forKey: .fcmToken)
+        self.lastConnection = try container.decodeIfPresent(Date.self, forKey: .lastConnection)
     }
     
     // MARK: - Encoder Method
@@ -104,7 +110,8 @@ struct DBUser: Codable {
         try container.encodeIfPresent(self.age, forKey: .age)
         try container.encodeIfPresent(self.profileImagePathUrl, forKey: .profileImagePathUrl)
         try container.encodeIfPresent(self.biography, forKey: .biography)
-        try container.encodeIfPresent(self.fcmToken, forKey: .fcmToken) // Encode FCM Token
+        try container.encodeIfPresent(self.fcmToken, forKey: .fcmToken)
+        try container.encodeIfPresent(self.lastConnection, forKey: .lastConnection)
     }
 
     init?(id: String, data: [String: Any]) {
@@ -117,6 +124,11 @@ struct DBUser: Codable {
         self.profileImagePathUrl = data[CodingKeys.profileImagePathUrl.rawValue] as? String
         self.biography = data[CodingKeys.biography.rawValue] as? String
         self.fcmToken = data[CodingKeys.fcmToken.rawValue] as? String
+        if let ts = data[CodingKeys.lastConnection.rawValue] as? Timestamp {
+            self.lastConnection = ts.dateValue()
+        } else {
+            self.lastConnection = nil
+        }
     }
 
     var dictionary: [String: Any] {
@@ -131,6 +143,7 @@ struct DBUser: Codable {
         if let profileImagePathUrl = profileImagePathUrl { dict[CodingKeys.profileImagePathUrl.rawValue] = profileImagePathUrl }
         if let biography = biography { dict[CodingKeys.biography.rawValue] = biography }
         if let fcmToken = fcmToken { dict[CodingKeys.fcmToken.rawValue] = fcmToken }
+        if let lastConnection = lastConnection { dict[CodingKeys.lastConnection.rawValue] = Timestamp(date: lastConnection) }
         return dict
     }
 }
@@ -270,6 +283,12 @@ final class UserManager: ObservableObject {
             }
         }
     }
+
+    func updateLastConnection(userId: String, date: Date) async throws {
+        try await userDocument(userId: userId).setData([
+            DBUser.CodingKeys.lastConnection.rawValue: Timestamp(date: date)
+        ], merge: true)
+    }
 }
 
 // MARK: - userManagerViewModel
@@ -296,6 +315,7 @@ final class userManagerViewModel: ObservableObject {
         print("userid", userId)
 
         self.user = try await UserManager.shared.getUser(userId: userId)
+        try? await UserManager.shared.updateLastConnection(userId: userId, date: Date())
     }
     
     func sendNotificationRequest(title: String, body: String, token: String? = nil) {
