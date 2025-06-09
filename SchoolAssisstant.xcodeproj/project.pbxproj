@@ -121,12 +121,14 @@ A1D21D8E6E2B21FD0FA449BC /* UserWantsToReviseView.swift */ = {isa = PBXFileRefer
                };
                E3B140062DBE2C9C00DE31AD /* StudysessionScreen */ = {
                        isa = PBXGroup;
-                       path = StudysessionScreen;
+                       name = StudysessionScreen;
+                       path = "";
                        sourceTree = "<group>";
                };
                E3B140092DBE2CA000DE31AD /* LearnedSomeThingScreen */ = {
                        isa = PBXGroup;
-                       path = LearnedSomeThingScreen;
+                       name = LearnedSomeThingScreen;
+                       path = "";
                        sourceTree = "<group>";
                };
 /* End PBXGroup section */
@@ -154,24 +156,26 @@ A1D21D8E6E2B21FD0FA449BC /* UserWantsToReviseView.swift */ = {isa = PBXFileRefer
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		E31B203C2DA94954005F5816 /* Auth */ = {
-			isa = PBXGroup;
-			children = (
-				E3405F112DA80F4100216E57 /* LogInView.swift */,
-				E3405F122DA80F4100216E57 /* SignUpView.swift */,
-				E3405F132DA80F4100216E57 /* AuthenticationView.swift */,
-			);
-			path = Auth;
-			sourceTree = "<group>";
-		};
-		E31B203D2DA9495B005F5816 /* UserCreation */ = {
-			isa = PBXGroup;
-			children = (
-				E31B203E2DA9499A005F5816 /* UserInfosCreation.swift */,
-			);
-			path = UserCreation;
-			sourceTree = "<group>";
-		};
+               E31B203C2DA94954005F5816 /* Auth */ = {
+                       isa = PBXGroup;
+                       children = (
+                               E3405F112DA80F4100216E57 /* LogInView.swift */,
+                               E3405F122DA80F4100216E57 /* SignUpView.swift */,
+                               E3405F132DA80F4100216E57 /* AuthenticationView.swift */,
+                       );
+                       name = Auth;
+                       path = "";
+                       sourceTree = "<group>";
+               };
+               E31B203D2DA9495B005F5816 /* UserCreation */ = {
+                       isa = PBXGroup;
+                       children = (
+                               E31B203E2DA9499A005F5816 /* UserInfosCreation.swift */,
+                       );
+                       name = UserCreation;
+                       path = "";
+                       sourceTree = "<group>";
+               };
 		E3405EE82DA80F2100216E57 = {
 			isa = PBXGroup;
 			children = (
@@ -236,46 +240,50 @@ A1D21D8E6E2B21FD0FA449BC /* UserWantsToReviseView.swift */ = {isa = PBXFileRefer
 			path = ViewModels;
 			sourceTree = "<group>";
 		};
-		E3405F142DA80F4100216E57 /* Authentication */ = {
-			isa = PBXGroup;
-			children = (
-				E31B203D2DA9495B005F5816 /* UserCreation */,
-				E3405F102DA80F4100216E57 /* ViewModels */,
-				E31B203C2DA94954005F5816 /* Auth */,
-			);
-			path = Authentication;
-			sourceTree = "<group>";
-		};
-		E3767A6B2DC2647100F1FBD0 /* Songs */ = {
-			isa = PBXGroup;
-			children = (
-				E3767A692DC2609100F1FBD0 /* relaxing.mp3 */,
-			);
-			path = Songs;
-			sourceTree = "<group>";
-		};
-		E37B3C4E2DA83DCA005CB93F /* Account */ = {
-			isa = PBXGroup;
-			children = (
-				E3405F002DA80F4100216E57 /* AccountTab.swift */,
-				E37B3C4F2DA83DCF005CB93F /* SettingsView.swift */,
-				E37B3C542DA84086005CB93F /* PrivacyView.swift */,
-				E37B3C562DA8411B005CB93F /* ShowEmailAdressView.swift */,
-				E37B3C572DA8411B005CB93F /* ShowPasswordView.swift */,
-				E37B3C5A2DA8418B005CB93F /* ModifyBiographyView.swift */,
-				E37B3C5E2DA843A0005CB93F /* ResetPasswordView.swift */,
-			);
-			path = Account;
-			sourceTree = "<group>";
-		};
-		E37B3C512DA83DE9005CB93F /* HomeView */ = {
-			isa = PBXGroup;
-			children = (
-				E3405EFF2DA80F4100216E57 /* HomeTab.swift */,
-			);
-			path = HomeView;
-			sourceTree = "<group>";
-		};
+               E3405F142DA80F4100216E57 /* Authentication */ = {
+                       isa = PBXGroup;
+                       children = (
+                               E31B203D2DA9495B005F5816 /* UserCreation */,
+                               E3405F102DA80F4100216E57 /* ViewModels */,
+                               E31B203C2DA94954005F5816 /* Auth */,
+                       );
+                       name = Authentication;
+                       path = "";
+                       sourceTree = "<group>";
+               };
+               E3767A6B2DC2647100F1FBD0 /* Songs */ = {
+                       isa = PBXGroup;
+                       children = (
+                               E3767A692DC2609100F1FBD0 /* relaxing.mp3 */,
+                       );
+                       name = Songs;
+                       path = Resources;
+                       sourceTree = "<group>";
+               };
+               E37B3C4E2DA83DCA005CB93F /* Account */ = {
+                       isa = PBXGroup;
+                       children = (
+                               E3405F002DA80F4100216E57 /* AccountTab.swift */,
+                               E37B3C4F2DA83DCF005CB93F /* SettingsView.swift */,
+                               E37B3C542DA84086005CB93F /* PrivacyView.swift */,
+                               E37B3C562DA8411B005CB93F /* ShowEmailAdressView.swift */,
+                               E37B3C572DA8411B005CB93F /* ShowPasswordView.swift */,
+                               E37B3C5A2DA8418B005CB93F /* ModifyBiographyView.swift */,
+                               E37B3C5E2DA843A0005CB93F /* ResetPasswordView.swift */,
+                       );
+                       name = Account;
+                       path = "";
+                       sourceTree = "<group>";
+               };
+               E37B3C512DA83DE9005CB93F /* HomeView */ = {
+                       isa = PBXGroup;
+                       children = (
+                               E3405EFF2DA80F4100216E57 /* HomeTab.swift */,
+                       );
+                       name = HomeView;
+                       path = "";
+                       sourceTree = "<group>";
+               };
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
