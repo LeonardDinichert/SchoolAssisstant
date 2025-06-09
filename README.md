@@ -5,9 +5,10 @@ SchoolAssisstant is a study companion app built with SwiftUI. It helps students 
 ## Features
 - **Pomodoro Timer** – Focused study sessions with optional relaxation break.
 - **Learning Notes** – Save quick notes while studying and review them later.
-- **Revision Reminders** – View due notes using a spaced-repetition approach.
+- **Revision Reminders** – View due notes using a spaced-repetition approach and receive notifications to review new information.
 - **Statistics** – Charts showing daily study minutes.
 - **Profile Management** – Sign up, log in, and edit your account details.
+- **Study State Prompt** – After logging in, specify whether you're in middle school, high school, college, or another level.
 - **Tasks** – Keep track of homework and receive reminders.
 - **Streaks & Friends** – View your study streak and nudge friends to join you.
 

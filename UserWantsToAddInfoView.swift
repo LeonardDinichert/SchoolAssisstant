@@ -95,6 +95,11 @@ struct UserWantsToAddInfoView: View {
 
         do {
             try await NotesManager.shared.addNote(note, userId: userId)
+            let now = Date()
+            NotificationManager.scheduleNotification(title: "Review", body: learned, at: Calendar.current.date(byAdding: .hour, value: 1, to: now) ?? now)
+            NotificationManager.scheduleNotification(title: "Review", body: learned, at: Calendar.current.date(byAdding: .day, value: 1, to: now) ?? now)
+            NotificationManager.scheduleNotification(title: "Review", body: learned, at: Calendar.current.date(byAdding: .day, value: 4, to: now) ?? now)
+            NotificationManager.scheduleNotification(title: "Review", body: learned, at: Calendar.current.date(byAdding: .day, value: 7, to: now) ?? now)
             userWantsAddInfo = false
         } catch {
             print("Failed to save note: \(error)")
