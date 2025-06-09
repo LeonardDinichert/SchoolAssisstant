@@ -43,6 +43,7 @@
 		E37B3C592DA8411B005CB93F /* ShowEmailAdressView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E37B3C562DA8411B005CB93F /* ShowEmailAdressView.swift */; };
 		E37B3C5B2DA8418B005CB93F /* ModifyBiographyView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E37B3C5A2DA8418B005CB93F /* ModifyBiographyView.swift */; };
 		E37B3C5F2DA843A0005CB93F /* ResetPasswordView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E37B3C5E2DA843A0005CB93F /* ResetPasswordView.swift */; };
+                3dda1ecaa1b03555ea42b8f0 /* StudyStateView.swift in Sources */ = {isa = PBXBuildFile; fileRef = d5a000bea56848f4bae60b46 /* StudyStateView.swift */; }
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -71,6 +72,7 @@
 		E37B3C572DA8411B005CB93F /* ShowPasswordView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShowPasswordView.swift; sourceTree = "<group>"; };
 		E37B3C5A2DA8418B005CB93F /* ModifyBiographyView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModifyBiographyView.swift; sourceTree = "<group>"; };
 		E37B3C5E2DA843A0005CB93F /* ResetPasswordView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResetPasswordView.swift; sourceTree = "<group>"; };
+                d5a000bea56848f4bae60b46 /* StudyStateView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StudyStateView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
@@ -245,6 +247,7 @@
 			isa = PBXGroup;
 			children = (
 				E3405EFF2DA80F4100216E57 /* HomeTab.swift */,
+                                d5a000bea56848f4bae60b46 /* StudyStateView.swift */,
 			);
 			path = HomeView;
 			sourceTree = "<group>";
@@ -344,6 +347,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				E3405F162DA80F4200216E57 /* HomeTab.swift in Sources */,
+                                3dda1ecaa1b03555ea42b8f0 /* StudyStateView.swift in Sources */,
 				E3405F172DA80F4200216E57 /* SignUpEmailViewModel.swift in Sources */,
 				E37B3C5F2DA843A0005CB93F /* ResetPasswordView.swift in Sources */,
 				E37B3C582DA8411B005CB93F /* ShowPasswordView.swift in Sources */,

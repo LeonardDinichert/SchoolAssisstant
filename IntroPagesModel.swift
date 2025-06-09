@@ -16,9 +16,9 @@ struct IntroPage: Identifiable {
 
 struct IntroPagesModel {
     static let pages: [IntroPage] = [
-        IntroPage(title: "Welcome", description: "Manage your school tasks easily.", systemImage: "star"),
-        IntroPage(title: "Track Progress", description: "Keep track of what you've learned.", systemImage: "list.bullet.rectangle"),
-        IntroPage(title: "Stay Focused", description: "Use timers to stay productive.", systemImage: "timer")
+        IntroPage(title: "Welcome", description: "School Assistant helps you learn anything faster and have fun doing it.", systemImage: "books.vertical"),
+        IntroPage(title: "Democratize Learning", description: "Our goal is to democratize knowledge and make studying simpler for everyone.", systemImage: "bolt.fill"),
+        IntroPage(title: "Disclaimer", description: "An app can't replace a real teacher but it will help you learn with ease.", systemImage: "exclamationmark.triangle")
     ]
 }
 

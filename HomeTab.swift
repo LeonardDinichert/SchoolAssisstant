@@ -13,6 +13,7 @@ struct HomeTab: View {
     @StateObject private var notesViewModel = NotesViewModel()
     @StateObject private var statsModel = StatsViewModel()
     @Binding var selectedTab: Tab
+    @State private var showStudyState: Bool = false
 
 
     var body: some View {
@@ -91,10 +92,16 @@ struct HomeTab: View {
         .onAppear {
             Task {
                 try await viewModel.loadCurrentUser()
+                if viewModel.user?.studyState == nil {
+                    showStudyState = true
+                }
                 await notesViewModel.loadNotes()
                 await statsModel.load()
                 await viewModel.loadLeaderboard()
             }
+        }
+        .fullScreenCover(isPresented: $showStudyState) {
+            StudyStateView(show: $showStudyState)
         }
     }
 }

@@ -25,6 +25,8 @@ struct UserInfosCreation: View {
     
     @StateObject private var viewModel = userManagerViewModel()
     @State private var profileImageData: Data? = nil
+    @State private var studyState: String = "Middle School"
+    private let studyOptions = ["Middle School", "High School", "College", "University", "Other"]
     
     @FocusState private var focusedField: Field?
     
@@ -69,6 +71,20 @@ struct UserInfosCreation: View {
                         .datePickerStyle(CompactDatePickerStyle())
                         .cardStyle()
                         .padding(.horizontal)
+
+                    // Study State
+                    VStack(alignment: .leading) {
+                        Text("Study State")
+                            .font(.headline)
+                        Picker("Study State", selection: $studyState) {
+                            ForEach(studyOptions, id: \.self) { option in
+                                Text(option).tag(option)
+                            }
+                        }
+                        .pickerStyle(.menu)
+                    }
+                    .cardStyle()
+                    .padding(.horizontal)
                     
                     
                     // Profile Image Picker
@@ -188,6 +204,8 @@ struct UserInfosCreation: View {
                 birthDate: birthDate,
                 username: username,
             )
+
+            try await UserManager.shared.updateStudyState(userId: userId, studyState: studyState)
             
             
             print("Informations registred successfully")

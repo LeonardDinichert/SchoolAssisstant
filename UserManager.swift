@@ -24,6 +24,7 @@ struct DBUser: Codable {
     let lastName: String?
     let profileImagePathUrl: String?
     let biography: String?
+    let studyState: String?
     var fcmToken: String?
     
     // MARK: - Initializers
@@ -37,6 +38,7 @@ struct DBUser: Codable {
         self.username = nil
         self.profileImagePathUrl = nil
         self.biography = nil
+        self.studyState = nil
         self.fcmToken = nil
     }
     
@@ -50,6 +52,7 @@ struct DBUser: Codable {
         lastName: String? = nil,
         profileImagePathUrl: String? = nil,
         biography: String? = nil,
+        studyState: String? = nil,
         fcmToken: String? = nil
     ) {
         self.userId = userId
@@ -60,6 +63,7 @@ struct DBUser: Codable {
         self.username = username
         self.profileImagePathUrl = profileImagePathUrl
         self.biography = biography
+        self.studyState = studyState
         self.fcmToken = fcmToken
     }
     
@@ -74,6 +78,7 @@ struct DBUser: Codable {
         case lastName = "last_name"
         case profileImagePathUrl = "profile_image_path_url"
         case biography = "biography"
+        case studyState = "study_state"
         case fcmToken = "fcmToken" // Coding Key for FCM Token
     }
     
@@ -89,6 +94,7 @@ struct DBUser: Codable {
         self.username = try container.decodeIfPresent(String.self, forKey: .username)
         self.profileImagePathUrl = try container.decodeIfPresent(String.self, forKey: .profileImagePathUrl)
         self.biography = try container.decodeIfPresent(String.self, forKey: .biography)
+        self.studyState = try container.decodeIfPresent(String.self, forKey: .studyState)
         self.fcmToken = try container.decodeIfPresent(String.self, forKey: .fcmToken) // Decode FCM Token
     }
     
@@ -104,6 +110,7 @@ struct DBUser: Codable {
         try container.encodeIfPresent(self.age, forKey: .age)
         try container.encodeIfPresent(self.profileImagePathUrl, forKey: .profileImagePathUrl)
         try container.encodeIfPresent(self.biography, forKey: .biography)
+        try container.encodeIfPresent(self.studyState, forKey: .studyState)
         try container.encodeIfPresent(self.fcmToken, forKey: .fcmToken) // Encode FCM Token
     }
 
@@ -116,6 +123,7 @@ struct DBUser: Codable {
         self.lastName = data[CodingKeys.lastName.rawValue] as? String
         self.profileImagePathUrl = data[CodingKeys.profileImagePathUrl.rawValue] as? String
         self.biography = data[CodingKeys.biography.rawValue] as? String
+        self.studyState = data[CodingKeys.studyState.rawValue] as? String
         self.fcmToken = data[CodingKeys.fcmToken.rawValue] as? String
     }
 
@@ -130,6 +138,7 @@ struct DBUser: Codable {
         if let lastName = lastName { dict[CodingKeys.lastName.rawValue] = lastName }
         if let profileImagePathUrl = profileImagePathUrl { dict[CodingKeys.profileImagePathUrl.rawValue] = profileImagePathUrl }
         if let biography = biography { dict[CodingKeys.biography.rawValue] = biography }
+        if let studyState = studyState { dict[CodingKeys.studyState.rawValue] = studyState }
         if let fcmToken = fcmToken { dict[CodingKeys.fcmToken.rawValue] = fcmToken }
         return dict
     }
@@ -205,6 +214,10 @@ final class UserManager: ObservableObject {
 
     func updateUsername(userId: String, username: String) async throws {
         try await userDocument(userId: userId).setData(["username": username], merge: true)
+    }
+
+    func updateStudyState(userId: String, studyState: String) async throws {
+        try await userDocument(userId: userId).setData(["study_state": studyState], merge: true)
     }
     
     func addStudySessionRegisteredToUser(userId: String, studiedSubject: String, start: Date, end: Date) async throws {
@@ -353,6 +366,12 @@ final class userManagerViewModel: ObservableObject {
         print("Name: \(name)")
         let url = try await StorageManager.shared.getUrlForImage(path: path)
         try await UserManager.shared.updateUserProfileImagePathUrl(userId: userId, path: path, url: url.absoluteString)
+    }
+
+    func updateStudyState(state: String) async throws {
+        guard let userId = Auth.auth().currentUser?.uid else { return }
+        try await UserManager.shared.updateStudyState(userId: userId, studyState: state)
+        try await loadCurrentUser()
     }
     
     func deleteProfileImage() {
