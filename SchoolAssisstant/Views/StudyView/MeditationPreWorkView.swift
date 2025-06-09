@@ -16,11 +16,11 @@ struct MeditationPreWorkView: View {
         "Be sure that you know all your goals for the first timer, the next one, and for the day.",
         "Breathe in, and out, focus",
         "Stillness is where creativity and solutions are found.",
-        "Visualise yourself alreadey working",
+        "Visualise yourself already working",
         "Think about how proud you will be of yourself when you will have finished this work",
     ]
     
-    private let quoteTimer = Timer.publish(every: 5, on: .main, in: .common).autoconnect()
+    private let quoteTimer = Timer.publish(every: 15, on: .main, in: .common).autoconnect()
     private let countdownTimer = Timer.publish(every: 1, on: .main, in: .common).autoconnect()
 
 

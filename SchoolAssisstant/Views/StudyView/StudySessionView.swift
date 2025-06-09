@@ -14,7 +14,7 @@ struct StudySessionView: View {
     @State var userWillStudy: String = ""
     @State var openMeditationView: Bool = false
     @State var startSession: Bool = false
-    @State var userId: String?
+    @State var userId: String = ""
     
     var body: some View {
         NavigationStack {
@@ -22,7 +22,7 @@ struct StudySessionView: View {
                 if let user = viewModel.user {
                     VStack {
 
-                        Text("What will you study \(user.firstName ?? "no name")")
+                        Text("What will you study \(user.firstName ?? "no name") ? ")
                             .font(.title)
                             .fontWeight(.semibold)
                         
@@ -62,9 +62,9 @@ struct StudySessionView: View {
                         Spacer()
                         
                         Button {
-
-                            startSession = true
+                            
                             userId = user.userId
+                            startSession = true
 
                         } label: {
                             Text("Begin the pomodoro timer")
@@ -93,9 +93,10 @@ struct StudySessionView: View {
             MeditationPreWorkView(openMeditationView: $openMeditationView)
         })
         .fullScreenCover(isPresented: $startSession, content: {
-            PomodoroTimerView(startSession: $startSession, userWillStudy: $userWillStudy, userId: userId ?? "")
+            PomodoroTimerView(startSession: $startSession, userWillStudy: $userWillStudy, userId: userId)
         })
-        .onAppear {
+        
+        .task {
             Task {
                 try await viewModel.loadCurrentUser()
             }

@@ -128,6 +128,9 @@
     "Create an account or log in to start exploring amazing opportunities." : {
 
     },
+    "Current streak: %lld days" : {
+
+    },
     "Dark Mode" : {
 
     },
@@ -143,7 +146,7 @@
     "Describe what you learned" : {
 
     },
-    "Did you learn something new ?" : {
+    "Did you learn something new?" : {
 
     },
     "Don't have an account yet?" : {
@@ -200,7 +203,7 @@
     "How important is it?" : {
 
     },
-    "I learned something new i want to remember" : {
+    "I learned something new" : {
 
     },
     "I want to revise" : {
@@ -234,6 +237,9 @@
 
     },
     "Log in with Google" : {
+
+    },
+    "Long Break" : {
 
     },
     "Me déconnecter" : {
@@ -356,7 +362,13 @@
     "Settings" : {
 
     },
+    "Share it or revise past notes below." : {
+
+    },
     "Share your story, skills, and experiences so others can get to know you better." : {
+
+    },
+    "Short Break" : {
 
     },
     "Sign in / Create an account" : {
@@ -378,6 +390,9 @@
 
     },
     "Study" : {
+
+    },
+    "Study Minutes by Day" : {
 
     },
     "Study Session" : {
@@ -419,7 +434,7 @@
     "What did you learn specifically?" : {
 
     },
-    "What will you study %@" : {
+    "What will you study %@ ? " : {
 
     },
     "Work" : {

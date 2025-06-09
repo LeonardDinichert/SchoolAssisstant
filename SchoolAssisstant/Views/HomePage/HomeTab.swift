@@ -36,20 +36,20 @@ struct HomeTab: View {
                             Text("You're on a \(statsModel.streak) day streak!")
                                 .font(.headline)
 
-                            if !notesViewModel.notes.isEmpty {
-                                VStack(alignment: .leading) {
-                                    Text("Recent Notes")
-                                        .font(.headline)
-                                    ForEach(notesViewModel.notes.prefix(3)) { note in
-                                        Text(note.text)
-                                            .frame(maxWidth: .infinity, alignment: .leading)
-                                            .padding(8)
-                                            .background(AppTheme.cardBackground)
-                                            .cornerRadius(AppTheme.cornerRadius)
-                                    }
-                                }
-                                .padding(.horizontal)
-                            }
+//                            if !notesViewModel.notes.isEmpty {
+//                                VStack(alignment: .leading) {
+//                                    Text("Recent Notes")
+//                                        .font(.headline)
+//                                    ForEach(notesViewModel.notes.prefix(3)) { note in
+//                                        Text(note.text)
+//                                            .frame(maxWidth: .infinity, alignment: .leading)
+//                                            .padding(8)
+//                                            .background(AppTheme.cardBackground)
+//                                            .cornerRadius(AppTheme.cornerRadius)
+//                                    }
+//                                }
+//                                .padding(.horizontal)
+//                            }
                             if !viewModel.leaderboard.isEmpty {
                                 VStack(alignment: .leading) {
                                     Text("Friends")

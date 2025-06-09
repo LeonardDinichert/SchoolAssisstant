@@ -214,7 +214,7 @@ final class UserManager: ObservableObject {
             "session_end": end,
             "studied_subject": studiedSubject
         ]
-
+        
         try await userDocument(userId: userId).collection("work_sessions").addDocument(data: data)
     }
 

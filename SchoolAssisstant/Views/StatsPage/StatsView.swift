@@ -8,36 +8,36 @@ struct StudySession: Identifiable, Codable {
     let session_start: Date
     let session_end: Date
     let studied_subject: String
-
+    
     var duration: TimeInterval {
         session_end.timeIntervalSince(session_start)
     }
-
+    
     init(id: String? = nil, session_start: Date, session_end: Date, studied_subject: String) {
         self.id = id
         self.session_start = session_start
         self.session_end = session_end
         self.studied_subject = studied_subject
     }
-
+    
     init?(document: DocumentSnapshot) {
         guard let data = document.data(),
               let startTS = data["session_start"] as? Timestamp,
               let endTS = data["session_end"] as? Timestamp,
               let subject = data["studied_subject"] as? String else { return nil }
-
+        
         self.id = document.documentID
         self.session_start = startTS.dateValue()
         self.session_end = endTS.dateValue()
         self.studied_subject = subject
     }
-
+    
 }
 
 @MainActor
 final class StatsViewModel: ObservableObject {
     @Published var sessions: [StudySession] = []
-
+    
     func load() async {
         guard let userId = Auth.auth().currentUser?.uid else { return }
         do {
@@ -46,7 +46,7 @@ final class StatsViewModel: ObservableObject {
             print("Failed to load sessions: \(error)")
         }
     }
-
+    
     var dailyTotals: [(day: Date, minutes: Double)] {
         let cal = Calendar.current
         var totals: [Date: Double] = [:]
@@ -56,7 +56,7 @@ final class StatsViewModel: ObservableObject {
         }
         return totals.map { ($0.key, $0.value) }.sorted { $0.day < $1.day }
     }
-
+    
     var streak: Int {
         let cal = Calendar.current
         let days = Set(sessions.map { cal.startOfDay(for: $0.session_start) }).sorted(by: >)
@@ -79,10 +79,16 @@ final class StatsViewModel: ObservableObject {
 
 struct StatsView: View {
     @StateObject private var viewModel = StatsViewModel()
-
+    
     var body: some View {
         NavigationStack {
-            VStack {
+            VStack(alignment: .leading, spacing: 16) {
+                Text("Study Minutes by Day")
+                    .font(.headline)
+                Text("Current streak: \(viewModel.streak) days")
+                    .font(.subheadline)
+                    .foregroundColor(.secondary)
+                
                 if viewModel.dailyTotals.isEmpty {
                     Text("No sessions yet")
                         .foregroundColor(.secondary)
@@ -96,6 +102,8 @@ struct StatsView: View {
                             .foregroundStyle(AppTheme.primaryColor)
                         }
                     }
+                    .chartXAxisLabel("Day")
+                    .chartYAxisLabel("Minutes")
                     .frame(height: 200)
                 }
                 Spacer()

@@ -75,7 +75,7 @@ struct PomodoroTimerView: View {
                 }
             }
             .onReceive(ticker) { tick in
-                now = tick                             // ← update every second
+                now = tick
                 if isRunning && elapsedSeconds >= currentDuration {
                     completePhase()
                 }
@@ -151,6 +151,19 @@ struct PomodoroTimerView: View {
                     // Landscape: timer + controls on left, history on right
                     HStack(spacing: 20) {
                         VStack(spacing: 24) {
+                            if phase == .work {
+                                Text("Work")
+                                    .font(.title2)
+                                
+                            } else if phase == .shortBreak {
+                                Text("Short Break")
+                                    .font(.title2)
+
+                            } else if phase == .longBreak {
+                                Text("Long Break")
+                                    .font(.title2)
+
+                            }
                             timerCard
                                 .frame(width: geo.size.width * 0.4,
                                        height: geo.size.width * 0.4)
@@ -238,6 +251,7 @@ struct PomodoroTimerView: View {
             Color(.systemBackground).ignoresSafeArea()
             timerCard.onTapGesture { isFocusMode = false }
         }
+        .padding()
     }
 
     private var timerCard: some View {
@@ -292,6 +306,7 @@ struct PomodoroTimerView: View {
             )
             let end = now
             Task {
+               
                 try await UserManager
                   .shared
                   .addStudySessionRegisteredToUser(
@@ -316,21 +331,19 @@ struct PomodoroTimerView: View {
     }
 
     private func scheduleNotification() {
+        let interval = TimeInterval(max(currentDuration - elapsedSeconds, 0))
+        guard interval > 0 else { return }  // Prevent invalid 0-second trigger
+
         let center = UNUserNotificationCenter.current()
         center.requestAuthorization(options: [.alert, .sound]) { _, _ in }
+
         let content = UNMutableNotificationContent()
         content.title = phase == .work ? "Work completed" : "Time to work"
         content.sound = .default
-        let interval = TimeInterval(max(currentDuration - elapsedSeconds, 0))
-        let trigger = UNTimeIntervalNotificationTrigger(
-            timeInterval: interval,
-            repeats: false
-        )
-        center.add(.init(
-            identifier: UUID().uuidString,
-            content: content,
-            trigger: trigger
-        ))
+
+        let trigger = UNTimeIntervalNotificationTrigger(timeInterval: interval, repeats: false)
+        let request = UNNotificationRequest(identifier: UUID().uuidString, content: content, trigger: trigger)
+        center.add(request)
     }
 }
 
