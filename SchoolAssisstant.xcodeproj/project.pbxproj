@@ -121,14 +121,14 @@ A1D21D8E6E2B21FD0FA449BC /* UserWantsToReviseView.swift */ = {isa = PBXFileRefer
                };
                E3B140062DBE2C9C00DE31AD /* StudysessionScreen */ = {
                        isa = PBXGroup;
-                       name = StudysessionScreen;
-                       path = "";
+
+                       path = StudysessionScreen;
                        sourceTree = "<group>";
                };
                E3B140092DBE2CA000DE31AD /* LearnedSomeThingScreen */ = {
                        isa = PBXGroup;
-                       name = LearnedSomeThingScreen;
-                       path = "";
+
+                       path = LearnedSomeThingScreen;
                        sourceTree = "<group>";
                };
 /* End PBXGroup section */
