@@ -62,9 +62,9 @@ struct MainInterfaceView: View {
                     .tabItem { Label("Study", systemImage: "pencil.and.outline") }
                     .tag(Tab.studySession)
 
-                StatsView()
-                    .tabItem { Label("Stats", systemImage: "chart.bar") }
-                    .tag(Tab.stats)
+                SocialView()
+                    .tabItem { Label("Social", systemImage: "person.2.fill") }
+                    .tag(Tab.social)
 
 //                TasksTab()
 //                    .tabItem { Label("Tasks", systemImage: "list.bullet") }
@@ -91,7 +91,7 @@ enum Tab {
     case home
     case account
     case studySession
-    case stats
+    case social
     case learnedSomething
     case tasks
 }

@@ -33,8 +33,25 @@ struct HomeTab: View {
                         .padding(.horizontal)
                         
                         VStack(spacing: 16) {
-                            Text("You're on a \(statsModel.streak) day streak!")
-                                .font(.headline)
+                            Text("\(statsModel.streak) day streak! Keep it up!")
+                                .font(.title2)
+                                .fontWeight(.bold)
+                                .multilineTextAlignment(.center)
+
+                            if !statsModel.dailyTotals.isEmpty {
+                                Chart {
+                                    ForEach(statsModel.dailyTotals, id: \.day) { entry in
+                                        BarMark(
+                                            x: .value("Day", entry.day, unit: .day),
+                                            y: .value("Minutes", entry.minutes)
+                                        )
+                                        .foregroundStyle(AppTheme.primaryColor)
+                                    }
+                                }
+                                .chartXAxisLabel("Day")
+                                .chartYAxisLabel("Minutes")
+                                .frame(height: 200)
+                            }
 
 //                            if !notesViewModel.notes.isEmpty {
 //                                VStack(alignment: .leading) {
@@ -56,13 +73,20 @@ struct HomeTab: View {
                                         .font(.headline)
                                     ForEach(viewModel.leaderboard.prefix(5), id: \.userId) { friend in
                                         if friend.userId != viewModel.user?.userId {
-                                            HStack {
-                                                Text(friend.username ?? "Unknown")
-                                                Spacer()
-                                                Button("Nudge") {
-                                                    viewModel.sendNotificationRequest(title: "Time to study!", body: "Let's work together", token: friend.fcmToken)
+                                            VStack(alignment: .leading) {
+                                                HStack {
+                                                    Text(friend.username ?? "Unknown")
+                                                    Spacer()
+                                                    Button("Nudge") {
+                                                        viewModel.sendNotificationRequest(title: "Time to study!", body: "Let's work together", token: friend.fcmToken)
+                                                    }
+                                                    .buttonStyle(.bordered)
                                                 }
-                                                .buttonStyle(.bordered)
+                                                if let last = friend.lastConnection {
+                                                    Text("Last online: \(last, style: .time)")
+                                                        .font(.caption)
+                                                        .foregroundColor(.secondary)
+                                                }
                                             }
                                         }
                                     }
@@ -94,8 +118,23 @@ struct HomeTab: View {
                 await notesViewModel.loadNotes()
                 await statsModel.load()
                 await viewModel.loadLeaderboard()
+                scheduleReminder()
             }
         }
+    }
+
+    private func scheduleReminder() {
+        NotificationManager.cancelAll()
+        let cal = Calendar.current
+        let now = Date()
+        if let last = viewModel.user?.lastConnection, cal.isDateInToday(last) {
+            return
+        }
+        var components = cal.dateComponents([.year, .month, .day], from: now)
+        components.hour = 20
+        components.minute = 0
+        let target = cal.date(from: components) ?? now
+        NotificationManager.scheduleNotification(title: "Time to study!", body: "You haven't logged in today", at: target)
     }
 }
 
