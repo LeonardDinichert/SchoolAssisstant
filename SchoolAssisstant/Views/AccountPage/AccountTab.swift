@@ -171,6 +171,7 @@ struct AccountTab: View {
 #Preview {
     AccountTab()
 }
+
 struct logOutButton: View {
     
     @State private var UserWantsToLogOut = false

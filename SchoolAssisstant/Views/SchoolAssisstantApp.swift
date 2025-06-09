@@ -27,7 +27,7 @@ struct HasSeenWelcomingMessage: View {
     var body: some View {
         
         if !hasShownWelcome {
-            JobbIntroView()
+            IntroView()
         } else {
             MainInterfaceView()
         }
@@ -66,9 +66,9 @@ struct MainInterfaceView: View {
                     .tabItem { Label("Stats", systemImage: "chart.bar") }
                     .tag(Tab.stats)
 
-                TasksTab()
-                    .tabItem { Label("Tasks", systemImage: "list.bullet") }
-                    .tag(Tab.tasks)
+//                TasksTab()
+//                    .tabItem { Label("Tasks", systemImage: "list.bullet") }
+//                    .tag(Tab.tasks)
 
                 LearnedSomethingView()
                     .tabItem { Label("Learn", systemImage: "graduationcap.fill") }

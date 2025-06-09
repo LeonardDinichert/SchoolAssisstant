@@ -1,9 +1,6 @@
 {
   "sourceLanguage" : "en",
   "strings" : {
-    "" : {
-
-    },
     "%lld min" : {
       "localizations" : {
         "fr" : {
@@ -26,6 +23,9 @@
           }
         }
       }
+    },
+    "Add" : {
+
     },
     "Add a profile picture" : {
       "localizations" : {
@@ -119,10 +119,22 @@
     "Change my email adress" : {
 
     },
+    "Continue" : {
+
+    },
     "Create an Account" : {
 
     },
     "Create an account or log in to start exploring amazing opportunities." : {
+
+    },
+    "Dark Mode" : {
+
+    },
+    "Day" : {
+
+    },
+    "Delete" : {
 
     },
     "Delete my account" : {
@@ -137,7 +149,16 @@
     "Don't have an account yet?" : {
 
     },
+    "Done" : {
+
+    },
+    "Due Date" : {
+
+    },
     "Edit Biography" : {
+
+    },
+    "Edit Profile" : {
 
     },
     "Edit Your Biography" : {
@@ -164,10 +185,10 @@
     "Forgot your Password?" : {
 
     },
-    "Hello %@, let's work !" : {
+    "Friends" : {
 
     },
-    "Hello, World!" : {
+    "Hello %@, let's work !" : {
 
     },
     "History" : {
@@ -218,6 +239,9 @@
     "Me déconnecter" : {
 
     },
+    "Minutes" : {
+
+    },
     "Modify my password" : {
 
     },
@@ -225,6 +249,9 @@
 
     },
     "My account" : {
+
+    },
+    "New Task" : {
 
     },
     "Next" : {
@@ -247,10 +274,16 @@
         }
       }
     },
+    "No sessions yet" : {
+
+    },
     "No sessions yet." : {
 
     },
     "Non" : {
+
+    },
+    "Nudge" : {
 
     },
     "OK" : {
@@ -281,6 +314,9 @@
 
     },
     "Quit session?" : {
+
+    },
+    "Recent Notes" : {
 
     },
     "Registration" : {
@@ -338,7 +374,7 @@
     "Start a study session" : {
 
     },
-    "Streak and social things view" : {
+    "Stats" : {
 
     },
     "Study" : {
@@ -353,10 +389,13 @@
     "Take 20 min break" : {
 
     },
-    "This is a description" : {
+    "Tasks" : {
 
     },
-    "Title Example" : {
+    "Title" : {
+
+    },
+    "Username" : {
 
     },
     "Veuillez remplir toutes les informations demandées." : {
@@ -374,9 +413,6 @@
     "Welcome to Jobb" : {
 
     },
-    "Welcome to SchoolAssisstant!" : {
-
-    },
     "What category does it fit in?" : {
 
     },
@@ -392,7 +428,13 @@
     "Yes" : {
 
     },
+    "You're on a %lld day streak!" : {
+
+    },
     "You’ve completed four sessions." : {
+
+    },
+    "Your Notes" : {
 
     }
   },

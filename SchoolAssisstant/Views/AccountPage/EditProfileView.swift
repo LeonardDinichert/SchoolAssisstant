@@ -2,11 +2,16 @@ import SwiftUI
 import PhotosUI
 
 struct EditProfileView: View {
-    let user: DBUser
+    var user: DBUser
     @State private var username: String = ""
     @State private var selectedItem: PhotosPickerItem?
     @State private var selectedImageData: Data?
     @StateObject private var viewModel = userManagerViewModel()
+    
+    init(user: DBUser) {
+        self.user = user
+        _viewModel = StateObject(wrappedValue: userManagerViewModel())
+      }
 
     var body: some View {
         NavigationStack {
@@ -32,7 +37,7 @@ struct EditProfileView: View {
                             .frame(width: 100, height: 100)
                     }
                 }
-                .onChange(of: selectedItem) { newItem in
+                .onChange(of: selectedItem) { newItem, oldItem in
                     Task {
                         if let data = try? await newItem?.loadTransferable(type: Data.self) {
                             selectedImageData = data
@@ -57,7 +62,6 @@ struct EditProfileView: View {
             .navigationTitle("Edit Profile")
             .onAppear {
                 username = user.username ?? ""
-                viewModel.user = user
             }
         }
     }
