@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 77;
+       objectVersion = 56;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -355,7 +355,7 @@ A1D21D8E6E2B21FD0FA449BC /* UserWantsToReviseView.swift */ = {isa = PBXFileRefer
 				E3405F262DA80F7900216E57 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
 				E3405F3B2DA8118700216E57 /* XCRemoteSwiftPackageReference "GoogleSignIn-iOS" */,
 			);
-			preferredProjectObjectVersion = 77;
+                       preferredProjectObjectVersion = 56;
 			productRefGroup = E3405EF22DA80F2100216E57 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
