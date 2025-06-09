@@ -13,7 +13,9 @@ SchoolAssisstant is a study companion app built with SwiftUI. It helps students 
 
 ## Setup
 1. Install Xcode 15 or later (requires iOS 16+).
-2. Clone this repository and open `SchoolAssisstant.xcodeproj`.
+2. Clone this repository and open `SchoolAssisstant.xcworkspace`.
+   If Xcode tries to open the folder as a Swift package, choosing the
+   workspace ensures the app project is loaded.
 3. Add your Firebase `GoogleService-Info.plist` to enable authentication and storage.
 4. Build and run on a simulator or device.
 
