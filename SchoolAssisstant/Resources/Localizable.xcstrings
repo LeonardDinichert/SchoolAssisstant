@@ -1,6 +1,9 @@
 {
   "sourceLanguage" : "en",
   "strings" : {
+    "%lld day streak! Keep it up!" : {
+
+    },
     "%lld min" : {
       "localizations" : {
         "fr" : {
@@ -221,6 +224,9 @@
     "Key" : {
       "extractionState" : "manual"
     },
+    "Last online: %@" : {
+
+    },
     "Learn" : {
 
     },
@@ -322,9 +328,6 @@
     "Quit session?" : {
 
     },
-    "Recent Notes" : {
-
-    },
     "Registration" : {
 
     },
@@ -381,6 +384,9 @@
 
     },
     "Sign up with Google" : {
+
+    },
+    "Social" : {
 
     },
     "Start a study session" : {
@@ -441,9 +447,6 @@
 
     },
     "Yes" : {
-
-    },
-    "You're on a %lld day streak!" : {
 
     },
     "You’ve completed four sessions." : {
