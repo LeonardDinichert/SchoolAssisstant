@@ -27,7 +27,7 @@ struct HasSeenWelcomingMessage: View {
     var body: some View {
         
         if !hasShownWelcome {
-            JobbIntroView()
+            IntroView()
         } else {
             MainInterfaceView()
         }

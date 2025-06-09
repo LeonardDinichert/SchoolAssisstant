@@ -9,8 +9,9 @@ import SwiftUI
 
 struct IntroPagesView: View {
     let pages = IntroPagesModel.pages
-    @Binding var showIntro: Bool
-
+    
+    @AppStorage("hasShownWelcome") private var hasShownWelcome: Bool = false
+    
     var body: some View {
         VStack {
             TabView {
@@ -36,7 +37,7 @@ struct IntroPagesView: View {
             .tabViewStyle(PageTabViewStyle())
 
             Button("Continue") {
-                showIntro = false
+                hasShownWelcome = true
             }
             .padding()
         }
@@ -44,6 +45,6 @@ struct IntroPagesView: View {
 }
 
 #Preview {
-    IntroPagesView(showIntro: .constant(true))
+    IntroPagesView()
 }
 

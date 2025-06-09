@@ -3,25 +3,10 @@
 	archiveVersion = 1;
 	classes = {
 	};
-       objectVersion = 56;
+	objectVersion = 63;
 	objects = {
 
 /* Begin PBXBuildFile section */
-		E31B203F2DA9499A005F5816 /* UserInfosCreation.swift in Sources */ = {isa = PBXBuildFile; fileRef = E31B203E2DA9499A005F5816 /* UserInfosCreation.swift */; };
-		E3405F162DA80F4200216E57 /* HomeTab.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3405EFF2DA80F4100216E57 /* HomeTab.swift */; };
-		E3405F172DA80F4200216E57 /* SignUpEmailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3405F0E2DA80F4100216E57 /* SignUpEmailViewModel.swift */; };
-		E3405F182DA80F4200216E57 /* AuthenticationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3405F132DA80F4100216E57 /* AuthenticationView.swift */; };
-		E3405F192DA80F4200216E57 /* SignInWithApple.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3405F0F2DA80F4100216E57 /* SignInWithApple.swift */; };
-		E3405F1A2DA80F4200216E57 /* LogInView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3405F112DA80F4100216E57 /* LogInView.swift */; };
-		E3405F1B2DA80F4200216E57 /* TextManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3405F092DA80F4100216E57 /* TextManager.swift */; };
-		E3405F1C2DA80F4200216E57 /* IntroPagesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3405F062DA80F4100216E57 /* IntroPagesView.swift */; };
-		E3405F1E2DA80F4200216E57 /* SignUpView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3405F122DA80F4100216E57 /* SignUpView.swift */; };
-		E3405F1F2DA80F4200216E57 /* AccountTab.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3405F002DA80F4100216E57 /* AccountTab.swift */; };
-		E3405F202DA80F4200216E57 /* Utilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3405F032DA80F4100216E57 /* Utilities.swift */; };
-		E3405F212DA80F4200216E57 /* AuthManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3405F0A2DA80F4100216E57 /* AuthManager.swift */; };
-		E3405F222DA80F4200216E57 /* JobIntroView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3405F072DA80F4100216E57 /* JobIntroView.swift */; };
-		E3405F242DA80F4200216E57 /* GoogleManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3405F0B2DA80F4100216E57 /* GoogleManager.swift */; };
-		E3405F252DA80F4200216E57 /* IntroPagesModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3405F052DA80F4100216E57 /* IntroPagesModel.swift */; };
 		E3405F282DA80F7900216E57 /* FirebaseAppDistribution-Beta in Frameworks */ = {isa = PBXBuildFile; productRef = E3405F272DA80F7900216E57 /* FirebaseAppDistribution-Beta */; };
 		E3405F2A2DA80F7900216E57 /* FirebaseAuth in Frameworks */ = {isa = PBXBuildFile; productRef = E3405F292DA80F7900216E57 /* FirebaseAuth */; };
 		E3405F2C2DA80F7900216E57 /* FirebaseFirestore in Frameworks */ = {isa = PBXBuildFile; productRef = E3405F2B2DA80F7900216E57 /* FirebaseFirestore */; };
@@ -34,104 +19,108 @@
 		E3405F3A2DA80F7900216E57 /* FirebaseStorageCombine-Community in Frameworks */ = {isa = PBXBuildFile; productRef = E3405F392DA80F7900216E57 /* FirebaseStorageCombine-Community */; };
 		E3405F3D2DA8118700216E57 /* GoogleSignIn in Frameworks */ = {isa = PBXBuildFile; productRef = E3405F3C2DA8118700216E57 /* GoogleSignIn */; };
 		E3405F3F2DA8118700216E57 /* GoogleSignInSwift in Frameworks */ = {isa = PBXBuildFile; productRef = E3405F3E2DA8118700216E57 /* GoogleSignInSwift */; };
-		E3767A6A2DC2609100F1FBD0 /* relaxing.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = E3767A692DC2609100F1FBD0 /* relaxing.mp3 */; };
-		E37B3C4D2DA83DAC005CB93F /* UserManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = E37B3C4C2DA83DAC005CB93F /* UserManager.swift */; };
-		E37B3C502DA83DCF005CB93F /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E37B3C4F2DA83DCF005CB93F /* SettingsView.swift */; };
-		E37B3C532DA83E89005CB93F /* StorageManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = E37B3C522DA83E89005CB93F /* StorageManager.swift */; };
-		E37B3C552DA84086005CB93F /* PrivacyView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E37B3C542DA84086005CB93F /* PrivacyView.swift */; };
-		E37B3C582DA8411B005CB93F /* ShowPasswordView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E37B3C572DA8411B005CB93F /* ShowPasswordView.swift */; };
-		E37B3C592DA8411B005CB93F /* ShowEmailAdressView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E37B3C562DA8411B005CB93F /* ShowEmailAdressView.swift */; };
-		E37B3C5B2DA8418B005CB93F /* ModifyBiographyView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E37B3C5A2DA8418B005CB93F /* ModifyBiographyView.swift */; };
-		E37B3C5F2DA843A0005CB93F /* ResetPasswordView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E37B3C5E2DA843A0005CB93F /* ResetPasswordView.swift */; };
-99935F8BD5CD9637E7510D25 /* AddTaskView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9A3E79373E82E95466BD749 /* AddTaskView.swift */; };
-3F841E0F817CCE60BE06BA86 /* AppTheme.swift in Sources */ = {isa = PBXBuildFile; fileRef = D58EFC6069FF22C46F7A358A /* AppTheme.swift */; };
-B7FC8A43443AEDDFD929735E /* EditProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4895307F154D0B8C0F998A8E /* EditProfileView.swift */; };
-D3CE411E5015224B4C93B4E9 /* LearnedSomethingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D4D21A6D0E065D22814FE41 /* LearnedSomethingView.swift */; };
-831067A5FD16C80351E9F10F /* LearningNote.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8489DF4239BD9DC2AA69DA9 /* LearningNote.swift */; };
-9A5D72E1CF63E57D99527CDF /* MeditationPreWorkView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AACC22AC0B8611E2B70CCC72 /* MeditationPreWorkView.swift */; };
-45391921E3673D01EDBDC4FC /* NotesManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B5D059392D7EBB5525591A3 /* NotesManager.swift */; };
-13C90DACEBB32F2E20E2E558 /* NotesViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99F455C006B5902B705B7928 /* NotesViewModel.swift */; };
-1EF4EECD7E053E03E39D1CB7 /* NotificationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1FCF7CE6FEADD4D02FCB8DF /* NotificationManager.swift */; };
-E981B8640222EFD12A53D718 /* PomodoroTimerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6480713D7F2B2709C464F6B /* PomodoroTimerView.swift */; };
-A439B69836BC16EDF2FC4D3E /* SchoolAssisstantApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FC5F6AEF4142FDE69BB8D62 /* SchoolAssisstantApp.swift */; };
-37E1F0CC76478DAD4726A485 /* StatsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFFEC01B64E523C0966D3324 /* StatsView.swift */; };
-868DB39FF9E689093D1A6371 /* StudySessionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 209DAFF2A6A18614DA0FC6A6 /* StudySessionView.swift */; };
-FE9C838A8FBB1574CC598981 /* TaskItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AA5CBE9DB28BFDD982D41F6 /* TaskItem.swift */; };
-057EDA16DAA3880E0ED4D734 /* TaskManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43E1127ACEE2868A89A0C967 /* TaskManager.swift */; };
-437C30297605046B0C40761B /* TasksTab.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6D1F8F062B2601EA237E322 /* TasksTab.swift */; };
-2C97DE19C997D0FF7AD353F7 /* TasksViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27E0744B5E69EE1F74DDD4B8 /* TasksViewModel.swift */; };
-E6C7EF4BB245CF0D49C8EBA7 /* UserWantsToAddInfoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D18A8D0AF66D68872B48BDB /* UserWantsToAddInfoView.swift */; };
-39940B5992EB8A8482EFD2D5 /* UserWantsToReviseView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1D21D8E6E2B21FD0FA449BC /* UserWantsToReviseView.swift */; };
+		E3D309412DF7258E004DF8C1 /* relaxing.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = E3D309172DF7258E004DF8C1 /* relaxing.mp3 */; };
+		E3D309432DF7258E004DF8C1 /* Localizable.xcstrings in Resources */ = {isa = PBXBuildFile; fileRef = E3D309162DF7258E004DF8C1 /* Localizable.xcstrings */; };
+		E3D309442DF7258E004DF8C1 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = E3D309142DF7258E004DF8C1 /* GoogleService-Info.plist */; };
+		E3D309452DF7258E004DF8C1 /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = E3D309062DF7258E004DF8C1 /* README.md */; };
+		E3D309462DF7258E004DF8C1 /* StudySessionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3D309342DF7258E004DF8C1 /* StudySessionView.swift */; };
+		E3D309472DF7258E004DF8C1 /* NotificationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3D3090A2DF7258E004DF8C1 /* NotificationManager.swift */; };
+		E3D309482DF7258E004DF8C1 /* PrivacyView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3D3092C2DF7258E004DF8C1 /* PrivacyView.swift */; };
+		E3D309492DF7258E004DF8C1 /* PomodoroTimerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3D3092B2DF7258E004DF8C1 /* PomodoroTimerView.swift */; };
+		E3D3094A2DF7258E004DF8C1 /* TaskManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3D3090C2DF7258E004DF8C1 /* TaskManager.swift */; };
+		E3D3094B2DF7258E004DF8C1 /* AddTaskView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3D309212DF7258E004DF8C1 /* AddTaskView.swift */; };
+		E3D3094C2DF7258E004DF8C1 /* Utilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3D3091A2DF7258E004DF8C1 /* Utilities.swift */; };
+		E3D3094D2DF7258E004DF8C1 /* AuthManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3D309072DF7258E004DF8C1 /* AuthManager.swift */; };
+		E3D3094E2DF7258E004DF8C1 /* TasksTab.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3D309352DF7258E004DF8C1 /* TasksTab.swift */; };
+		E3D3094F2DF7258E004DF8C1 /* EditProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3D309232DF7258E004DF8C1 /* EditProfileView.swift */; };
+		E3D309502DF7258E004DF8C1 /* SignUpView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3D309322DF7258E004DF8C1 /* SignUpView.swift */; };
+		E3D309512DF7258E004DF8C1 /* UserWantsToReviseView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3D309382DF7258E004DF8C1 /* UserWantsToReviseView.swift */; };
+		E3D309522DF7258E004DF8C1 /* ResetPasswordView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3D3092D2DF7258E004DF8C1 /* ResetPasswordView.swift */; };
+		E3D309532DF7258E004DF8C1 /* AccountTab.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3D309202DF7258E004DF8C1 /* AccountTab.swift */; };
+		E3D309542DF7258E004DF8C1 /* TextManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3D3090D2DF7258E004DF8C1 /* TextManager.swift */; };
+		E3D309562DF7258E004DF8C1 /* TasksViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3D3091E2DF7258E004DF8C1 /* TasksViewModel.swift */; };
+		E3D309572DF7258E004DF8C1 /* LogInView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3D309282DF7258E004DF8C1 /* LogInView.swift */; };
+		E3D309582DF7258E004DF8C1 /* AppTheme.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3D309192DF7258E004DF8C1 /* AppTheme.swift */; };
+		E3D309592DF7258E004DF8C1 /* UserWantsToAddInfoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3D309372DF7258E004DF8C1 /* UserWantsToAddInfoView.swift */; };
+		E3D3095A2DF7258E004DF8C1 /* SchoolAssisstantApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3D3093A2DF7258E004DF8C1 /* SchoolAssisstantApp.swift */; };
+		E3D3095B2DF7258E004DF8C1 /* ShowEmailAdressView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3D3092F2DF7258E004DF8C1 /* ShowEmailAdressView.swift */; };
+		E3D3095C2DF7258E004DF8C1 /* StatsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3D309332DF7258E004DF8C1 /* StatsView.swift */; };
+		E3D3095D2DF7258E004DF8C1 /* IntroPagesModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3D309102DF7258E004DF8C1 /* IntroPagesModel.swift */; };
+		E3D3095E2DF7258E004DF8C1 /* UserManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3D3090E2DF7258E004DF8C1 /* UserManager.swift */; };
+		E3D3095F2DF7258E004DF8C1 /* IntroPagesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3D309252DF7258E004DF8C1 /* IntroPagesView.swift */; };
+		E3D309602DF7258E004DF8C1 /* LearnedSomethingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3D309272DF7258E004DF8C1 /* LearnedSomethingView.swift */; };
+		E3D309612DF7258E004DF8C1 /* TaskItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3D309122DF7258E004DF8C1 /* TaskItem.swift */; };
+		E3D309622DF7258E004DF8C1 /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3D3092E2DF7258E004DF8C1 /* SettingsView.swift */; };
+		E3D309642DF7258E004DF8C1 /* NotesManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3D309092DF7258E004DF8C1 /* NotesManager.swift */; };
+		E3D309652DF7258E004DF8C1 /* Placeholder.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3D3093C2DF7258E004DF8C1 /* Placeholder.swift */; };
+		E3D309662DF7258E004DF8C1 /* StorageManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3D3090B2DF7258E004DF8C1 /* StorageManager.swift */; };
+		E3D309672DF7258E004DF8C1 /* ModifyBiographyView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3D3092A2DF7258E004DF8C1 /* ModifyBiographyView.swift */; };
+		E3D309682DF7258E004DF8C1 /* HomeTab.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3D309242DF7258E004DF8C1 /* HomeTab.swift */; };
+		E3D309692DF7258E004DF8C1 /* IntroView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3D309262DF7258E004DF8C1 /* IntroView.swift */; };
+		E3D3096A2DF7258E004DF8C1 /* LearningNote.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3D309112DF7258E004DF8C1 /* LearningNote.swift */; };
+		E3D3096B2DF7258E004DF8C1 /* NotesViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3D3091C2DF7258E004DF8C1 /* NotesViewModel.swift */; };
+		E3D3096C2DF7258E004DF8C1 /* UserInfosCreation.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3D309362DF7258E004DF8C1 /* UserInfosCreation.swift */; };
+		E3D3096D2DF7258E004DF8C1 /* AuthenticationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3D309222DF7258E004DF8C1 /* AuthenticationView.swift */; };
+		E3D3096E2DF7258E004DF8C1 /* SignInWithApple.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3D309312DF7258E004DF8C1 /* SignInWithApple.swift */; };
+		E3D3096F2DF7258E004DF8C1 /* ShowPasswordView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3D309302DF7258E004DF8C1 /* ShowPasswordView.swift */; };
+		E3D309702DF7258E004DF8C1 /* GoogleManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3D309082DF7258E004DF8C1 /* GoogleManager.swift */; };
+		E3D309712DF7258E004DF8C1 /* SignUpEmailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3D3091D2DF7258E004DF8C1 /* SignUpEmailViewModel.swift */; };
+		E3D309722DF7258E004DF8C1 /* MeditationPreWorkView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3D309292DF7258E004DF8C1 /* MeditationPreWorkView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		E31B203E2DA9499A005F5816 /* UserInfosCreation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Views/UserInfosCreation.swift; sourceTree = "<group>"; };
-		E3405EF12DA80F2100216E57 /* SchoolAssisstant.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SchoolAssisstant.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		E3405EFF2DA80F4100216E57 /* HomeTab.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Views/HomeTab.swift; sourceTree = "<group>"; };
-		E3405F002DA80F4100216E57 /* AccountTab.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Views/AccountTab.swift; sourceTree = "<group>"; };
-		E3405F032DA80F4100216E57 /* Utilities.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Utilities/Utilities.swift; sourceTree = "<group>"; };
-		E3405F052DA80F4100216E57 /* IntroPagesModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Models/IntroPagesModel.swift; sourceTree = "<group>"; };
-		E3405F062DA80F4100216E57 /* IntroPagesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Views/IntroPagesView.swift; sourceTree = "<group>"; };
-		E3405F072DA80F4100216E57 /* JobIntroView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Views/JobIntroView.swift; sourceTree = "<group>"; };
-		E3405F092DA80F4100216E57 /* TextManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Managers/TextManager.swift; sourceTree = "<group>"; };
-		E3405F0A2DA80F4100216E57 /* AuthManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Managers/AuthManager.swift; sourceTree = "<group>"; };
-		E3405F0B2DA80F4100216E57 /* GoogleManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Managers/GoogleManager.swift; sourceTree = "<group>"; };
-		E3405F0E2DA80F4100216E57 /* SignUpEmailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModels/SignUpEmailViewModel.swift; sourceTree = "<group>"; };
-		E3405F0F2DA80F4100216E57 /* SignInWithApple.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Views/SignInWithApple.swift; sourceTree = "<group>"; };
-		E3405F112DA80F4100216E57 /* LogInView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Views/LogInView.swift; sourceTree = "<group>"; };
-		E3405F122DA80F4100216E57 /* SignUpView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Views/SignUpView.swift; sourceTree = "<group>"; };
-		E3405F132DA80F4100216E57 /* AuthenticationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Views/AuthenticationView.swift; sourceTree = "<group>"; };
-		E3767A692DC2609100F1FBD0 /* relaxing.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = relaxing.mp3; sourceTree = "<group>"; };
-		E37B3C4C2DA83DAC005CB93F /* UserManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Managers/UserManager.swift; sourceTree = "<group>"; };
-		E37B3C4F2DA83DCF005CB93F /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Views/SettingsView.swift; sourceTree = "<group>"; };
-		E37B3C522DA83E89005CB93F /* StorageManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Managers/StorageManager.swift; sourceTree = "<group>"; };
-		E37B3C542DA84086005CB93F /* PrivacyView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Views/PrivacyView.swift; sourceTree = "<group>"; };
-		E37B3C562DA8411B005CB93F /* ShowEmailAdressView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Views/ShowEmailAdressView.swift; sourceTree = "<group>"; };
-		E37B3C572DA8411B005CB93F /* ShowPasswordView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Views/ShowPasswordView.swift; sourceTree = "<group>"; };
-		E37B3C5A2DA8418B005CB93F /* ModifyBiographyView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Views/ModifyBiographyView.swift; sourceTree = "<group>"; };
-		E37B3C5E2DA843A0005CB93F /* ResetPasswordView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Views/ResetPasswordView.swift; sourceTree = "<group>"; };
-B9A3E79373E82E95466BD749 /* AddTaskView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Views/AddTaskView.swift; sourceTree = "<group>"; };
-D58EFC6069FF22C46F7A358A /* AppTheme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Utilities/AppTheme.swift; sourceTree = "<group>"; };
-4895307F154D0B8C0F998A8E /* EditProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Views/EditProfileView.swift; sourceTree = "<group>"; };
-5D4D21A6D0E065D22814FE41 /* LearnedSomethingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Views/LearnedSomethingView.swift; sourceTree = "<group>"; };
-E8489DF4239BD9DC2AA69DA9 /* LearningNote.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Models/LearningNote.swift; sourceTree = "<group>"; };
-AACC22AC0B8611E2B70CCC72 /* MeditationPreWorkView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Views/MeditationPreWorkView.swift; sourceTree = "<group>"; };
-3B5D059392D7EBB5525591A3 /* NotesManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Managers/NotesManager.swift; sourceTree = "<group>"; };
-99F455C006B5902B705B7928 /* NotesViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModels/NotesViewModel.swift; sourceTree = "<group>"; };
-F1FCF7CE6FEADD4D02FCB8DF /* NotificationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Managers/NotificationManager.swift; sourceTree = "<group>"; };
-C6480713D7F2B2709C464F6B /* PomodoroTimerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Views/PomodoroTimerView.swift; sourceTree = "<group>"; };
-2FC5F6AEF4142FDE69BB8D62 /* SchoolAssisstantApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SchoolAssisstantApp.swift; sourceTree = "<group>"; };
-FFFEC01B64E523C0966D3324 /* StatsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Views/StatsView.swift; sourceTree = "<group>"; };
-209DAFF2A6A18614DA0FC6A6 /* StudySessionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Views/StudySessionView.swift; sourceTree = "<group>"; };
-5AA5CBE9DB28BFDD982D41F6 /* TaskItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Models/TaskItem.swift; sourceTree = "<group>"; };
-43E1127ACEE2868A89A0C967 /* TaskManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Managers/TaskManager.swift; sourceTree = "<group>"; };
-F6D1F8F062B2601EA237E322 /* TasksTab.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Views/TasksTab.swift; sourceTree = "<group>"; };
-27E0744B5E69EE1F74DDD4B8 /* TasksViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModels/TasksViewModel.swift; sourceTree = "<group>"; };
-7D18A8D0AF66D68872B48BDB /* UserWantsToAddInfoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Views/UserWantsToAddInfoView.swift; sourceTree = "<group>"; };
-A1D21D8E6E2B21FD0FA449BC /* UserWantsToReviseView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Views/UserWantsToReviseView.swift; sourceTree = "<group>"; };
+		E3D309052DF7258E004DF8C1 /* Package.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Package.swift; sourceTree = "<group>"; };
+		E3D309062DF7258E004DF8C1 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		E3D309072DF7258E004DF8C1 /* AuthManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthManager.swift; sourceTree = "<group>"; };
+		E3D309082DF7258E004DF8C1 /* GoogleManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoogleManager.swift; sourceTree = "<group>"; };
+		E3D309092DF7258E004DF8C1 /* NotesManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotesManager.swift; sourceTree = "<group>"; };
+		E3D3090A2DF7258E004DF8C1 /* NotificationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationManager.swift; sourceTree = "<group>"; };
+		E3D3090B2DF7258E004DF8C1 /* StorageManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StorageManager.swift; sourceTree = "<group>"; };
+		E3D3090C2DF7258E004DF8C1 /* TaskManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskManager.swift; sourceTree = "<group>"; };
+		E3D3090D2DF7258E004DF8C1 /* TextManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextManager.swift; sourceTree = "<group>"; };
+		E3D3090E2DF7258E004DF8C1 /* UserManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserManager.swift; sourceTree = "<group>"; };
+		E3D309102DF7258E004DF8C1 /* IntroPagesModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IntroPagesModel.swift; sourceTree = "<group>"; };
+		E3D309112DF7258E004DF8C1 /* LearningNote.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LearningNote.swift; sourceTree = "<group>"; };
+		E3D309122DF7258E004DF8C1 /* TaskItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskItem.swift; sourceTree = "<group>"; };
+		E3D309142DF7258E004DF8C1 /* GoogleService-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		E3D309152DF7258E004DF8C1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E3D309162DF7258E004DF8C1 /* Localizable.xcstrings */ = {isa = PBXFileReference; lastKnownFileType = text.json.xcstrings; path = Localizable.xcstrings; sourceTree = "<group>"; };
+		E3D309172DF7258E004DF8C1 /* relaxing.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = relaxing.mp3; sourceTree = "<group>"; };
+		E3D309192DF7258E004DF8C1 /* AppTheme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppTheme.swift; sourceTree = "<group>"; };
+		E3D3091A2DF7258E004DF8C1 /* Utilities.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Utilities.swift; sourceTree = "<group>"; };
+		E3D3091C2DF7258E004DF8C1 /* NotesViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotesViewModel.swift; sourceTree = "<group>"; };
+		E3D3091D2DF7258E004DF8C1 /* SignUpEmailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpEmailViewModel.swift; sourceTree = "<group>"; };
+		E3D3091E2DF7258E004DF8C1 /* TasksViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TasksViewModel.swift; sourceTree = "<group>"; };
+		E3D309202DF7258E004DF8C1 /* AccountTab.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountTab.swift; sourceTree = "<group>"; };
+		E3D309212DF7258E004DF8C1 /* AddTaskView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddTaskView.swift; sourceTree = "<group>"; };
+		E3D309222DF7258E004DF8C1 /* AuthenticationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthenticationView.swift; sourceTree = "<group>"; };
+		E3D309232DF7258E004DF8C1 /* EditProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditProfileView.swift; sourceTree = "<group>"; };
+		E3D309242DF7258E004DF8C1 /* HomeTab.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeTab.swift; sourceTree = "<group>"; };
+		E3D309252DF7258E004DF8C1 /* IntroPagesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IntroPagesView.swift; sourceTree = "<group>"; };
+		E3D309262DF7258E004DF8C1 /* IntroView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IntroView.swift; sourceTree = "<group>"; };
+		E3D309272DF7258E004DF8C1 /* LearnedSomethingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LearnedSomethingView.swift; sourceTree = "<group>"; };
+		E3D309282DF7258E004DF8C1 /* LogInView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogInView.swift; sourceTree = "<group>"; };
+		E3D309292DF7258E004DF8C1 /* MeditationPreWorkView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MeditationPreWorkView.swift; sourceTree = "<group>"; };
+		E3D3092A2DF7258E004DF8C1 /* ModifyBiographyView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModifyBiographyView.swift; sourceTree = "<group>"; };
+		E3D3092B2DF7258E004DF8C1 /* PomodoroTimerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PomodoroTimerView.swift; sourceTree = "<group>"; };
+		E3D3092C2DF7258E004DF8C1 /* PrivacyView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrivacyView.swift; sourceTree = "<group>"; };
+		E3D3092D2DF7258E004DF8C1 /* ResetPasswordView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResetPasswordView.swift; sourceTree = "<group>"; };
+		E3D3092E2DF7258E004DF8C1 /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
+		E3D3092F2DF7258E004DF8C1 /* ShowEmailAdressView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShowEmailAdressView.swift; sourceTree = "<group>"; };
+		E3D309302DF7258E004DF8C1 /* ShowPasswordView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShowPasswordView.swift; sourceTree = "<group>"; };
+		E3D309312DF7258E004DF8C1 /* SignInWithApple.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInWithApple.swift; sourceTree = "<group>"; };
+		E3D309322DF7258E004DF8C1 /* SignUpView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpView.swift; sourceTree = "<group>"; };
+		E3D309332DF7258E004DF8C1 /* StatsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatsView.swift; sourceTree = "<group>"; };
+		E3D309342DF7258E004DF8C1 /* StudySessionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StudySessionView.swift; sourceTree = "<group>"; };
+		E3D309352DF7258E004DF8C1 /* TasksTab.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TasksTab.swift; sourceTree = "<group>"; };
+		E3D309362DF7258E004DF8C1 /* UserInfosCreation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserInfosCreation.swift; sourceTree = "<group>"; };
+		E3D309372DF7258E004DF8C1 /* UserWantsToAddInfoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserWantsToAddInfoView.swift; sourceTree = "<group>"; };
+		E3D309382DF7258E004DF8C1 /* UserWantsToReviseView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserWantsToReviseView.swift; sourceTree = "<group>"; };
+		E3D3093A2DF7258E004DF8C1 /* SchoolAssisstantApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SchoolAssisstantApp.swift; sourceTree = "<group>"; };
+		E3D3093C2DF7258E004DF8C1 /* Placeholder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Placeholder.swift; sourceTree = "<group>"; };
+		E3D3093E2DF7258E004DF8C1 /* PlaceholderTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaceholderTests.swift; sourceTree = "<group>"; };
+		E3D309732DF725EF004DF8C1 /* SchoolAssisstant.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SchoolAssisstant.app; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
-
-/* Removed PBXFileSystemSynchronizedBuildFileExceptionSet section for older Xcode compatibility */
-
-/* Begin PBXGroup section (converted from PBXFileSystemSynchronizedRootGroup) */
-               E3405EF32DA80F2100216E57 /* SchoolAssisstant */ = {
-                       isa = PBXGroup;
-                       path = SchoolAssisstant;
-                       sourceTree = "<group>";
-               };
-               E3B140062DBE2C9C00DE31AD /* StudysessionScreen */ = {
-                       isa = PBXGroup;
-
-                       path = StudysessionScreen;
-                       sourceTree = "<group>";
-               };
-               E3B140092DBE2CA000DE31AD /* LearnedSomeThingScreen */ = {
-                       isa = PBXGroup;
-
-                       path = LearnedSomeThingScreen;
-                       sourceTree = "<group>";
-               };
-/* End PBXGroup section */
 
 /* Begin PBXFrameworksBuildPhase section */
 		E3405EEE2DA80F2100216E57 /* Frameworks */ = {
@@ -156,134 +145,143 @@ A1D21D8E6E2B21FD0FA449BC /* UserWantsToReviseView.swift */ = {isa = PBXFileRefer
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-               E31B203C2DA94954005F5816 /* Auth */ = {
-                       isa = PBXGroup;
-                       children = (
-                               E3405F112DA80F4100216E57 /* LogInView.swift */,
-                               E3405F122DA80F4100216E57 /* SignUpView.swift */,
-                               E3405F132DA80F4100216E57 /* AuthenticationView.swift */,
-                       );
-                       name = Auth;
-                       path = "";
-                       sourceTree = "<group>";
-               };
-               E31B203D2DA9495B005F5816 /* UserCreation */ = {
-                       isa = PBXGroup;
-                       children = (
-                               E31B203E2DA9499A005F5816 /* UserInfosCreation.swift */,
-                       );
-                       name = UserCreation;
-                       path = "";
-                       sourceTree = "<group>";
-               };
 		E3405EE82DA80F2100216E57 = {
 			isa = PBXGroup;
 			children = (
-				E3767A6B2DC2647100F1FBD0 /* Songs */,
-				E3405EF32DA80F2100216E57 /* SchoolAssisstant */,
-				E3B140092DBE2CA000DE31AD /* LearnedSomeThingScreen */,
-				E3B140062DBE2C9C00DE31AD /* StudysessionScreen */,
-				E37B3C512DA83DE9005CB93F /* HomeView */,
-				E37B3C4E2DA83DCA005CB93F /* Account */,
-				E3405F042DA80F4100216E57 /* Utilities */,
-				E3405F082DA80F4100216E57 /* IntroPages */,
-				E3405F0D2DA80F4100216E57 /* Managers */,
-				E3405F142DA80F4100216E57 /* Authentication */,
-				E3405EF22DA80F2100216E57 /* Products */,
+				E3D309052DF7258E004DF8C1 /* Package.swift */,
+				E3D309062DF7258E004DF8C1 /* README.md */,
+				E3D3093B2DF7258E004DF8C1 /* SchoolAssisstant */,
+				E3D3093D2DF7258E004DF8C1 /* swiftpackage */,
+				E3D309402DF7258E004DF8C1 /* Tests */,
+				E3D309732DF725EF004DF8C1 /* SchoolAssisstant.app */,
 			);
 			sourceTree = "<group>";
 		};
-		E3405EF22DA80F2100216E57 /* Products */ = {
+		E3D3090F2DF7258E004DF8C1 /* Managers */ = {
 			isa = PBXGroup;
 			children = (
-				E3405EF12DA80F2100216E57 /* SchoolAssisstant.app */,
-			);
-			name = Products;
-			sourceTree = "<group>";
-		};
-		E3405F042DA80F4100216E57 /* Utilities */ = {
-			isa = PBXGroup;
-			children = (
-				E3405F032DA80F4100216E57 /* Utilities.swift */,
-			);
-			path = Utilities;
-			sourceTree = "<group>";
-		};
-		E3405F082DA80F4100216E57 /* IntroPages */ = {
-			isa = PBXGroup;
-			children = (
-				E3405F052DA80F4100216E57 /* IntroPagesModel.swift */,
-				E3405F062DA80F4100216E57 /* IntroPagesView.swift */,
-				E3405F072DA80F4100216E57 /* JobIntroView.swift */,
-			);
-			path = IntroPages;
-			sourceTree = "<group>";
-		};
-		E3405F0D2DA80F4100216E57 /* Managers */ = {
-			isa = PBXGroup;
-			children = (
-				E3405F092DA80F4100216E57 /* TextManager.swift */,
-				E3405F0A2DA80F4100216E57 /* AuthManager.swift */,
-				E3405F0B2DA80F4100216E57 /* GoogleManager.swift */,
-				E37B3C4C2DA83DAC005CB93F /* UserManager.swift */,
-				E37B3C522DA83E89005CB93F /* StorageManager.swift */,
+				E3D309072DF7258E004DF8C1 /* AuthManager.swift */,
+				E3D309082DF7258E004DF8C1 /* GoogleManager.swift */,
+				E3D309092DF7258E004DF8C1 /* NotesManager.swift */,
+				E3D3090A2DF7258E004DF8C1 /* NotificationManager.swift */,
+				E3D3090B2DF7258E004DF8C1 /* StorageManager.swift */,
+				E3D3090C2DF7258E004DF8C1 /* TaskManager.swift */,
+				E3D3090D2DF7258E004DF8C1 /* TextManager.swift */,
+				E3D3090E2DF7258E004DF8C1 /* UserManager.swift */,
 			);
 			path = Managers;
 			sourceTree = "<group>";
 		};
-		E3405F102DA80F4100216E57 /* ViewModels */ = {
+		E3D309132DF7258E004DF8C1 /* Models */ = {
 			isa = PBXGroup;
 			children = (
-				E3405F0E2DA80F4100216E57 /* SignUpEmailViewModel.swift */,
-				E3405F0F2DA80F4100216E57 /* SignInWithApple.swift */,
+				E3D309102DF7258E004DF8C1 /* IntroPagesModel.swift */,
+				E3D309112DF7258E004DF8C1 /* LearningNote.swift */,
+				E3D309122DF7258E004DF8C1 /* TaskItem.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		E3D309182DF7258E004DF8C1 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				E3D309142DF7258E004DF8C1 /* GoogleService-Info.plist */,
+				E3D309152DF7258E004DF8C1 /* Info.plist */,
+				E3D309162DF7258E004DF8C1 /* Localizable.xcstrings */,
+				E3D309172DF7258E004DF8C1 /* relaxing.mp3 */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		E3D3091B2DF7258E004DF8C1 /* Utilities */ = {
+			isa = PBXGroup;
+			children = (
+				E3D309192DF7258E004DF8C1 /* AppTheme.swift */,
+				E3D3091A2DF7258E004DF8C1 /* Utilities.swift */,
+			);
+			path = Utilities;
+			sourceTree = "<group>";
+		};
+		E3D3091F2DF7258E004DF8C1 /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				E3D3091C2DF7258E004DF8C1 /* NotesViewModel.swift */,
+				E3D3091D2DF7258E004DF8C1 /* SignUpEmailViewModel.swift */,
+				E3D3091E2DF7258E004DF8C1 /* TasksViewModel.swift */,
 			);
 			path = ViewModels;
 			sourceTree = "<group>";
 		};
-               E3405F142DA80F4100216E57 /* Authentication */ = {
-                       isa = PBXGroup;
-                       children = (
-                               E31B203D2DA9495B005F5816 /* UserCreation */,
-                               E3405F102DA80F4100216E57 /* ViewModels */,
-                               E31B203C2DA94954005F5816 /* Auth */,
-                       );
-                       name = Authentication;
-                       path = "";
-                       sourceTree = "<group>";
-               };
-               E3767A6B2DC2647100F1FBD0 /* Songs */ = {
-                       isa = PBXGroup;
-                       children = (
-                               E3767A692DC2609100F1FBD0 /* relaxing.mp3 */,
-                       );
-                       name = Songs;
-                       path = Resources;
-                       sourceTree = "<group>";
-               };
-               E37B3C4E2DA83DCA005CB93F /* Account */ = {
-                       isa = PBXGroup;
-                       children = (
-                               E3405F002DA80F4100216E57 /* AccountTab.swift */,
-                               E37B3C4F2DA83DCF005CB93F /* SettingsView.swift */,
-                               E37B3C542DA84086005CB93F /* PrivacyView.swift */,
-                               E37B3C562DA8411B005CB93F /* ShowEmailAdressView.swift */,
-                               E37B3C572DA8411B005CB93F /* ShowPasswordView.swift */,
-                               E37B3C5A2DA8418B005CB93F /* ModifyBiographyView.swift */,
-                               E37B3C5E2DA843A0005CB93F /* ResetPasswordView.swift */,
-                       );
-                       name = Account;
-                       path = "";
-                       sourceTree = "<group>";
-               };
-               E37B3C512DA83DE9005CB93F /* HomeView */ = {
-                       isa = PBXGroup;
-                       children = (
-                               E3405EFF2DA80F4100216E57 /* HomeTab.swift */,
-                       );
-                       name = HomeView;
-                       path = "";
-                       sourceTree = "<group>";
-               };
+		E3D309392DF7258E004DF8C1 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				E3D309202DF7258E004DF8C1 /* AccountTab.swift */,
+				E3D309212DF7258E004DF8C1 /* AddTaskView.swift */,
+				E3D309222DF7258E004DF8C1 /* AuthenticationView.swift */,
+				E3D309232DF7258E004DF8C1 /* EditProfileView.swift */,
+				E3D309242DF7258E004DF8C1 /* HomeTab.swift */,
+				E3D309252DF7258E004DF8C1 /* IntroPagesView.swift */,
+				E3D309262DF7258E004DF8C1 /* IntroView.swift */,
+				E3D309272DF7258E004DF8C1 /* LearnedSomethingView.swift */,
+				E3D309282DF7258E004DF8C1 /* LogInView.swift */,
+				E3D309292DF7258E004DF8C1 /* MeditationPreWorkView.swift */,
+				E3D3092A2DF7258E004DF8C1 /* ModifyBiographyView.swift */,
+				E3D3092B2DF7258E004DF8C1 /* PomodoroTimerView.swift */,
+				E3D3092C2DF7258E004DF8C1 /* PrivacyView.swift */,
+				E3D3092D2DF7258E004DF8C1 /* ResetPasswordView.swift */,
+				E3D3092E2DF7258E004DF8C1 /* SettingsView.swift */,
+				E3D3092F2DF7258E004DF8C1 /* ShowEmailAdressView.swift */,
+				E3D309302DF7258E004DF8C1 /* ShowPasswordView.swift */,
+				E3D309312DF7258E004DF8C1 /* SignInWithApple.swift */,
+				E3D309322DF7258E004DF8C1 /* SignUpView.swift */,
+				E3D309332DF7258E004DF8C1 /* StatsView.swift */,
+				E3D309342DF7258E004DF8C1 /* StudySessionView.swift */,
+				E3D309352DF7258E004DF8C1 /* TasksTab.swift */,
+				E3D309362DF7258E004DF8C1 /* UserInfosCreation.swift */,
+				E3D309372DF7258E004DF8C1 /* UserWantsToAddInfoView.swift */,
+				E3D309382DF7258E004DF8C1 /* UserWantsToReviseView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		E3D3093B2DF7258E004DF8C1 /* SchoolAssisstant */ = {
+			isa = PBXGroup;
+			children = (
+				E3D3090F2DF7258E004DF8C1 /* Managers */,
+				E3D309132DF7258E004DF8C1 /* Models */,
+				E3D309182DF7258E004DF8C1 /* Resources */,
+				E3D3091B2DF7258E004DF8C1 /* Utilities */,
+				E3D3091F2DF7258E004DF8C1 /* ViewModels */,
+				E3D309392DF7258E004DF8C1 /* Views */,
+				E3D3093A2DF7258E004DF8C1 /* SchoolAssisstantApp.swift */,
+			);
+			path = SchoolAssisstant;
+			sourceTree = "<group>";
+		};
+		E3D3093D2DF7258E004DF8C1 /* swiftpackage */ = {
+			isa = PBXGroup;
+			children = (
+				E3D3093C2DF7258E004DF8C1 /* Placeholder.swift */,
+			);
+			path = swiftpackage;
+			sourceTree = "<group>";
+		};
+		E3D3093F2DF7258E004DF8C1 /* SchoolAssisstantPackageTests */ = {
+			isa = PBXGroup;
+			children = (
+				E3D3093E2DF7258E004DF8C1 /* PlaceholderTests.swift */,
+			);
+			path = SchoolAssisstantPackageTests;
+			sourceTree = "<group>";
+		};
+		E3D309402DF7258E004DF8C1 /* Tests */ = {
+			isa = PBXGroup;
+			children = (
+				E3D3093F2DF7258E004DF8C1 /* SchoolAssisstantPackageTests */,
+			);
+			path = Tests;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -299,7 +297,7 @@ A1D21D8E6E2B21FD0FA449BC /* UserWantsToReviseView.swift */ = {isa = PBXFileRefer
 			);
 			dependencies = (
 			);
-                       name = SchoolAssisstant;
+			name = SchoolAssisstant;
 			packageProductDependencies = (
 				E3405F272DA80F7900216E57 /* FirebaseAppDistribution-Beta */,
 				E3405F292DA80F7900216E57 /* FirebaseAuth */,
@@ -315,7 +313,7 @@ A1D21D8E6E2B21FD0FA449BC /* UserWantsToReviseView.swift */ = {isa = PBXFileRefer
 				E3405F3E2DA8118700216E57 /* GoogleSignInSwift */,
 			);
 			productName = SchoolAssisstant;
-			productReference = E3405EF12DA80F2100216E57 /* SchoolAssisstant.app */;
+			productReference = E3D309732DF725EF004DF8C1 /* SchoolAssisstant.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -334,6 +332,7 @@ A1D21D8E6E2B21FD0FA449BC /* UserWantsToReviseView.swift */ = {isa = PBXFileRefer
 				};
 			};
 			buildConfigurationList = E3405EEC2DA80F2100216E57 /* Build configuration list for PBXProject "SchoolAssisstant" */;
+			compatibilityVersion = "Xcode 14.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
 			knownRegions = (
@@ -347,8 +346,7 @@ A1D21D8E6E2B21FD0FA449BC /* UserWantsToReviseView.swift */ = {isa = PBXFileRefer
 				E3405F262DA80F7900216E57 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
 				E3405F3B2DA8118700216E57 /* XCRemoteSwiftPackageReference "GoogleSignIn-iOS" */,
 			);
-                       preferredProjectObjectVersion = 56;
-			productRefGroup = E3405EF22DA80F2100216E57 /* Products */;
+			productRefGroup = E3405EE82DA80F2100216E57;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
@@ -362,7 +360,10 @@ A1D21D8E6E2B21FD0FA449BC /* UserWantsToReviseView.swift */ = {isa = PBXFileRefer
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E3767A6A2DC2609100F1FBD0 /* relaxing.mp3 in Resources */,
+				E3D309412DF7258E004DF8C1 /* relaxing.mp3 in Resources */,
+				E3D309432DF7258E004DF8C1 /* Localizable.xcstrings in Resources */,
+				E3D309442DF7258E004DF8C1 /* GoogleService-Info.plist in Resources */,
+				E3D309452DF7258E004DF8C1 /* README.md in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -373,48 +374,50 @@ A1D21D8E6E2B21FD0FA449BC /* UserWantsToReviseView.swift */ = {isa = PBXFileRefer
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E3405F162DA80F4200216E57 /* HomeTab.swift in Sources */,
-				E3405F172DA80F4200216E57 /* SignUpEmailViewModel.swift in Sources */,
-				E37B3C5F2DA843A0005CB93F /* ResetPasswordView.swift in Sources */,
-				E37B3C582DA8411B005CB93F /* ShowPasswordView.swift in Sources */,
-				E37B3C592DA8411B005CB93F /* ShowEmailAdressView.swift in Sources */,
-				E37B3C502DA83DCF005CB93F /* SettingsView.swift in Sources */,
-				E3405F182DA80F4200216E57 /* AuthenticationView.swift in Sources */,
-				E3405F192DA80F4200216E57 /* SignInWithApple.swift in Sources */,
-				E3405F1A2DA80F4200216E57 /* LogInView.swift in Sources */,
-				E37B3C5B2DA8418B005CB93F /* ModifyBiographyView.swift in Sources */,
-				E3405F1B2DA80F4200216E57 /* TextManager.swift in Sources */,
-				E3405F1C2DA80F4200216E57 /* IntroPagesView.swift in Sources */,
-				E37B3C552DA84086005CB93F /* PrivacyView.swift in Sources */,
-				E37B3C532DA83E89005CB93F /* StorageManager.swift in Sources */,
-				E3405F1E2DA80F4200216E57 /* SignUpView.swift in Sources */,
-				E3405F1F2DA80F4200216E57 /* AccountTab.swift in Sources */,
-				E3405F202DA80F4200216E57 /* Utilities.swift in Sources */,
-				E3405F212DA80F4200216E57 /* AuthManager.swift in Sources */,
-				E3405F222DA80F4200216E57 /* JobIntroView.swift in Sources */,
-				E3405F242DA80F4200216E57 /* GoogleManager.swift in Sources */,
-				E3405F252DA80F4200216E57 /* IntroPagesModel.swift in Sources */,
-				E31B203F2DA9499A005F5816 /* UserInfosCreation.swift in Sources */,
-				E37B3C4D2DA83DAC005CB93F /* UserManager.swift in Sources */,
-				99935F8BD5CD9637E7510D25 /* AddTaskView.swift in Sources */,
-				3F841E0F817CCE60BE06BA86 /* AppTheme.swift in Sources */,
-				B7FC8A43443AEDDFD929735E /* EditProfileView.swift in Sources */,
-				D3CE411E5015224B4C93B4E9 /* LearnedSomethingView.swift in Sources */,
-				831067A5FD16C80351E9F10F /* LearningNote.swift in Sources */,
-				9A5D72E1CF63E57D99527CDF /* MeditationPreWorkView.swift in Sources */,
-				45391921E3673D01EDBDC4FC /* NotesManager.swift in Sources */,
-				13C90DACEBB32F2E20E2E558 /* NotesViewModel.swift in Sources */,
-				1EF4EECD7E053E03E39D1CB7 /* NotificationManager.swift in Sources */,
-				E981B8640222EFD12A53D718 /* PomodoroTimerView.swift in Sources */,
-				A439B69836BC16EDF2FC4D3E /* SchoolAssisstantApp.swift in Sources */,
-				37E1F0CC76478DAD4726A485 /* StatsView.swift in Sources */,
-				868DB39FF9E689093D1A6371 /* StudySessionView.swift in Sources */,
-				FE9C838A8FBB1574CC598981 /* TaskItem.swift in Sources */,
-				057EDA16DAA3880E0ED4D734 /* TaskManager.swift in Sources */,
-				437C30297605046B0C40761B /* TasksTab.swift in Sources */,
-				2C97DE19C997D0FF7AD353F7 /* TasksViewModel.swift in Sources */,
-				E6C7EF4BB245CF0D49C8EBA7 /* UserWantsToAddInfoView.swift in Sources */,
-				39940B5992EB8A8482EFD2D5 /* UserWantsToReviseView.swift in Sources */,			);
+				E3D309462DF7258E004DF8C1 /* StudySessionView.swift in Sources */,
+				E3D309472DF7258E004DF8C1 /* NotificationManager.swift in Sources */,
+				E3D309482DF7258E004DF8C1 /* PrivacyView.swift in Sources */,
+				E3D309492DF7258E004DF8C1 /* PomodoroTimerView.swift in Sources */,
+				E3D3094A2DF7258E004DF8C1 /* TaskManager.swift in Sources */,
+				E3D3094B2DF7258E004DF8C1 /* AddTaskView.swift in Sources */,
+				E3D3094C2DF7258E004DF8C1 /* Utilities.swift in Sources */,
+				E3D3094D2DF7258E004DF8C1 /* AuthManager.swift in Sources */,
+				E3D3094E2DF7258E004DF8C1 /* TasksTab.swift in Sources */,
+				E3D3094F2DF7258E004DF8C1 /* EditProfileView.swift in Sources */,
+				E3D309502DF7258E004DF8C1 /* SignUpView.swift in Sources */,
+				E3D309512DF7258E004DF8C1 /* UserWantsToReviseView.swift in Sources */,
+				E3D309522DF7258E004DF8C1 /* ResetPasswordView.swift in Sources */,
+				E3D309532DF7258E004DF8C1 /* AccountTab.swift in Sources */,
+				E3D309542DF7258E004DF8C1 /* TextManager.swift in Sources */,
+				E3D309562DF7258E004DF8C1 /* TasksViewModel.swift in Sources */,
+				E3D309572DF7258E004DF8C1 /* LogInView.swift in Sources */,
+				E3D309582DF7258E004DF8C1 /* AppTheme.swift in Sources */,
+				E3D309592DF7258E004DF8C1 /* UserWantsToAddInfoView.swift in Sources */,
+				E3D3095A2DF7258E004DF8C1 /* SchoolAssisstantApp.swift in Sources */,
+				E3D3095B2DF7258E004DF8C1 /* ShowEmailAdressView.swift in Sources */,
+				E3D3095C2DF7258E004DF8C1 /* StatsView.swift in Sources */,
+				E3D3095D2DF7258E004DF8C1 /* IntroPagesModel.swift in Sources */,
+				E3D3095E2DF7258E004DF8C1 /* UserManager.swift in Sources */,
+				E3D3095F2DF7258E004DF8C1 /* IntroPagesView.swift in Sources */,
+				E3D309602DF7258E004DF8C1 /* LearnedSomethingView.swift in Sources */,
+				E3D309612DF7258E004DF8C1 /* TaskItem.swift in Sources */,
+				E3D309622DF7258E004DF8C1 /* SettingsView.swift in Sources */,
+				E3D309642DF7258E004DF8C1 /* NotesManager.swift in Sources */,
+				E3D309652DF7258E004DF8C1 /* Placeholder.swift in Sources */,
+				E3D309662DF7258E004DF8C1 /* StorageManager.swift in Sources */,
+				E3D309672DF7258E004DF8C1 /* ModifyBiographyView.swift in Sources */,
+				E3D309682DF7258E004DF8C1 /* HomeTab.swift in Sources */,
+				E3D309692DF7258E004DF8C1 /* IntroView.swift in Sources */,
+				E3D3096A2DF7258E004DF8C1 /* LearningNote.swift in Sources */,
+				E3D3096B2DF7258E004DF8C1 /* NotesViewModel.swift in Sources */,
+				E3D3096C2DF7258E004DF8C1 /* UserInfosCreation.swift in Sources */,
+				E3D3096D2DF7258E004DF8C1 /* AuthenticationView.swift in Sources */,
+				E3D3096E2DF7258E004DF8C1 /* SignInWithApple.swift in Sources */,
+				E3D3096F2DF7258E004DF8C1 /* ShowPasswordView.swift in Sources */,
+				E3D309702DF7258E004DF8C1 /* GoogleManager.swift in Sources */,
+				E3D309712DF7258E004DF8C1 /* SignUpEmailViewModel.swift in Sources */,
+				E3D309722DF7258E004DF8C1 /* MeditationPreWorkView.swift in Sources */,
+			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
@@ -473,6 +476,7 @@ A1D21D8E6E2B21FD0FA449BC /* UserWantsToReviseView.swift */ = {isa = PBXFileRefer
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
+				INFOPLIST_FILE = /Users/leonarddinichert/Documents/GitHub/SchoolAssisstant/SchoolAssisstant/Resources/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 18.4;
 				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
@@ -532,6 +536,7 @@ A1D21D8E6E2B21FD0FA449BC /* UserWantsToReviseView.swift */ = {isa = PBXFileRefer
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
+				INFOPLIST_FILE = /Users/leonarddinichert/Documents/GitHub/SchoolAssisstant/SchoolAssisstant/Resources/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 18.4;
 				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
 				MTL_ENABLE_DEBUG_INFO = NO;
@@ -553,7 +558,7 @@ A1D21D8E6E2B21FD0FA449BC /* UserWantsToReviseView.swift */ = {isa = PBXFileRefer
 				DEVELOPMENT_TEAM = F6VFNA642Y;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = SchoolAssisstant/Info.plist;
+				INFOPLIST_FILE = /Users/leonarddinichert/Documents/GitHub/SchoolAssisstant/SchoolAssisstant/Resources/Info.plist;
 				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.education";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -583,7 +588,7 @@ A1D21D8E6E2B21FD0FA449BC /* UserWantsToReviseView.swift */ = {isa = PBXFileRefer
 				DEVELOPMENT_TEAM = F6VFNA642Y;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = SchoolAssisstant/Info.plist;
+				INFOPLIST_FILE = /Users/leonarddinichert/Documents/GitHub/SchoolAssisstant/SchoolAssisstant/Resources/Info.plist;
 				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.education";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;

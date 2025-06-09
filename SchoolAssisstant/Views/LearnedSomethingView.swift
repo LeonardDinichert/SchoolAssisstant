@@ -44,15 +44,17 @@ struct LearnedSomethingView: View {
             }
             .padding()
             .background(AppTheme.background)
-        }
-        .fullScreenCover(isPresented: $userWantsToRevise) {
-            UserWantsToReviseView()
-        }
-        .fullScreenCover(isPresented: $userWantsAddInfo) {
-            UserWantsToAddInfoView(userWantsAddInfo: $userWantsAddInfo)
+        
+            .fullScreenCover(isPresented: $userWantsAddInfo) {
+                UserWantsToAddInfoView(userWantsAddInfo: $userWantsAddInfo)
+            }
+        
+            .fullScreenCover(isPresented: $userWantsToRevise) {
+                UserWantsToReviseView()
+            }
         }
     }
-}
+
 
 #Preview {
     LearnedSomethingView()

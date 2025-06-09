@@ -7,15 +7,15 @@
 
 import SwiftUI
 
-struct JobIntroView: View {
+struct IntroView: View {
     @AppStorage("hasShownWelcome") private var hasShownWelcome: Bool = false
 
     var body: some View {
-        IntroPagesView(showIntro: $hasShownWelcome)
+        IntroPagesView()
     }
 }
 
 #Preview {
-    JobIntroView()
+    IntroView()
 }
 
