@@ -118,7 +118,6 @@
 		E3D309382DF7258E004DF8C1 /* UserWantsToReviseView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserWantsToReviseView.swift; sourceTree = "<group>"; };
 		E3D3093A2DF7258E004DF8C1 /* SchoolAssisstantApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SchoolAssisstantApp.swift; sourceTree = "<group>"; };
 		E3D3093C2DF7258E004DF8C1 /* Placeholder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Placeholder.swift; sourceTree = "<group>"; };
-		E3D3093E2DF7258E004DF8C1 /* PlaceholderTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaceholderTests.swift; sourceTree = "<group>"; };
 		E3D309732DF725EF004DF8C1 /* SchoolAssisstant.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SchoolAssisstant.app; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -152,7 +151,6 @@
 				E3D309062DF7258E004DF8C1 /* README.md */,
 				E3D3093B2DF7258E004DF8C1 /* SchoolAssisstant */,
 				E3D3093D2DF7258E004DF8C1 /* swiftpackage */,
-				E3D309402DF7258E004DF8C1 /* Tests */,
 				E3D309732DF725EF004DF8C1 /* SchoolAssisstant.app */,
 			);
 			sourceTree = "<group>";
@@ -264,22 +262,6 @@
 				E3D3093C2DF7258E004DF8C1 /* Placeholder.swift */,
 			);
 			path = swiftpackage;
-			sourceTree = "<group>";
-		};
-		E3D3093F2DF7258E004DF8C1 /* SchoolAssisstantPackageTests */ = {
-			isa = PBXGroup;
-			children = (
-				E3D3093E2DF7258E004DF8C1 /* PlaceholderTests.swift */,
-			);
-			path = SchoolAssisstantPackageTests;
-			sourceTree = "<group>";
-		};
-		E3D309402DF7258E004DF8C1 /* Tests */ = {
-			isa = PBXGroup;
-			children = (
-				E3D3093F2DF7258E004DF8C1 /* SchoolAssisstantPackageTests */,
-			);
-			path = Tests;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
