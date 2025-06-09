@@ -213,31 +213,15 @@
 		E3D309392DF7258E004DF8C1 /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				E3D309202DF7258E004DF8C1 /* AccountTab.swift */,
-				E3D309212DF7258E004DF8C1 /* AddTaskView.swift */,
-				E3D309222DF7258E004DF8C1 /* AuthenticationView.swift */,
-				E3D309232DF7258E004DF8C1 /* EditProfileView.swift */,
-				E3D309242DF7258E004DF8C1 /* HomeTab.swift */,
-				E3D309252DF7258E004DF8C1 /* IntroPagesView.swift */,
-				E3D309262DF7258E004DF8C1 /* IntroView.swift */,
-				E3D309272DF7258E004DF8C1 /* LearnedSomethingView.swift */,
-				E3D309282DF7258E004DF8C1 /* LogInView.swift */,
-				E3D309292DF7258E004DF8C1 /* MeditationPreWorkView.swift */,
-				E3D3092A2DF7258E004DF8C1 /* ModifyBiographyView.swift */,
-				E3D3092B2DF7258E004DF8C1 /* PomodoroTimerView.swift */,
-				E3D3092C2DF7258E004DF8C1 /* PrivacyView.swift */,
-				E3D3092D2DF7258E004DF8C1 /* ResetPasswordView.swift */,
-				E3D3092E2DF7258E004DF8C1 /* SettingsView.swift */,
-				E3D3092F2DF7258E004DF8C1 /* ShowEmailAdressView.swift */,
-				E3D309302DF7258E004DF8C1 /* ShowPasswordView.swift */,
-				E3D309312DF7258E004DF8C1 /* SignInWithApple.swift */,
-				E3D309322DF7258E004DF8C1 /* SignUpView.swift */,
-				E3D309332DF7258E004DF8C1 /* StatsView.swift */,
-				E3D309342DF7258E004DF8C1 /* StudySessionView.swift */,
-				E3D309352DF7258E004DF8C1 /* TasksTab.swift */,
-				E3D309362DF7258E004DF8C1 /* UserInfosCreation.swift */,
-				E3D309372DF7258E004DF8C1 /* UserWantsToAddInfoView.swift */,
-				E3D309382DF7258E004DF8C1 /* UserWantsToReviseView.swift */,
+				E3D3093A2DF7258E004DF8C1 /* SchoolAssisstantApp.swift */,
+				E3D309752DF72D66004DF8C1 /* HomePage */,
+				E3D309742DF72D58004DF8C1 /* AccountPage */,
+				E3D3097B2DF72DD0004DF8C1 /* Tasks */,
+				E3D309762DF72D6E004DF8C1 /* IntroPages */,
+				E3D309772DF72D7F004DF8C1 /* AuthenticationViews */,
+				E3D309792DF72D9A004DF8C1 /* LearnView */,
+				E3D3097A2DF72DB2004DF8C1 /* StudyView */,
+				E3D3097C2DF72DEC004DF8C1 /* StatsPage */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -251,7 +235,6 @@
 				E3D3091B2DF7258E004DF8C1 /* Utilities */,
 				E3D3091F2DF7258E004DF8C1 /* ViewModels */,
 				E3D309392DF7258E004DF8C1 /* Views */,
-				E3D3093A2DF7258E004DF8C1 /* SchoolAssisstantApp.swift */,
 			);
 			path = SchoolAssisstant;
 			sourceTree = "<group>";
@@ -262,6 +245,87 @@
 				E3D3093C2DF7258E004DF8C1 /* Placeholder.swift */,
 			);
 			path = swiftpackage;
+			sourceTree = "<group>";
+		};
+		E3D309742DF72D58004DF8C1 /* AccountPage */ = {
+			isa = PBXGroup;
+			children = (
+				E3D3092A2DF7258E004DF8C1 /* ModifyBiographyView.swift */,
+				E3D309202DF7258E004DF8C1 /* AccountTab.swift */,
+				E3D309232DF7258E004DF8C1 /* EditProfileView.swift */,
+				E3D3092F2DF7258E004DF8C1 /* ShowEmailAdressView.swift */,
+				E3D3092E2DF7258E004DF8C1 /* SettingsView.swift */,
+				E3D309302DF7258E004DF8C1 /* ShowPasswordView.swift */,
+				E3D3092D2DF7258E004DF8C1 /* ResetPasswordView.swift */,
+				E3D3092C2DF7258E004DF8C1 /* PrivacyView.swift */,
+			);
+			path = AccountPage;
+			sourceTree = "<group>";
+		};
+		E3D309752DF72D66004DF8C1 /* HomePage */ = {
+			isa = PBXGroup;
+			children = (
+				E3D309242DF7258E004DF8C1 /* HomeTab.swift */,
+			);
+			path = HomePage;
+			sourceTree = "<group>";
+		};
+		E3D309762DF72D6E004DF8C1 /* IntroPages */ = {
+			isa = PBXGroup;
+			children = (
+				E3D309262DF7258E004DF8C1 /* IntroView.swift */,
+				E3D309252DF7258E004DF8C1 /* IntroPagesView.swift */,
+			);
+			path = IntroPages;
+			sourceTree = "<group>";
+		};
+		E3D309772DF72D7F004DF8C1 /* AuthenticationViews */ = {
+			isa = PBXGroup;
+			children = (
+				E3D309222DF7258E004DF8C1 /* AuthenticationView.swift */,
+				E3D309362DF7258E004DF8C1 /* UserInfosCreation.swift */,
+				E3D309282DF7258E004DF8C1 /* LogInView.swift */,
+				E3D309312DF7258E004DF8C1 /* SignInWithApple.swift */,
+				E3D309322DF7258E004DF8C1 /* SignUpView.swift */,
+			);
+			path = AuthenticationViews;
+			sourceTree = "<group>";
+		};
+		E3D309792DF72D9A004DF8C1 /* LearnView */ = {
+			isa = PBXGroup;
+			children = (
+				E3D309272DF7258E004DF8C1 /* LearnedSomethingView.swift */,
+				E3D309382DF7258E004DF8C1 /* UserWantsToReviseView.swift */,
+				E3D309372DF7258E004DF8C1 /* UserWantsToAddInfoView.swift */,
+			);
+			path = LearnView;
+			sourceTree = "<group>";
+		};
+		E3D3097A2DF72DB2004DF8C1 /* StudyView */ = {
+			isa = PBXGroup;
+			children = (
+				E3D309342DF7258E004DF8C1 /* StudySessionView.swift */,
+				E3D3092B2DF7258E004DF8C1 /* PomodoroTimerView.swift */,
+				E3D309292DF7258E004DF8C1 /* MeditationPreWorkView.swift */,
+			);
+			path = StudyView;
+			sourceTree = "<group>";
+		};
+		E3D3097B2DF72DD0004DF8C1 /* Tasks */ = {
+			isa = PBXGroup;
+			children = (
+				E3D309212DF7258E004DF8C1 /* AddTaskView.swift */,
+				E3D309352DF7258E004DF8C1 /* TasksTab.swift */,
+			);
+			path = Tasks;
+			sourceTree = "<group>";
+		};
+		E3D3097C2DF72DEC004DF8C1 /* StatsPage */ = {
+			isa = PBXGroup;
+			children = (
+				E3D309332DF7258E004DF8C1 /* StatsView.swift */,
+			);
+			path = StatsPage;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
