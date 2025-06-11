@@ -55,7 +55,6 @@
 		E3D309642DF7258E004DF8C1 /* NotesManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3D309092DF7258E004DF8C1 /* NotesManager.swift */; };
 		E3D309652DF7258E004DF8C1 /* Placeholder.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3D3093C2DF7258E004DF8C1 /* Placeholder.swift */; };
 		E3D309662DF7258E004DF8C1 /* StorageManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3D3090B2DF7258E004DF8C1 /* StorageManager.swift */; };
-		E3D309672DF7258E004DF8C1 /* ModifyBiographyView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3D3092A2DF7258E004DF8C1 /* ModifyBiographyView.swift */; };
 		E3D309682DF7258E004DF8C1 /* HomeTab.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3D309242DF7258E004DF8C1 /* HomeTab.swift */; };
 		E3D309692DF7258E004DF8C1 /* IntroView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3D309262DF7258E004DF8C1 /* IntroView.swift */; };
 		E3D3096A2DF7258E004DF8C1 /* LearningNote.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3D309112DF7258E004DF8C1 /* LearningNote.swift */; };
@@ -103,7 +102,6 @@
 		E3D309272DF7258E004DF8C1 /* LearnedSomethingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LearnedSomethingView.swift; sourceTree = "<group>"; };
 		E3D309282DF7258E004DF8C1 /* LogInView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogInView.swift; sourceTree = "<group>"; };
 		E3D309292DF7258E004DF8C1 /* MeditationPreWorkView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MeditationPreWorkView.swift; sourceTree = "<group>"; };
-		E3D3092A2DF7258E004DF8C1 /* ModifyBiographyView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModifyBiographyView.swift; sourceTree = "<group>"; };
 		E3D3092B2DF7258E004DF8C1 /* PomodoroTimerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PomodoroTimerView.swift; sourceTree = "<group>"; };
 		E3D3092C2DF7258E004DF8C1 /* PrivacyView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrivacyView.swift; sourceTree = "<group>"; };
 		E3D3092D2DF7258E004DF8C1 /* ResetPasswordView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResetPasswordView.swift; sourceTree = "<group>"; };
@@ -261,7 +259,6 @@
 		E3D309742DF72D58004DF8C1 /* AccountPage */ = {
 			isa = PBXGroup;
 			children = (
-				E3D3092A2DF7258E004DF8C1 /* ModifyBiographyView.swift */,
 				E3D309202DF7258E004DF8C1 /* AccountTab.swift */,
 				E3D309232DF7258E004DF8C1 /* EditProfileView.swift */,
 				E3D3092F2DF7258E004DF8C1 /* ShowEmailAdressView.swift */,
@@ -463,7 +460,6 @@
 				E3D309642DF7258E004DF8C1 /* NotesManager.swift in Sources */,
 				E3D309652DF7258E004DF8C1 /* Placeholder.swift in Sources */,
 				E3D309662DF7258E004DF8C1 /* StorageManager.swift in Sources */,
-				E3D309672DF7258E004DF8C1 /* ModifyBiographyView.swift in Sources */,
 				E3D309682DF7258E004DF8C1 /* HomeTab.swift in Sources */,
 				E3D309692DF7258E004DF8C1 /* IntroView.swift in Sources */,
 				E3D3096A2DF7258E004DF8C1 /* LearningNote.swift in Sources */,
