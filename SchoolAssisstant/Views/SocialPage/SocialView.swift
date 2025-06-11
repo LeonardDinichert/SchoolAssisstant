@@ -1,33 +1,54 @@
 import SwiftUI
 
 struct SocialView: View {
-    @StateObject private var viewModel = userManagerViewModel()
-
+    @StateObject private var viewModel = SocialViewModel()
+    private let columns = [GridItem(.flexible()), GridItem(.flexible())]
+    
     var body: some View {
         NavigationStack {
-            List {
-                ForEach(viewModel.leaderboard, id: \.userId) { friend in
-                    if friend.userId != viewModel.user?.userId {
-                        VStack(alignment: .leading) {
-                            Text(friend.username ?? "Unknown")
-                                .font(.headline)
-                            if let last = friend.lastConnection {
-                                Text("Last online: \(last, style: .relative)")
-                                    .font(.caption)
-                                    .foregroundColor(.secondary)
+            ScrollView {
+                VStack(alignment: .leading, spacing: 16) {
+                    if viewModel.userMinutesToday > 0 {
+                        Text("You've studied \(viewModel.userMinutesToday) min today")
+                            .font(.headline)
+                    }
+                    LazyVGrid(columns: columns, spacing: 16) {
+                        ForEach(viewModel.friends) { friend in
+                            FriendCard(friend: friend) {
+                                viewModel.nudge(friend: friend.user)
                             }
                         }
                     }
                 }
+                .padding()
             }
             .navigationTitle("Social")
-            .onAppear {
-                Task {
-                    try? await viewModel.loadCurrentUser()
-                    await viewModel.loadLeaderboard()
-                }
+        }
+        .task { await viewModel.load() }
+    }
+}
+
+struct FriendCard: View {
+    let friend: FriendStats
+    var nudgeAction: () -> Void
+
+    var body: some View {
+        VStack(alignment: .leading, spacing: 8) {
+            Text(friend.user.username ?? "Unknown")
+                .font(.headline)
+            Text(friend.lastLoginText)
+                .font(.caption)
+                .foregroundColor(.secondary)
+            Text("Streak: \(friend.streak) d")
+                .font(.caption)
+            Text("Today: \(friend.minutesToday) min")
+                .font(.caption)
+            if friend.daysSinceLastLogin >= 2 {
+                Button("Nudge", action: nudgeAction)
+                    .primaryButtonStyle()
             }
         }
+        .cardStyle()
     }
 }
 

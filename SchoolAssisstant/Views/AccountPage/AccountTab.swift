@@ -95,17 +95,32 @@ struct AccountTab: View {
                                 PrivacyView()
                             } label: {
                                 HStack {
-                                    
+
                                     Text("Security and privacy")
                                         .font(.headline)
                                         .foregroundStyle(.black)
-                                    
+
                                     Spacer()
-                                    
+
                                     Image(systemName: "chevron.right")
                                         .font(.subheadline)
                                         .foregroundStyle(.black)
-                                    
+
+                                }
+                            }
+                            .padding(.bottom)
+
+                            NavigationLink {
+                                LegalView()
+                            } label: {
+                                HStack {
+                                    Text("Legal")
+                                        .font(.headline)
+                                        .foregroundStyle(.black)
+                                    Spacer()
+                                    Image(systemName: "chevron.right")
+                                        .font(.subheadline)
+                                        .foregroundStyle(.black)
                                 }
                             }
                             .padding(.bottom)
