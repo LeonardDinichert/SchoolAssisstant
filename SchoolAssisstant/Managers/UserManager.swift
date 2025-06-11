@@ -311,9 +311,7 @@ final class userManagerViewModel: ObservableObject {
             print("No authenticated user.")
             return
         }
-        
-        print("userid", userId)
-
+    
         self.user = try await UserManager.shared.getUser(userId: userId)
         try? await UserManager.shared.updateLastConnection(userId: userId, date: Date())
     }
