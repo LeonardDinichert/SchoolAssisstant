@@ -239,22 +239,7 @@ final class UserManager: ObservableObject {
         }
     }
     
-    func addBiographyAndTownToUser(userId: String, biography: String, town : String) async throws {
-        let data: [String: Any] = [
-            "biography": biography,
-            "town" : town
-        ]
-        
-        try await userDocument(userId: userId).setData(data, merge: true)
-    }
-    
-    func modifyBiographyToUser(userId: String, biography: String) async throws {
-        let data: [String: Any] = [
-            "biography": biography,
-        ]
-        
-        try await userDocument(userId: userId).setData(data, merge: true)
-    }
+
     
     func loadCurrentUserId() async throws -> String {
         
