@@ -9,35 +9,29 @@ import SwiftUI
 import Charts
 
 struct HomeTab: View {
-    
+
     @StateObject private var viewModel = userManagerViewModel()
     @StateObject private var notesViewModel = NotesViewModel()
     @StateObject private var statsModel = StatsViewModel()
     @Binding var selectedTab: Tab
 
-
     var body: some View {
         NavigationStack {
-            ScrollView {
-                if let user = viewModel.user {
-                    VStack {
-                        Text("Hello \(user.username ?? "No user"), let's work !")
-                            .font(.largeTitle)
-                            .fontWeight(.semibold)
-                        
-                        Button {
-                            selectedTab = .studySession
-                        } label: {
-                            Text("Start a study session")
-                        }
-                        .primaryButtonStyle()
-                        .padding(.horizontal)
-                        
-                        VStack(spacing: 16) {
-                            Text("\(statsModel.streak) day streak! Keep it up!")
+            VStack(spacing: 0) {
+                ScrollView {
+                    if let user = viewModel.user {
+                        VStack(alignment: .leading, spacing: 24) {
+                            Text("Hello \(user.username ?? "No user"), let's work !")
+                                .font(.largeTitle)
+                                .fontWeight(.semibold)
+                                .padding(.horizontal)
+
+                            Text(statsModel.streak > 0 ? "\(statsModel.streak) day streak! Keep it up!" : "Start building your streak!")
                                 .font(.title2)
                                 .fontWeight(.bold)
                                 .multilineTextAlignment(.center)
+                                .frame(maxWidth: .infinity)
+                                .padding(.horizontal)
 
                             if !statsModel.dailyTotals.isEmpty {
                                 Chart {
@@ -52,66 +46,30 @@ struct HomeTab: View {
                                 .chartXAxisLabel("Day")
                                 .chartYAxisLabel("Minutes")
                                 .frame(height: 200)
-                            }
-
-//                            if !notesViewModel.notes.isEmpty {
-//                                VStack(alignment: .leading) {
-//                                    Text("Recent Notes")
-//                                        .font(.headline)
-//                                    ForEach(notesViewModel.notes.prefix(3)) { note in
-//                                        Text(note.text)
-//                                            .frame(maxWidth: .infinity, alignment: .leading)
-//                                            .padding(8)
-//                                            .background(AppTheme.cardBackground)
-//                                            .cornerRadius(AppTheme.cornerRadius)
-//                                    }
-//                                }
-//                                .padding(.horizontal)
-//                            }
-                            if !viewModel.leaderboard.isEmpty {
-                                VStack(alignment: .leading) {
-                                    Text("Friends")
-                                        .font(.headline)
-                                    ForEach(viewModel.leaderboard.prefix(5), id: \.userId) { friend in
-                                        if friend.userId != viewModel.user?.userId {
-                                            VStack(alignment: .leading) {
-                                                HStack {
-                                                    Text(friend.username ?? "Unknown")
-                                                    Spacer()
-                                                    Button("Nudge") {
-                                                        viewModel.sendNotificationRequest(title: "Time to study!", body: "Let's work together", token: friend.fcmToken)
-                                                    }
-                                                    .buttonStyle(.bordered)
-                                                }
-                                                if let last = friend.lastConnection {
-                                                    Text("Last online: \(last, style: .time)")
-                                                        .font(.caption)
-                                                        .foregroundColor(.secondary)
-                                                }
-                                            }
-                                        }
-                                    }
-                                }
                                 .padding(.horizontal)
                             }
                         }
-                        
-                        
+                        .frame(maxWidth: .infinity, alignment: .leading)
+                    } else {
+                        VStack(spacing: 16) {
+                            Text("Loading...")
+                                .font(.largeTitle)
+                                .fontWeight(.bold)
+                            ProgressView()
+                                .font(.title)
+                        }
+                        .padding()
                     }
-                    
-                } else {
-                    // MARK: - Loading / Not Logged In
-                    VStack(spacing: 16) {
-                        Text("Loading...")
-                            .font(.largeTitle)
-                            .fontWeight(.bold)
-                        
-                        ProgressView()
-                            .font(.title)
-                    }
-                    .padding()
                 }
+                Button {
+                    selectedTab = .studySession
+                } label: {
+                    Text("Start a study session")
+                }
+                .primaryButtonStyle()
+                .padding()
             }
+            .navigationTitle("Home")
         }
         .onAppear {
             Task {
