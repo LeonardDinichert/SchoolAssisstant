@@ -1,3 +1,10 @@
+//
+//  LegalView.swift
+//  SchoolAssisstant
+//
+//  Created by Léonard Dinichert on 11.06.2025.
+//
+
 import SwiftUI
 
 struct LegalView: View {

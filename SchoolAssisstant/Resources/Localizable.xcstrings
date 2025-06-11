@@ -99,6 +99,9 @@
         }
       }
     },
+    "By using SchoolAssisstant you agree to use the app for personal study only. We do not guarantee the accuracy of provided data and reserve the right to modify the service at any time." : {
+
+    },
     "Cancel" : {
       "localizations" : {
         "fr" : {
@@ -122,6 +125,9 @@
     "Change my email adress" : {
 
     },
+    "Contact" : {
+
+    },
     "Continue" : {
 
     },
@@ -137,6 +143,9 @@
     "Dark Mode" : {
 
     },
+    "Data Deletion" : {
+
+    },
     "Day" : {
 
     },
@@ -144,6 +153,9 @@
 
     },
     "Delete my account" : {
+
+    },
+    "Deleting your account permanently removes your notes, study history and any personal information from our servers." : {
 
     },
     "Describe what you learned" : {
@@ -161,13 +173,7 @@
     "Due Date" : {
 
     },
-    "Edit Biography" : {
-
-    },
     "Edit Profile" : {
-
-    },
-    "Edit Your Biography" : {
 
     },
     "Eg. Math" : {
@@ -189,9 +195,6 @@
 
     },
     "Forgot your Password?" : {
-
-    },
-    "Friends" : {
 
     },
     "Hello %@, let's work !" : {
@@ -228,6 +231,12 @@
 
     },
     "Learn" : {
+
+    },
+    "Legal" : {
+
+    },
+    "Legal Information" : {
 
     },
     "Loading..." : {
@@ -295,9 +304,6 @@
     "Non" : {
 
     },
-    "Nudge" : {
-
-    },
     "OK" : {
 
     },
@@ -316,7 +322,13 @@
     "Prepare yourself better for working ?" : {
 
     },
+    "Privacy Policy" : {
+
+    },
     "Profile" : {
+
+    },
+    "Questions or concerns? Email support@schoolassistant.app." : {
 
     },
     "Quit" : {
@@ -346,9 +358,6 @@
     "Save" : {
 
     },
-    "Save Biography" : {
-
-    },
     "Security and privacy" : {
 
     },
@@ -366,9 +375,6 @@
 
     },
     "Share it or revise past notes below." : {
-
-    },
-    "Share your story, skills, and experiences so others can get to know you better." : {
 
     },
     "Short Break" : {
@@ -392,6 +398,9 @@
     "Start a study session" : {
 
     },
+    "Start building your streak!" : {
+
+    },
     "Stats" : {
 
     },
@@ -411,6 +420,9 @@
 
     },
     "Tasks" : {
+
+    },
+    "Terms of Use" : {
 
     },
     "Title" : {
@@ -453,6 +465,9 @@
 
     },
     "Your Notes" : {
+
+    },
+    "Your study sessions and profile details are stored securely in your iCloud account. They are not shared with third parties. You may remove all data by deleting your account." : {
 
     }
   },

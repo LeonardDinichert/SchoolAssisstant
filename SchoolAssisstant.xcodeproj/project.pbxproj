@@ -20,6 +20,7 @@
 		E3405F3D2DA8118700216E57 /* GoogleSignIn in Frameworks */ = {isa = PBXBuildFile; productRef = E3405F3C2DA8118700216E57 /* GoogleSignIn */; };
 		E3405F3F2DA8118700216E57 /* GoogleSignInSwift in Frameworks */ = {isa = PBXBuildFile; productRef = E3405F3E2DA8118700216E57 /* GoogleSignInSwift */; };
 		E3BD2CF82DF749FA005D97B2 /* SocialView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3BD2CF62DF749FA005D97B2 /* SocialView.swift */; };
+		E3BE42B22DF9DD48006992C5 /* LegalView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3BE42B12DF9DD48006992C5 /* LegalView.swift */; };
 		E3D309412DF7258E004DF8C1 /* relaxing.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = E3D309172DF7258E004DF8C1 /* relaxing.mp3 */; };
 		E3D309432DF7258E004DF8C1 /* Localizable.xcstrings in Resources */ = {isa = PBXBuildFile; fileRef = E3D309162DF7258E004DF8C1 /* Localizable.xcstrings */; };
 		E3D309442DF7258E004DF8C1 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = E3D309142DF7258E004DF8C1 /* GoogleService-Info.plist */; };
@@ -70,6 +71,7 @@
 
 /* Begin PBXFileReference section */
 		E3BD2CF62DF749FA005D97B2 /* SocialView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SocialView.swift; sourceTree = "<group>"; };
+		E3BE42B12DF9DD48006992C5 /* LegalView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LegalView.swift; sourceTree = "<group>"; };
 		E3D309052DF7258E004DF8C1 /* Package.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Package.swift; sourceTree = "<group>"; };
 		E3D309062DF7258E004DF8C1 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		E3D309072DF7258E004DF8C1 /* AuthManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthManager.swift; sourceTree = "<group>"; };
@@ -260,6 +262,7 @@
 			isa = PBXGroup;
 			children = (
 				E3D309202DF7258E004DF8C1 /* AccountTab.swift */,
+				E3BE42B12DF9DD48006992C5 /* LegalView.swift */,
 				E3D309232DF7258E004DF8C1 /* EditProfileView.swift */,
 				E3D3092F2DF7258E004DF8C1 /* ShowEmailAdressView.swift */,
 				E3D3092E2DF7258E004DF8C1 /* SettingsView.swift */,
@@ -442,6 +445,7 @@
 				E3D309512DF7258E004DF8C1 /* UserWantsToReviseView.swift in Sources */,
 				E3D309522DF7258E004DF8C1 /* ResetPasswordView.swift in Sources */,
 				E3D309532DF7258E004DF8C1 /* AccountTab.swift in Sources */,
+				E3BE42B22DF9DD48006992C5 /* LegalView.swift in Sources */,
 				E3D309542DF7258E004DF8C1 /* TextManager.swift in Sources */,
 				E3D309562DF7258E004DF8C1 /* TasksViewModel.swift in Sources */,
 				E3D309572DF7258E004DF8C1 /* LogInView.swift in Sources */,
