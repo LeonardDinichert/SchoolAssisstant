@@ -19,6 +19,8 @@
 		E3405F3A2DA80F7900216E57 /* FirebaseStorageCombine-Community in Frameworks */ = {isa = PBXBuildFile; productRef = E3405F392DA80F7900216E57 /* FirebaseStorageCombine-Community */; };
 		E3405F3D2DA8118700216E57 /* GoogleSignIn in Frameworks */ = {isa = PBXBuildFile; productRef = E3405F3C2DA8118700216E57 /* GoogleSignIn */; };
 		E3405F3F2DA8118700216E57 /* GoogleSignInSwift in Frameworks */ = {isa = PBXBuildFile; productRef = E3405F3E2DA8118700216E57 /* GoogleSignInSwift */; };
+		E34D77B72DF9E1710041B0FF /* SocialView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E34D77B52DF9E1710041B0FF /* SocialView.swift */; };
+		E34D77B92DF9E1B30041B0FF /* SocialViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E34D77B82DF9E1B30041B0FF /* SocialViewModel.swift */; };
 		E3BE42B22DF9DD48006992C5 /* LegalView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3BE42B12DF9DD48006992C5 /* LegalView.swift */; };
 		E3D309412DF7258E004DF8C1 /* relaxing.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = E3D309172DF7258E004DF8C1 /* relaxing.mp3 */; };
 		E3D309432DF7258E004DF8C1 /* Localizable.xcstrings in Resources */ = {isa = PBXBuildFile; fileRef = E3D309162DF7258E004DF8C1 /* Localizable.xcstrings */; };
@@ -69,6 +71,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		E34D77B52DF9E1710041B0FF /* SocialView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SocialView.swift; sourceTree = "<group>"; };
+		E34D77B82DF9E1B30041B0FF /* SocialViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SocialViewModel.swift; sourceTree = "<group>"; };
 		E3BE42B12DF9DD48006992C5 /* LegalView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LegalView.swift; sourceTree = "<group>"; };
 		E3D309052DF7258E004DF8C1 /* Package.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Package.swift; sourceTree = "<group>"; };
 		E3D309062DF7258E004DF8C1 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
@@ -155,6 +159,14 @@
 			);
 			sourceTree = "<group>";
 		};
+		E34D77B62DF9E1710041B0FF /* SocialPage 2 */ = {
+			isa = PBXGroup;
+			children = (
+				E34D77B52DF9E1710041B0FF /* SocialView.swift */,
+			);
+			path = "SocialPage 2";
+			sourceTree = "<group>";
+		};
 		E3D3090F2DF7258E004DF8C1 /* Managers */ = {
 			isa = PBXGroup;
 			children = (
@@ -206,6 +218,7 @@
 				E3D3091C2DF7258E004DF8C1 /* NotesViewModel.swift */,
 				E3D3091D2DF7258E004DF8C1 /* SignUpEmailViewModel.swift */,
 				E3D3091E2DF7258E004DF8C1 /* TasksViewModel.swift */,
+				E34D77B82DF9E1B30041B0FF /* SocialViewModel.swift */,
 			);
 			path = ViewModels;
 			sourceTree = "<group>";
@@ -213,6 +226,7 @@
 		E3D309392DF7258E004DF8C1 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				E34D77B62DF9E1710041B0FF /* SocialPage 2 */,
 				E3D3093A2DF7258E004DF8C1 /* SchoolAssisstantApp.swift */,
 				E3D309752DF72D66004DF8C1 /* HomePage */,
 				E3D309742DF72D58004DF8C1 /* AccountPage */,
@@ -422,6 +436,7 @@
 			files = (
 				E3D309462DF7258E004DF8C1 /* StudySessionView.swift in Sources */,
 				E3D309472DF7258E004DF8C1 /* NotificationManager.swift in Sources */,
+				E34D77B92DF9E1B30041B0FF /* SocialViewModel.swift in Sources */,
 				E3D309482DF7258E004DF8C1 /* PrivacyView.swift in Sources */,
 				E3D309492DF7258E004DF8C1 /* PomodoroTimerView.swift in Sources */,
 				E3D3094A2DF7258E004DF8C1 /* TaskManager.swift in Sources */,
@@ -445,6 +460,7 @@
 				E3D3095C2DF7258E004DF8C1 /* StatsView.swift in Sources */,
 				E3D3095D2DF7258E004DF8C1 /* IntroPagesModel.swift in Sources */,
 				E3D3095E2DF7258E004DF8C1 /* UserManager.swift in Sources */,
+				E34D77B72DF9E1710041B0FF /* SocialView.swift in Sources */,
 				E3D3095F2DF7258E004DF8C1 /* IntroPagesView.swift in Sources */,
 				E3D309602DF7258E004DF8C1 /* LearnedSomethingView.swift in Sources */,
 				E3D309612DF7258E004DF8C1 /* TaskItem.swift in Sources */,

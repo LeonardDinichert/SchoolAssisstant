@@ -227,9 +227,6 @@
     "Key" : {
       "extractionState" : "manual"
     },
-    "Last online: %@" : {
-
-    },
     "Learn" : {
 
     },
@@ -302,6 +299,9 @@
 
     },
     "Non" : {
+
+    },
+    "Nudge" : {
 
     },
     "OK" : {
@@ -404,6 +404,9 @@
     "Stats" : {
 
     },
+    "Streak: %lld d" : {
+
+    },
     "Study" : {
 
     },
@@ -426,6 +429,9 @@
 
     },
     "Title" : {
+
+    },
+    "Today: %lld min" : {
 
     },
     "Username" : {
@@ -462,6 +468,9 @@
 
     },
     "You’ve completed four sessions." : {
+
+    },
+    "You've studied %lld min today" : {
 
     },
     "Your Notes" : {
