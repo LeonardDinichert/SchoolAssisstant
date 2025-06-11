@@ -19,7 +19,6 @@
 		E3405F3A2DA80F7900216E57 /* FirebaseStorageCombine-Community in Frameworks */ = {isa = PBXBuildFile; productRef = E3405F392DA80F7900216E57 /* FirebaseStorageCombine-Community */; };
 		E3405F3D2DA8118700216E57 /* GoogleSignIn in Frameworks */ = {isa = PBXBuildFile; productRef = E3405F3C2DA8118700216E57 /* GoogleSignIn */; };
 		E3405F3F2DA8118700216E57 /* GoogleSignInSwift in Frameworks */ = {isa = PBXBuildFile; productRef = E3405F3E2DA8118700216E57 /* GoogleSignInSwift */; };
-		E3BD2CF82DF749FA005D97B2 /* SocialView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3BD2CF62DF749FA005D97B2 /* SocialView.swift */; };
 		E3BE42B22DF9DD48006992C5 /* LegalView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3BE42B12DF9DD48006992C5 /* LegalView.swift */; };
 		E3D309412DF7258E004DF8C1 /* relaxing.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = E3D309172DF7258E004DF8C1 /* relaxing.mp3 */; };
 		E3D309432DF7258E004DF8C1 /* Localizable.xcstrings in Resources */ = {isa = PBXBuildFile; fileRef = E3D309162DF7258E004DF8C1 /* Localizable.xcstrings */; };
@@ -70,7 +69,6 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		E3BD2CF62DF749FA005D97B2 /* SocialView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SocialView.swift; sourceTree = "<group>"; };
 		E3BE42B12DF9DD48006992C5 /* LegalView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LegalView.swift; sourceTree = "<group>"; };
 		E3D309052DF7258E004DF8C1 /* Package.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Package.swift; sourceTree = "<group>"; };
 		E3D309062DF7258E004DF8C1 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
@@ -157,14 +155,6 @@
 			);
 			sourceTree = "<group>";
 		};
-		E3BD2CF72DF749FA005D97B2 /* SocialPage */ = {
-			isa = PBXGroup;
-			children = (
-				E3BD2CF62DF749FA005D97B2 /* SocialView.swift */,
-			);
-			path = SocialPage;
-			sourceTree = "<group>";
-		};
 		E3D3090F2DF7258E004DF8C1 /* Managers */ = {
 			isa = PBXGroup;
 			children = (
@@ -239,7 +229,6 @@
 		E3D3093B2DF7258E004DF8C1 /* SchoolAssisstant */ = {
 			isa = PBXGroup;
 			children = (
-				E3BD2CF72DF749FA005D97B2 /* SocialPage */,
 				E3D3090F2DF7258E004DF8C1 /* Managers */,
 				E3D309132DF7258E004DF8C1 /* Models */,
 				E3D309182DF7258E004DF8C1 /* Resources */,
@@ -457,7 +446,6 @@
 				E3D3095D2DF7258E004DF8C1 /* IntroPagesModel.swift in Sources */,
 				E3D3095E2DF7258E004DF8C1 /* UserManager.swift in Sources */,
 				E3D3095F2DF7258E004DF8C1 /* IntroPagesView.swift in Sources */,
-				E3BD2CF82DF749FA005D97B2 /* SocialView.swift in Sources */,
 				E3D309602DF7258E004DF8C1 /* LearnedSomethingView.swift in Sources */,
 				E3D309612DF7258E004DF8C1 /* TaskItem.swift in Sources */,
 				E3D309622DF7258E004DF8C1 /* SettingsView.swift in Sources */,
