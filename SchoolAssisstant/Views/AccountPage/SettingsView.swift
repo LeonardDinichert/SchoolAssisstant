@@ -34,15 +34,15 @@ struct SettingsView: View {
                         }
                         
                         NavigationLink {
-                            modifyBiographyView(userId: userId)
-                        } label: {
-                            settingsRow(title: "Biography")
-                        }
-
-                        NavigationLink {
                             EditProfileView(user: user)
                         } label: {
                             settingsRow(title: "Edit Profile")
+                        }
+
+                        NavigationLink {
+                            LegalView()
+                        } label: {
+                            settingsRow(title: "Legal")
                         }
 
                     }
