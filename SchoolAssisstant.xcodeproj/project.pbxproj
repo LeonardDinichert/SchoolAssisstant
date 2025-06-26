@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 63;
+	objectVersion = 70;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -19,7 +19,6 @@
 		E3405F3A2DA80F7900216E57 /* FirebaseStorageCombine-Community in Frameworks */ = {isa = PBXBuildFile; productRef = E3405F392DA80F7900216E57 /* FirebaseStorageCombine-Community */; };
 		E3405F3D2DA8118700216E57 /* GoogleSignIn in Frameworks */ = {isa = PBXBuildFile; productRef = E3405F3C2DA8118700216E57 /* GoogleSignIn */; };
 		E3405F3F2DA8118700216E57 /* GoogleSignInSwift in Frameworks */ = {isa = PBXBuildFile; productRef = E3405F3E2DA8118700216E57 /* GoogleSignInSwift */; };
-		E34D77B72DF9E1710041B0FF /* SocialView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E34D77B52DF9E1710041B0FF /* SocialView.swift */; };
 		E34D77B92DF9E1B30041B0FF /* SocialViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E34D77B82DF9E1B30041B0FF /* SocialViewModel.swift */; };
 		E3BE42B22DF9DD48006992C5 /* LegalView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3BE42B12DF9DD48006992C5 /* LegalView.swift */; };
 		E3D309412DF7258E004DF8C1 /* relaxing.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = E3D309172DF7258E004DF8C1 /* relaxing.mp3 */; };
@@ -71,7 +70,6 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		E34D77B52DF9E1710041B0FF /* SocialView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SocialView.swift; sourceTree = "<group>"; };
 		E34D77B82DF9E1B30041B0FF /* SocialViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SocialViewModel.swift; sourceTree = "<group>"; };
 		E3BE42B12DF9DD48006992C5 /* LegalView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LegalView.swift; sourceTree = "<group>"; };
 		E3D309052DF7258E004DF8C1 /* Package.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Package.swift; sourceTree = "<group>"; };
@@ -125,6 +123,10 @@
 		E3D309732DF725EF004DF8C1 /* SchoolAssisstant.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SchoolAssisstant.app; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
+/* Begin PBXFileSystemSynchronizedRootGroup section */
+		E3AB9E622E0DB96000BBA6B9 /* SocialPage */ = {isa = PBXFileSystemSynchronizedRootGroup; explicitFileTypes = {}; explicitFolders = (); path = SocialPage; sourceTree = "<group>"; };
+/* End PBXFileSystemSynchronizedRootGroup section */
+
 /* Begin PBXFrameworksBuildPhase section */
 		E3405EEE2DA80F2100216E57 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
@@ -157,14 +159,6 @@
 				E3D3093D2DF7258E004DF8C1 /* swiftpackage */,
 				E3D309732DF725EF004DF8C1 /* SchoolAssisstant.app */,
 			);
-			sourceTree = "<group>";
-		};
-		E34D77B62DF9E1710041B0FF /* SocialPage 2 */ = {
-			isa = PBXGroup;
-			children = (
-				E34D77B52DF9E1710041B0FF /* SocialView.swift */,
-			);
-			path = "SocialPage 2";
 			sourceTree = "<group>";
 		};
 		E3D3090F2DF7258E004DF8C1 /* Managers */ = {
@@ -226,7 +220,6 @@
 		E3D309392DF7258E004DF8C1 /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				E34D77B62DF9E1710041B0FF /* SocialPage 2 */,
 				E3D3093A2DF7258E004DF8C1 /* SchoolAssisstantApp.swift */,
 				E3D309752DF72D66004DF8C1 /* HomePage */,
 				E3D309742DF72D58004DF8C1 /* AccountPage */,
@@ -243,6 +236,7 @@
 		E3D3093B2DF7258E004DF8C1 /* SchoolAssisstant */ = {
 			isa = PBXGroup;
 			children = (
+				E3AB9E622E0DB96000BBA6B9 /* SocialPage */,
 				E3D3090F2DF7258E004DF8C1 /* Managers */,
 				E3D309132DF7258E004DF8C1 /* Models */,
 				E3D309182DF7258E004DF8C1 /* Resources */,
@@ -357,6 +351,9 @@
 			);
 			dependencies = (
 			);
+			fileSystemSynchronizedGroups = (
+				E3AB9E622E0DB96000BBA6B9 /* SocialPage */,
+			);
 			name = SchoolAssisstant;
 			packageProductDependencies = (
 				E3405F272DA80F7900216E57 /* FirebaseAppDistribution-Beta */,
@@ -460,7 +457,6 @@
 				E3D3095C2DF7258E004DF8C1 /* StatsView.swift in Sources */,
 				E3D3095D2DF7258E004DF8C1 /* IntroPagesModel.swift in Sources */,
 				E3D3095E2DF7258E004DF8C1 /* UserManager.swift in Sources */,
-				E34D77B72DF9E1710041B0FF /* SocialView.swift in Sources */,
 				E3D3095F2DF7258E004DF8C1 /* IntroPagesView.swift in Sources */,
 				E3D309602DF7258E004DF8C1 /* LearnedSomethingView.swift in Sources */,
 				E3D309612DF7258E004DF8C1 /* TaskItem.swift in Sources */,
