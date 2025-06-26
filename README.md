@@ -22,10 +22,12 @@ SchoolAssisstant is a study companion app built with SwiftUI. It helps students 
 Firebase integration requires setting up Firestore collections referenced in the code. See `UserManager` and `NotesManager` for document structures.
 
 ## Design System
-The UI follows Apple's Human Interface Guidelines with a soft orange accent.
+- **Design Approach** – Inspired by Airbnb's clean pink aesthetic while respecting Apple's Human Interface Guidelines.
 
-- **Primary Color:** `#FFB660` with 10% tint and shade for states.
-- **Neutrals:** `#F8F8F8` and `#EAEAEB` for cards and separators.
-- **Components:** `cardStyle` and `primaryButtonStyle` keep rounded corners and gentle shadows consistent.
+- **Primary Color:** `#FF385C` with 10% tint (`#FF4C6C`) and shade (`#E53253`).
+- **Neutrals:** `#F7F7F7` and `#EAEAEB` for cards and separators.
+- **Components:** `cardStyle` and `primaryButtonStyle` use a 10pt corner radius and gentle shadows.
 - **Accessibility:** Dynamic Type and 44pt touch targets are respected.
+- **App-wide Styling:** Every screen applies these colors with unified card backgrounds and pink accents for buttons and icons, echoing Airbnb's clean layout.
+- **Consistent UI:** All views use `cardStyle`, `primaryButtonStyle`, and themed backgrounds for a cohesive Airbnb look across the app.
 

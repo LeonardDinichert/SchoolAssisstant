@@ -68,7 +68,7 @@ struct AccountTab: View {
                                 
                                 Image(systemName: "chevron.right")
                                     .font(.system(size: 20, weight: .semibold))
-                                    .foregroundColor(.black.opacity(0.8))
+                                    .foregroundColor(.primary)
                                 
                             }
                             .padding()
@@ -98,13 +98,13 @@ struct AccountTab: View {
 
                                     Text("Security and privacy")
                                         .font(.headline)
-                                        .foregroundStyle(.black)
+                                        .foregroundStyle(.primary)
 
                                     Spacer()
 
                                     Image(systemName: "chevron.right")
                                         .font(.subheadline)
-                                        .foregroundStyle(.black)
+                                        .foregroundStyle(.primary)
 
                                 }
                             }
@@ -116,11 +116,11 @@ struct AccountTab: View {
                                 HStack {
                                     Text("Legal")
                                         .font(.headline)
-                                        .foregroundStyle(.black)
+                                        .foregroundStyle(.primary)
                                     Spacer()
                                     Image(systemName: "chevron.right")
                                         .font(.subheadline)
-                                        .foregroundStyle(.black)
+                                        .foregroundStyle(.primary)
                                 }
                             }
                             .padding(.bottom)
@@ -136,7 +136,7 @@ struct AccountTab: View {
                     
                     HStack {
                         logOutButton()
-                            .foregroundColor(.black)
+                            .foregroundColor(AppTheme.primaryColor)
                             .font(.headline)
                             .fontWeight(.semibold)
                         Spacer()

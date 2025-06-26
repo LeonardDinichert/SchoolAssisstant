@@ -22,8 +22,17 @@ struct AddTaskView: View {
                             dismiss()
                         }
                     }
+                    .foregroundColor(.white)
+                    .padding(.vertical, 6)
+                    .padding(.horizontal, 12)
+                    .background(
+                        RoundedRectangle(cornerRadius: AppTheme.cornerRadius)
+                            .fill(AppTheme.primaryColor)
+                    )
                 }
             }
+            .tint(AppTheme.primaryColor)
+            .background(AppTheme.background)
         }
     }
 }
