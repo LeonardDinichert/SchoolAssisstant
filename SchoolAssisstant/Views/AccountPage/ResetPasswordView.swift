@@ -34,11 +34,7 @@ struct ResetPasswordView: View {
                         .keyboardType(.emailAddress)
                         .autocorrectionDisabled()
                         .autocapitalization(.none)
-                        .padding()
-                        .background(
-                            RoundedRectangle(cornerRadius: 10)
-                                .stroke(Color.gray.opacity(0.5), lineWidth: 1)
-                        )
+                        .cardStyle()
                         .padding(.horizontal)
                     
                     Button {

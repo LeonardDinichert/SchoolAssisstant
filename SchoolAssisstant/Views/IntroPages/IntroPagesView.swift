@@ -39,8 +39,10 @@ struct IntroPagesView: View {
             Button("Continue") {
                 hasShownWelcome = true
             }
+            .primaryButtonStyle()
             .padding()
         }
+        .background(AppTheme.background)
     }
 }
 

@@ -105,11 +105,13 @@ struct StatsView: View {
                     .chartXAxisLabel("Day")
                     .chartYAxisLabel("Minutes")
                     .frame(height: 200)
+                    .cardStyle()
                 }
                 Spacer()
             }
             .padding()
             .navigationTitle("Stats")
+            .background(AppTheme.background)
             .onAppear { Task { await viewModel.load() } }
         }
     }

@@ -32,6 +32,7 @@ struct UserWantsToReviseView: View {
                 }
             }
             .navigationTitle("Your Notes")
+            .background(AppTheme.background)
             .toolbar {
                 ToolbarItem(placement: .navigationBarLeading) {
                     Button("Done") { dismiss() }

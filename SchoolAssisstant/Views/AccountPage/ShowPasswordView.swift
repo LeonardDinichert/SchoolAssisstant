@@ -29,6 +29,7 @@ struct ShowPasswordView: View {
             .padding(.leading)
             Spacer()
         }
+        .background(AppTheme.background)
     }
 }
 

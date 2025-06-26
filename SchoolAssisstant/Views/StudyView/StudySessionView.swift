@@ -37,20 +37,21 @@ struct StudySessionView: View {
                             openMeditationView = true
                         } label: {
                             ZStack {
-                                RoundedRectangle(cornerSize: CGSize(width: 15, height: 15))
+                                RoundedRectangle(cornerRadius: AppTheme.cornerRadius)
                                     .frame(height: 100)
                                     .padding(.horizontal)
-                                    .foregroundStyle(.orange).opacity(0.2)
+                                    .foregroundStyle(AppTheme.primaryColor)
+                                    .opacity(0.1)
                                 VStack {
-                                    
+
                                     Text("Prepare yourself better for working ?")
-                                        .foregroundStyle(.black)
+                                        .foregroundStyle(.primary)
                                         .font(.subheadline)
                                         .fontWeight(.semibold)
                                         .padding(.top)
-                                    
+
                                     Text("By resting a few minutes before working, you will be able to concentrate better")
-                                        .foregroundStyle(.black)
+                                        .foregroundStyle(.primary)
                                         .font(.footnote)
                                         .padding(.bottom)
                                 }
@@ -89,6 +90,7 @@ struct StudySessionView: View {
         }
         .navigationTitle("Study Session")
         .navigationBarTitleDisplayMode(.large)
+        .background(AppTheme.background)
         .fullScreenCover(isPresented: $openMeditationView, content: {
             MeditationPreWorkView(openMeditationView: $openMeditationView)
         })

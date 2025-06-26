@@ -23,6 +23,7 @@ struct SocialView: View {
                 .padding()
             }
             .navigationTitle("Social")
+            .background(AppTheme.background)
         }
         .task { await viewModel.load() }
     }

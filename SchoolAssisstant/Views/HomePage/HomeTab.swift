@@ -70,6 +70,7 @@ struct HomeTab: View {
                 .padding()
             }
             .navigationTitle("Home")
+            .background(AppTheme.background)
         }
         .onAppear {
             Task {

@@ -39,6 +39,7 @@ struct ShowEmailAdressView: View {
                 .primaryButtonStyle()
             }
         }
+        .background(AppTheme.background)
         .task {
             try? await viewModel.loadCurrentUser()
         }
