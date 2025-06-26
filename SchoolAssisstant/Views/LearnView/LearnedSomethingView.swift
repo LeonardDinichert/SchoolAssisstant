@@ -15,7 +15,7 @@ struct LearnedSomethingView: View {
     var body: some View {
         ZStack {
             // Full-screen background
-            AppTheme.background
+            Color(UIColor.systemBackground)
                 .ignoresSafeArea()
 
             VStack(spacing: 24) {
@@ -35,8 +35,8 @@ struct LearnedSomethingView: View {
                 .padding(.horizontal, 32)
                 .padding(.vertical, 16)
                 .background(
-                    RoundedRectangle(cornerRadius: AppTheme.cornerRadius)
-                        .fill(AppTheme.cardBackground)
+                    RoundedRectangle(cornerRadius: 12)
+                        .fill(Color(UIColor.secondarySystemBackground))
                         .shadow(radius: 4)
                 )
                 .padding(.horizontal)
@@ -49,7 +49,7 @@ struct LearnedSomethingView: View {
                         Label("I learned something new", systemImage: "lightbulb.fill")
                             .frame(maxWidth: .infinity)
                             .padding()
-                            .background(AppTheme.primaryColor)
+                            .background(Color.accentColor)
                             .foregroundColor(.white)
                             .cornerRadius(10)
                     }
@@ -58,7 +58,7 @@ struct LearnedSomethingView: View {
                         Label("I want to revise", systemImage: "book.fill")
                             .frame(maxWidth: .infinity)
                             .padding()
-                            .background(AppTheme.cardBackground)
+                            .background(Color.gray.opacity(0.2))
                             .foregroundColor(.primary)
                             .cornerRadius(10)
                     }

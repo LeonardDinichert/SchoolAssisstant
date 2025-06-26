@@ -18,7 +18,7 @@ struct TasksTab: View {
                         Spacer()
                         Button(action: { Task { await viewModel.toggleCompleted(task) } }) {
                             Image(systemName: task.completed ? "checkmark.circle.fill" : "circle")
-                                .foregroundColor(AppTheme.primaryColor)
+                                .foregroundColor(.blue)
                         }
                     }
                     .swipeActions {
