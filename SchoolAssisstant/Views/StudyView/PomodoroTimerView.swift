@@ -248,7 +248,7 @@ struct PomodoroTimerView: View {
 
     private var focusView: some View {
         ZStack {
-            AppTheme.background.ignoresSafeArea()
+            Color(.systemBackground).ignoresSafeArea()
             timerCard.onTapGesture { isFocusMode = false }
         }
         .padding()
@@ -259,11 +259,11 @@ struct PomodoroTimerView: View {
             Circle()
                 .stroke(lineWidth: 20)
                 .opacity(0.2)
-                .foregroundColor(AppTheme.primaryColor)
+                .foregroundColor(.orange)
             Circle()
                 .trim(from: 0, to: progress)
                 .stroke(style: .init(lineWidth: 20, lineCap: .round))
-                .foregroundColor(AppTheme.primaryColor)
+                .foregroundColor(.orange)
                 .rotationEffect(.degrees(-90))
             VStack(spacing: 4) {
                 Text(timeString)
@@ -272,7 +272,7 @@ struct PomodoroTimerView: View {
                 if phase == .work {
                     Text("Session \(workCount+1) of \(totalWorkSessions)")
                         .font(.subheadline)
-                        .foregroundColor(AppTheme.primaryColor.opacity(0.8))
+                        .foregroundColor(.orange.opacity(0.8))
                 }
                 
                 Text(userWillStudy)
@@ -356,9 +356,9 @@ private struct ControlButton: View {
         Button(action: action) {
             Image(systemName: systemName)
                 .font(.largeTitle)
-                .foregroundColor(AppTheme.primaryColor)
+                .foregroundColor(.orange)
                 .frame(width: 64, height: 64)
-                .background(AppTheme.primaryColor.opacity(0.1))
+                .background(Color.orange.opacity(0.1))
                 .clipShape(Circle())
         }
     }
@@ -384,7 +384,7 @@ private struct HistoryRow: View {
                 .font(.subheadline)
         }
         .padding()
-        .background(AppTheme.cardBackground)
+        .background(Color(uiColor: .systemBackground))
         .cornerRadius(12)
         .shadow(color: .black.opacity(0.05), radius: 4, x: 0, y: 2)
     }
@@ -398,7 +398,7 @@ private struct CongratsView: View {
                 .font(.largeTitle).bold()
             Text("You’ve completed four sessions.")
             Button("Take 20 min break", action: onContinue)
-                .primaryButtonStyle()
+                .buttonStyle(.borderedProminent)
         }
         .padding(40)
     }

@@ -1,19 +1,19 @@
 import SwiftUI
 
 struct AppTheme {
-    /// Main brand color inspired by Airbnb's distinctive pink
-    static let primaryColor = Color(hex: "#FF385C")
+    /// Main brand color
+    static let primaryColor = Color(hex: "#FFB660")
     /// 10% lighter tint of the primary color
-    static let primaryTint = Color(hex: "#FF4C6C")
+    static let primaryTint = Color(hex: "#FFC86A")
     /// 10% darker shade of the primary color
-    static let primaryShade = Color(hex: "#E53253")
+    static let primaryShade = Color(hex: "#E6A456")
 
     /// Neutral backgrounds
     static let background = Color(light: .white, dark: .black)
-    static let cardBackground = Color(light: Color(hex: "#F7F7F7"),
+    static let cardBackground = Color(light: Color(hex: "#F8F8F8"),
                                       dark: Color(hex: "#1C1C1E"))
 
-    static let cornerRadius: CGFloat = 10
+    static let cornerRadius: CGFloat = 12
 
     struct CardModifier: ViewModifier {
         func body(content: Content) -> some View {

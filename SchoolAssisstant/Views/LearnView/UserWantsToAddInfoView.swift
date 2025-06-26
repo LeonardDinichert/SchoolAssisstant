@@ -62,8 +62,9 @@ struct UserWantsToAddInfoView: View {
             }) {
                 Text("Save")
                     .frame(maxWidth: .infinity)
+                    .padding()
             }
-            .primaryButtonStyle()
+            .buttonStyle(.borderedProminent)
             
             Button {
                 userWantsAddInfo = false

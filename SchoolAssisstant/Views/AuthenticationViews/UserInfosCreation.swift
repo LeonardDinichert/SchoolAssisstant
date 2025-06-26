@@ -82,7 +82,7 @@ struct UserInfosCreation: View {
                             Text("Add a profile picture")
                                 .font(.headline)
                                 .fontWeight(.semibold)
-                                .foregroundColor(.primary)
+                                .foregroundColor(.black)
                         }
                         .cardStyle()
                         .frame(maxWidth: .infinity)
